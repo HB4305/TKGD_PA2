@@ -18,25 +18,50 @@ In PA2, our group continues with the same product scope and conducts user resear
 
 ### 1.2 Research Goals
 
-The user research aims to answer the following questions:
+The user research focuses on achieving the following objectives:
 
-1. What information do users expect to find first when visiting a chess event website on mobile?
-2. How easily can users understand the purpose of the Freestyle Chess website from the homepage?
-3. What difficulties do users encounter when navigating the website on a smartphone?
-4. How do users find player ratings, event news, schedules, and video/livestream content?
-5. What mobile-specific problems appear when users operate the website with one hand or in short browsing sessions?
-6. Which user pain points should be prioritized in later design proposals?
+1. **Understand user expectations:** Identify what information mobile chess followers want to access first on a sports/chess event website.
+2. **Evaluate homepage clarity:** Assess if first-time mobile users can easily comprehend the core purpose of Freestyle Chess from the homepage.
+3. **Assess navigation usability:** Investigate how easily users can navigate between major sections on a smartphone browser.
+4. **Test information findability:** Measure the efficiency and discoverability when users look for player ratings, event news, schedules, and video/livestream content.
+5. **Identify mobile-specific constraints:** Observe how physical grip (one-handed usage) and short browsing sessions affect the user experience.
+6. **Prioritize user pain points:** Gather quantitative and qualitative evidence to prioritize which usability drawbacks from PA1 should be addressed in the redesign proposal.
 
-### 1.3 Research Questions
+### 1.3 Research Questions (Google Form Survey)
 
-| Research Question | Related Website Area | Expected Evidence |
-|---|---|---|
-| Do users understand what Freestyle Chess is about? | Home page | Survey ratings, interview comments |
-| Can users navigate between major sections easily on mobile? | Navigation menu | Survey ratings, interview observation |
-| Can users quickly find a player or rating information? | Rating page | Survey ratings, task observation |
-| Can users find event news with enough context? | News page | Survey answers, user preference patterns |
-| Does the video/livestream section match user expectations? | Videos & Streams page | Survey ratings, interview quotes |
-| Is one-handed use comfortable? | Global mobile navigation | Survey ratings, observation notes |
+The online survey contains 29 questions matching the research goals. Below is the mapping of each question to the related website area and the expected data type:
+
+| ID | Research Question (Vietnamese) | Related Area | Data Type / Expected Evidence |
+|---|---|---|---|
+| Q01 | Bạn có thường theo dõi tin tức, giải đấu, kỳ thủ hoặc nội dung liên quan đến cờ vua không? | Screening / Chess Interest | Single choice (Multiple choice) |
+| Q02 | Trước khảo sát này, bạn đã từng nghe đến Freestyle Chess chưa? | Screening / Familiarity | Single choice (Multiple choice) |
+| Q03 | Bạn thường dùng thiết bị nào để đọc tin tức thể thao hoặc tin tức cờ vua? | Screening / Device Context | Multiple choice (Checkboxes) |
+| Q04 | Khi dùng điện thoại, bạn thường cầm máy bằng cách nào? | Screening / Grip Context | Single choice (Multiple choice) |
+| Q05 | Bạn thường xem tin tức hoặc thông tin sự kiện trên điện thoại trong tình huống nào? | Screening / Mobile Context | Multiple choice (Checkboxes) |
+| Q06 | Khi truy cập một website về cờ vua hoặc giải đấu cờ vua, bạn thường muốn xem thông tin gì trước? | Home page / Expectations | Multiple choice (Checkboxes) |
+| Q07 | Nếu chỉ có 2-3 phút để xem nhanh trên điện thoại, bạn muốn website giúp bạn làm gì nhanh nhất? | Home page / Expectations | Short text response |
+| Q08 | Theo bạn, điều gì làm một website tin tức/sự kiện trên điện thoại dễ sử dụng? | General Mobile Usability | Short text response |
+| Q09 | Khi nhìn trang chủ Freestyle Chess trên điện thoại, bạn có dễ hiểu website này dùng để làm gì không? | Home page / Clarity | Rating scale (1-5) |
+| Q10 | Bạn có thấy trang chủ cung cấp đủ hướng dẫn cho người dùng mới không? | Home page / Onboarding | Single choice (Multiple choice) |
+| Q11 | Menu điều hướng trên mobile có dễ tìm và dễ bấm không? | Navigation menu | Rating scale (1-5) |
+| Q12 | Khi dùng một tay, bạn có thấy các nút điều hướng chính dễ chạm tới không? | Navigation / Reachability | Rating scale (1-5) |
+| Q13 | Bạn có từng cảm thấy phải với tay, đổi cách cầm điện thoại hoặc dùng tay còn lại để thao tác không? | Navigation / Reachability | Single choice (Multiple choice) |
+| Q14 | Các mục trong menu như News, Schedule, Rating, Videos & Streams có dễ hiểu không? | Navigation / Labels | Rating scale (1-5) |
+| Q15 | Bạn có nghĩ việc thêm icon vào các mục menu sẽ giúp nhận biết nhanh hơn không? | Navigation / Labels | Single choice (Multiple choice) |
+| Q16 | Việc tìm một kỳ thủ hoặc thông tin trong bảng xếp hạng có dễ không? | Rating page / Info retrieval | Rating scale (1-5) |
+| Q17 | Khi danh sách thông tin quá dài, bạn thích cách hỗ trợ nào nhất? | Rating page / Long lists | Multiple choice (Checkboxes) |
+| Q18 | Khi tìm tin tức về một sự kiện cờ vua, bạn muốn tìm theo cách nào? | News page / Info retrieval | Multiple choice (Checkboxes) |
+| Q19 | Bạn có từng gặp khó khăn khi không nhớ chính xác tên sự kiện, kỳ thủ hoặc thông tin cần tìm không? | News page / Memory load | Single choice (Multiple choice) |
+| Q20 | Khu vực video/livestream có dễ hiểu và dễ sử dụng không? | Videos & Streams page | Rating scale (1-5) |
+| Q21 | Khi chọn một video mới, bạn kỳ vọng điều gì xảy ra? | Videos & Streams page | Single choice (Multiple choice) |
+| Q22 | Nếu nhiều video phát cùng lúc, trải nghiệm của bạn sẽ như thế nào? | Videos & Streams page | Short text response |
+| Q23 | Bạn có từng không chắc một nội dung/nút/thẻ trên website có bấm được hay không? | General Mobile Usability | Single choice (Multiple choice) |
+| Q24 | Phần dễ sử dụng nhất của Freestyle Chess mobile web là gì? | Overall Usability | Short text response |
+| Q25 | Phần gây khó chịu hoặc khó hiểu nhất là gì? | Overall Usability | Short text response |
+| Q26 | Theo bạn, website này phù hợp nhất với nhóm người dùng nào? | Persona / Target Audience | Single choice (Multiple choice) |
+| Q27 | Bạn có muốn quay lại website này để theo dõi Freestyle Chess hoặc tin tức cờ vua không? | Return Intention | Single choice (Multiple choice) |
+| Q28 | Nếu được cải thiện một điểm trên giao diện mobile, bạn muốn cải thiện điều gì nhất? | General Feedback | Short text response |
+| Q29 | Bạn có góp ý nào khác cho nhóm thiết kế không? | General Feedback | Short text response |
 
 ---
 
@@ -159,7 +184,7 @@ The survey included:
 
 ### 4.2 Direct Interview Procedure
 
-Each interview participant was asked to perform a small set of tasks on the Freestyle Chess mobile website. The research team did not explain the interface before the task, so that the participant's first reaction could be observed.
+The direct interviews were conducted using a **semi-structured approach**. While the team followed the general task framework listed below, each interviewer adapted the specific prompts and follow-up questions dynamically based on the participant's background, device usage, and real-time reactions. This flexibility allowed the team to capture authentic user behaviors, unexpected pain points, and valuable qualitative feedback rather than strictly sticking to a rigid script.
 
 | Task | Prompt | Observation Focus |
 |---|---|---|
@@ -265,44 +290,39 @@ The online survey collected 72 responses. The findings below summarize the main 
 
 ## 6. Direct Interview Findings
 
-> This section can be completed gradually while the interviews are still in progress.
+In addition to the survey, our group conducted task-based observation interviews. Each member recorded and reviewed their own participant clips to capture raw user reactions, physical phone handling, and specific usability struggles. 
 
-### 6.1 Interview Participant Notes
+Below are the detailed entries for each participant session, linking directly to the interview recordings and analyzing the key behaviors observed:
 
-| Participant Code | User Type | Device Used | Holding Posture | Most Difficult Task | Main Pain Point | Useful Quote |
-|---|---|---|---|---|---|---|
-| P01 | [Frequent/Casual/Event-driven/First-time] | [ ] | [One hand/Two hands/Mixed] | [ ] | [ ] | "[ ]" |
-| P02 | [ ] | [ ] | [ ] | [ ] | [ ] | "[ ]" |
-| P03 | [ ] | [ ] | [ ] | [ ] | [ ] | "[ ]" |
-| P04 | [ ] | [ ] | [ ] | [ ] | [ ] | "[ ]" |
-| P05 | [ ] | [ ] | [ ] | [ ] | [ ] | "[ ]" |
+### 6.1 Entry 1: Participant P01 (Reviewed by Lê Mai Hoài Bảo)
 
-### 6.2 Task Observation Summary
+*   **Clip Link:** [Google Drive Clip](https://drive.google.com/file/d/1IvFpEbQsO3MB1V4CUh3SmSu7avnz98yB/view)
+*   **Analysis & Key Observations:**
+    *   [Write your analysis, notable quotes, and interesting observations here]
 
-| Task | Common Behavior Observed | Problems Observed | Evidence |
-|---|---|---|---|
-| Understand website purpose | [ ] | [ ] | [Quote/screenshot/note] |
-| Navigate to Rating | [ ] | [ ] | [Quote/screenshot/note] |
-| Find player/rating information | [ ] | [ ] | [Quote/screenshot/note] |
-| Find event news | [ ] | [ ] | [Quote/screenshot/note] |
-| Select a video/livestream | [ ] | [ ] | [Quote/screenshot/note] |
-| One-handed navigation | [ ] | [ ] | [Quote/screenshot/note] |
+### 6.2 Entry 2: Participant P02 (Reviewed by [Member Name])
 
-### 6.3 Notable Interview Quotes
+*   **Clip Link:** [Link to clip]
+*   **Analysis & Key Observations:**
+    *   [Write your analysis, notable quotes, and interesting observations here]
 
-| Quote | Participant | Related Issue | Interpretation |
-|---|---|---|---|
-| "[Insert quote]" | P01 | [Navigation/Home/Rating/Video] | [What this reveals] |
-| "[Insert quote]" | P02 | [ ] | [ ] |
-| "[Insert quote]" | P03 | [ ] | [ ] |
+### 6.3 Entry 3: Participant P03 (Reviewed by [Member Name])
 
-### 6.4 Interview Insights
+*   **Clip Link:** [Link to clip]
+*   **Analysis & Key Observations:**
+    *   [Write your analysis, notable quotes, and interesting observations here]
 
-| Insight | Supporting Evidence | Design Implication |
-|---|---|---|
-| [Example: Users hesitate before opening the menu because the mobile navigation button is not easy to reach.] | [P01 stretched thumb, P03 changed grip] | [Consider bottom navigation or easier menu placement.] |
-| [ ] | [ ] | [ ] |
-| [ ] | [ ] | [ ] |
+### 6.4 Entry 4: Participant P04 (Reviewed by [Member Name])
+
+*   **Clip Link:** [Link to clip]
+*   **Analysis & Key Observations:**
+    *   [Write your analysis, notable quotes, and interesting observations here]
+
+### 6.5 Entry 5: Participant P05 (Reviewed by [Member Name])
+
+*   **Clip Link:** [Link to clip]
+*   **Analysis & Key Observations:**
+    *   [Write your analysis, notable quotes, and interesting observations here]
 
 ---
 
@@ -468,11 +488,7 @@ Despite these limitations, combining survey data with direct interview observati
 
 The full Google Form content is documented in `06-PA2-GoogleForm-VI.md`.
 
-### 13.2 Interview Guide
-
-The full interview and observation questionnaire is documented in `06-PA2-UserResearch-Questionnaire.md`.
-
-### 13.3 Evidence Checklist
+### 13.2 Evidence Checklist
 
 | Evidence Type | Included? | Location / Notes |
 |---|---|---|
