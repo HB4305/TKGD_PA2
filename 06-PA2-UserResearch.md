@@ -384,7 +384,7 @@ Below are the detailed entries for each participant session, linking directly to
 
 
 ### 6.4 Entry 4: Participant P04 (Reviewed by Phạm Chí Bảo Ninh)
-*   **Clip Link:** https://youtu.be/B7fHfqv-Xsk
+*   **Clip Link:** [Youtube video](https://youtu.be/B7fHfqv-Xsk)
 *   **Person's Description:**
     * **Fullnname**: Prefer to not disclose
     * **Gender**: Male
@@ -409,7 +409,7 @@ Below are the detailed entries for each participant session, linking directly to
 
 
 ### 6.5 Entry 5: Participant P05 (Reviewed by Phạm Chí Bảo Ninh)
-*   **Clip Link:** https://youtu.be/zzidjcj8hWg
+*   **Clip Link:** [Youtube video](https://youtu.be/zzidjcj8hWg)
 *   **Person's Description:**
     * **Fullnname**: Prefer to not disclose
     * **Gender**: Male
@@ -442,15 +442,6 @@ Below are the detailed entries for each participant session, linking directly to
 *   **Analysis & Key Observations:**
 
 
-- **Clip Link:** [Link to clip]
-- **Analysis & Key Observations:**
-  - [Write your analysis, notable quotes, and interesting observations here]
-
-### 6.7 Entry 7: Participant P07 (Reviewed by [Member Name])
-
-- **Clip Link:** [Link to clip]
-- **Analysis & Key Observations:**
-  - [Write your analysis, notable quotes, and interesting observations here]
 ### 6.8 Entry 8: Participant P08 (Reviewed by Phạm Chí Bảo Ninh)
 *   **Clip Link:** [Link to clip]
 *   **Person's Description:**
@@ -462,7 +453,7 @@ Below are the detailed entries for each participant session, linking directly to
 
 
 ### 6.9 Entry 9: Participant P09 (Reviewed by Phạm Chí Bảo Ninh)
-*   **Clip Link:** https://youtu.be/e23vy663Bpw
+*   **Clip Link:** [Youtube video](https://youtu.be/e23vy663Bpw)
 *   **Person's Description:**
     * **Fullnname**: Prefer to not disclose
     * **Gender**: Male
