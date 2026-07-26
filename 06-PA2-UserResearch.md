@@ -321,6 +321,20 @@ Below are the detailed entries for each participant session, linking directly to
         * *Phân tích hành vi & Cảm nhận:* Hộp thoại xác nhận trên di động cần ngắn gọn, rõ ràng để người dùng đọc lướt nhanh và đưa ra quyết định ngay. Việc bắt buộc phải cuộn trong một khung pop-up nhỏ (nested scroll) vừa làm gián đoạn luồng trải nghiệm (flow), vừa gây khó chịu cho người dùng. Người dùng nhận xét rằng nên mở rộng phần dialog này ra để hiển thị nội dung trực quan hơn.
         * *Hàm ý thiết kế (Design Implication):* Khi thiết kế hộp thoại xác nhận trên mobile, cần giữ nội dung thông điệp ngắn gọn, súc tích và thiết kế khung dialog có chiều cao tự động co giãn (auto-height) theo độ dài văn bản để tránh việc phải cuộn. Các nút hành động (Đồng ý/Hủy) cần được bố trí rõ ràng, dễ chạm để người dùng thao tác nhanh chóng.    
 
+### 6.1.2 Entry 3: Participant P01 (Reviewed by Lê Mai Hoài Bảo)
+
+*   **Clip Link:** [Google Drive Clip](https://drive.google.com/file/d/1WujhKO_iSlUJqkQnKGucoJ8iOboW9y1f/view?usp=sharing)
+*   **Participant Description:** 
+    * **Fullname:** Mai Thị Kim Duyên
+    * **Gender:** Nữ
+    * **Device used during interview:** Không rõ (Unknown)
+    * **Description:** Người dùng mới, không thường xuyên theo dõi tin tức cờ vua. Khi sử dụng điện thoại, thường dùng tay trái để giữ điện thoại và sử dụng ngón cái tay phải để lướt tương tác.
+*   **Analysis & Key Observations:**
+    *   **Thanh điều hướng (Navigation Bar) khó thao tác một tay:** Người dùng phản hồi rằng thanh điều hướng nếu được đặt ở góc dưới bên phải sẽ giúp việc thao tác và điều hướng một tay trở nên dễ dàng và thuận tiện hơn nhiều.
+        * *Phân tích hành vi & Cảm nhận:* Khi người dùng sử dụng điện thoại bằng một tay (cầm tay trái, ngón cái tay phải lướt tương tác), vùng chạm tự nhiên của ngón cái nằm ở nửa dưới màn hình. Do đó, việc đặt thanh điều hướng ở góc dưới bên phải giúp giảm thiểu việc rướn ngón tay hoặc thay đổi tư thế cầm nắm.
+        * *Hàm ý thiết kế (Design Implication):* Đối với giao diện di động, thanh điều hướng chính hoặc các nút chức năng quan trọng cần được đặt ở nửa dưới màn hình (ví dụ: bottom navigation bar hoặc vị trí góc dưới bên phải) để tối ưu hóa trải nghiệm sử dụng một tay (one-handed design).
+
+
 ### 6.2 Entry 2: Participant P02 (Reviewed by Trương Công Thiên Phú)
 
 *   **Clip Link:** [Google Drive Clip](https://drive.google.com/file/d/1pC_BxAkzJX7djP9RkLlzDAB_nueVr_aL/view?usp=sharing)
