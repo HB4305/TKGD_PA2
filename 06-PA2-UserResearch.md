@@ -334,6 +334,19 @@ Below are the detailed entries for each participant session, linking directly to
     - _Phân tích hành vi & Cảm nhận:_ Khi người dùng sử dụng điện thoại bằng một tay (cầm tay trái, ngón cái tay phải lướt tương tác), vùng chạm tự nhiên của ngón cái nằm ở nửa dưới màn hình. Do đó, việc đặt thanh điều hướng ở góc dưới bên phải giúp giảm thiểu việc rướn ngón tay hoặc thay đổi tư thế cầm nắm.
     - _Hàm ý thiết kế (Design Implication):_ Đối với giao diện di động, thanh điều hướng chính hoặc các nút chức năng quan trọng cần được đặt ở nửa dưới màn hình (ví dụ: bottom navigation bar hoặc vị trí góc dưới bên phải) để tối ưu hóa trải nghiệm sử dụng một tay (one-handed design).
 
+### 6.1.3 Entry 4: Participant P01 (Reviewed by Lê Mai Hoài Bảo)
+
+*   **Clip Link:** [Google Drive Clip](https://drive.google.com/file/d/1FLfp7hlLy9cHM3C2On4Z7pcI0F6_kOKl/view?usp=sharing)
+*   **Participant Description:** 
+    * **Fullname:** Mai Thị Kim Duyên
+    * **Gender:** Nữ
+    * **Device used during interview:** Không rõ (Unknown)
+    * **Description:** Người dùng mới, không thường xuyên theo dõi tin tức cờ vua. Khi sử dụng điện thoại, thường dùng tay trái để giữ điện thoại và sử dụng ngón cái tay phải để lướt tương tác.
+*   **Analysis & Key Observations:**
+    *   **Thiếu phản hồi trạng thái tải trang (No Loading Indicator) khi chuyển mục:** Khi người dùng bấm vào các mục trên thanh điều hướng để chuyển trang, hệ thống không hiển thị bất kỳ ký hiệu hay thanh trạng thái loading nào. Điều này khiến người dùng cảm thấy bối rối và không biết liệu trang web có đang hoạt động hay không.
+        * *Phân tích hành vi & Cảm nhận:* Khi không nhận được phản hồi trực quan ngay lập tức từ hệ thống (System Status Visibility), người dùng dễ nảy sinh tâm lý nghi ngờ rằng trang web bị lỗi hoặc đơ, dẫn đến việc chạm liên tục nhiều lần.
+        * *Hàm ý thiết kế (Design Implication):* Cần bổ sung thanh chỉ báo trạng thái tải trang (như loading spinner, thanh progress bar chạy ở đầu trang, hoặc hiệu ứng chuyển cảnh mượt mà) để phản hồi trực quan tức thì ngay khi người dùng click chọn mục điều hướng.
+
 ### 6.2 Entry 2: Participant P02 (Reviewed by Trương Công Thiên Phú)
 
 - **Clip Link:** [Google Drive Clip](https://drive.google.com/file/d/1pC_BxAkzJX7djP9RkLlzDAB_nueVr_aL/view?usp=sharing)
