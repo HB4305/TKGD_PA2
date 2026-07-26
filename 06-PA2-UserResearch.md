@@ -462,7 +462,52 @@ Below are the detailed entries for each participant session, linking directly to
         - Does not mind multiple video running, this is the only person in my group to actually prefer multiple video to run simultaneously.
         - Reasoning given is that they could scroll down and watch a few seconds of the new video to see if it is interesting enough to switch, and if they do decide to, they could go back and switch it themselves. This is rather a special case from many, since most would prefer only one video to run at a time, so they arent overwhelmed and confused on what they are looking or hearing. This could only be explained by habit, is someone regularly watches multiple things together, they might even prefer the page have this feature, otherwise this is an edge case not worth discussing until more data is gathered.
 
+### 6.7 Entry 7: Participant P07 (Reviewed by Phùng Ngọc Tuấn)
 
+- **Person's Description:**
+  - **Gender:** Male
+  - **Device used during interview:** Xiaomi POCO F4 phone, Chrome browser
+  - **Description:** A chess-following user who is familiar with chess content and browses the site as someone who already has an interest in tournaments, players, and match updates. Using the phone with one hand holding the device and the other hand for interaction.
+- **Analysis & Key Observations:**
+
+  1. **Ranking search requires exact text matching:** [**Video clip**](https://drive.google.com/file/d/1tBovIlBAQX2lbDp64-4twuDJ-Im6M4zp/view?usp=sharing)  
+   The participant tried to find a player by typing **“Le Quang”**, then **“Liem Le”**, and later **“Liem”**. The name only appeared when he entered **“Liem”**, which suggests the search function depends heavily on the original stored text format. This made it difficult for the user to search naturally by the player name he already knew.  
+    
+
+  2. **Schedule does not provide enough structure:** [**Video clip**](https://drive.google.com/file/d/1Qzh9CV-DmSFLDQ9PZxGWNmnc41-gd7k7/view?usp=sharing)  
+   In the Schedule section, the participant expected a **visual bracket** and a clearer **match schedule**. Instead, the content did not give him the kind of overview he was looking for, so the page did not fully support his goal of quickly understanding the tournament flow.
+
+  3. **Videos look interactive but do not respond:** [**Video clip**](https://drive.google.com/file/d/1qfYRyTzgAqHChDFyrnP_0Qx3RFsqjFtg/view?usp=sharing)  
+   The participant tapped several video thumbnails expecting them to play, but nothing changed on screen. He tried again on other videos as well, with the same result. Because there was no visible feedback, the user could not tell whether the problem was the page, the player, or the network.
+
+  4. **Carousel playback causes confusion and audio overlap:** [**Video clip**](https://drive.google.com/file/d/1_RPg2D_u_KKMc3hm3yaEBuVEKNwKDLcb/view?usp=sharing)  
+   On the homepage carousel, the participant swiped the carousel but the video stayed on the same item, so the gesture did not behave as expected. After a video started playing, he also could not move through the carousel naturally by dragging the video area, which made browsing feel awkward. More importantly, when switching to another video, the previous one kept playing in the background, causing **two audio tracks to overlap**. This created a distracting experience and made the video section feel poorly controlled.
+
+- **Summary**  
+Overall, the participant had trouble with three main areas: search precision in Ranking, unclear structure in Schedule, and weak interaction behavior in the video sections. The most serious issue was the video experience, because it not only failed to respond properly but also created audio overlap when switching content.
+
+### 6.8 Entry 8: Participant P08 (Reviewed by Phùng Ngọc Tuấn)
+
+- **Person's Description:**
+  - **Gender:** Female
+  - **Device used during interview:** iPad in landscape mode, placed on a stand; used Apple Pencil for interaction, and sometimes rotated the pencil to tap directly with the same hand. Safari browser.
+  - **Description:** A new user with no background in chess. She approached the site as someone trying to understand chess-related content, tournament information, and basic navigation on a tablet.
+- **Analysis & Key Observations:**
+
+  1. **Hero section video controls do not match the actual playback state:** [**Video clip**](https://drive.google.com/file/d/1yiuPp7AuiD6VU7IU9KEraGdvyHzA10V3/view?usp=sharing)  
+   In the home page hero section, the participant tapped **Play Video** and the video started as expected, but pressing **Stop Video** did not stop playback. Even though the button label changed back to **Play Video**, the video continued playing in the background. After repeating the action several times, she became confused and reacted with a “huh,” showing that the control state did not match what the user could actually see and hear.
+
+  2. **Repeated video interaction creates overlapping playback:** [**Video clip**](https://drive.google.com/file/d/1K_a5VDX3sI9Po9WG9p5gX3gTS4RMWjRt/view?usp=sharing)  
+   After moving to other parts of the site and returning to the home page, the participant tried playing multiple hero videos again. The videos continued to play on top of each other, although the sound had already been muted. When she pressed **Stop Video** on the first video, it still did not stop; instead, the label switched back to **Play Video**. Pressing **Play Video** again restarted the video from the beginning. This made the video area feel unreliable and difficult to control.
+
+  3. **Rating search is too limited for user expectations:** [**Video clip**](https://drive.google.com/file/d/10Qq4q2925rRrOoum-aZ7999csA9SgK1w/view?usp=sharing)  
+   In the Rating section, the participant tried to search by **title** and **Elo rating**, but the search field did not support those inputs and only worked for player names. Since she is a new user, she expected a more flexible search method that would help her filter players by the attributes shown on the page. The current search behavior did not match her mental model.
+
+  4. **Schedule menu items look clickable, but are not:** [**Video clip**](https://drive.google.com/file/d/1tLs7tz1--MrZW8UqSs1k5pLZ6F7O-6DL/view?usp=sharing)  
+   In the Schedule menu, two large banners showing information about two tournaments gave the impression that they were interactive, but tapping them did nothing. In addition, when she scrolled to the bottom of the menu, part of the content remained cut off and did not stay fully visible. If she scrolled back up and held the position, the hidden text could be seen, but once she released, it disappeared again. This made the menu feel unstable and incomplete.
+
+- **Summary**  
+Overall, the participant struggled most with misleading interaction cues and inconsistent behavior. The biggest issue was the video controls, because the interface showed a state change without actually stopping playback. She also expected better filtering in Rating and more usable navigation in Schedule, especially as a new user trying to learn the site quickly.
 
 ---
 
