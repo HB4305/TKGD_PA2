@@ -430,32 +430,12 @@ Below are the detailed entries for each participant session, linking directly to
     * Video tab:
         - Does not like multiple videos running at the same time. Brought up that they might be using too much data if they are on 5G with multiple videos running, implying they do not think they could stop a video once it has started.
         - The fact that they don't like multiple video running is nothing new, but they implied that they couldn't stop a video once it has started running. This feeds into usability and showing the users what they could or could not do. With each video screen being so small, they think it is a stabic embed with no controls, so they think once a video starts, they can't stop it and therefore brought up that they might lose data losing them all.
-        
+    
 
 ### 6.6 Entry 6: Participant P06 (Reviewed by Phạm Chí Bảo Ninh)
-*   **Clip Link:** [Link to clip]
-*   **Person's Description:**
-    * **Fullnname**: Prefer to not disclose
-    * **Gender**: 
-    * **Device during interview**: 
-    * **Description**: 
-*   **Analysis & Key Observations:**
-
-
-### 6.8 Entry 8: Participant P08 (Reviewed by Phạm Chí Bảo Ninh)
-*   **Clip Link:** [Link to clip]
-*   **Person's Description:**
-    * **Fullnname**: Prefer to not disclose
-    * **Gender**: 
-    * **Device during interview**: 
-    * **Description**: 
-*   **Analysis & Key Observations:**
-
-
-### 6.9 Entry 9: Participant P09 (Reviewed by Phạm Chí Bảo Ninh)
 *   **Clip Link:** [Youtube video](https://youtu.be/e23vy663Bpw)
 *   **Person's Description:**
-    * **Fullnname**: Prefer to not disclose
+    * **Fullname**: Prefer to not disclose
     * **Gender**: Male
     * **Device during interview**: Oppo A9 2020 , Android
     * **Description**: Right handed, 2 hand use most of the time. Read a lot of news, like football. Sometimes read about chess. Plays chess, also knows about Freestyle Chess, but just heard of it, nothing specific.
