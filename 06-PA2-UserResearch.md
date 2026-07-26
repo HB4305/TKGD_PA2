@@ -296,9 +296,30 @@ Below are the detailed entries for each participant session, linking directly to
 
 ### 6.1 Entry 1: Participant P01 (Reviewed by Lê Mai Hoài Bảo)
 
-*   **Clip Link:** [Google Drive Clip](https://drive.google.com/file/d/1IvFpEbQsO3MB1V4CUh3SmSu7avnz98yB/view)
+*   **Clip Link:** [Google Drive Clip](https://drive.google.com/file/d/12gRdTJyrjOzHykbO9sQRamWukOgcOkC6/view?usp=sharing)
+*   **Participant Description:** 
+    * **Fullname:** Mai Thị Kim Duyên
+    * **Gender:** Nữ
+    * **Device used during interview:** Không rõ (Unknown)
+    * **Description:** Người dùng mới, không thường xuyên theo dõi tin tức cờ vua. Khi sử dụng điện thoại, thường dùng tay trái để giữ điện thoại và sử dụng ngón cái tay phải để lướt tương tác.
 *   **Analysis & Key Observations:**
-    *   [Write your analysis, notable quotes, and interesting observations here]
+    *   **Trải nghiệm tương tác với bàn cờ mô phỏng (Interactive Chessboard):** Khi nhấn vào xem một sự kiện/trận đấu cụ thể, người dùng nhìn thấy một bàn cờ động cùng các nút điều khiển như *Next Step* và *Back Step*. Họ bắt đầu liên tục bấm thử các nút này để di chuyển các quân cờ theo diễn biến ván đấu.
+        * *Phân tích hành vi & Cảm nhận:* Hành vi này chứng tỏ tính năng xem lại diễn biến ván đấu (game replay) trực quan ngay trên điện thoại cực kỳ thu hút sự chú ý và nâng cao trải nghiệm tương tác (delight/engagement) của người dùng, thay vì chỉ đọc tin tức chữ tĩnh đơn điệu.
+        * *Hàm ý thiết kế (Design Implication):* Đây là tính năng rất giá trị mang lại trải nghiệm tốt cho người dùng và nên được giữ lại. Khi cải tiến thiết kế trên thiết bị di động, cần lưu ý đặt các nút điều khiển này ở vị trí thuận tiện (phù hợp tầm với của ngón cái khi cầm một tay) và có khoảng cách/kích thước nút hợp lý để tránh việc bấm nhầm hoặc mỏi tay khi người dùng thao tác liên tục nhiều nước đi.
+    *   [Thêm các phân tích, trích dẫn hoặc quan sát thú vị khác của bạn tại đây]
+
+### 6.1.1 Entry 2: Participant P01 (Reviewed by Lê Mai Hoài Bảo)
+
+*   **Clip Link:** [Google Drive Clip](https://drive.google.com/file/d/1dJcL5sVL5BH1u0ngEHFFo77P6uN4Rx7l/view?usp=sharing)
+*   **Participant Description:** 
+    * **Fullname:** Mai Thị Kim Duyên
+    * **Gender:** Nữ
+    * **Device used during interview:** Không rõ (Unknown)
+    * **Description:** Người dùng mới, không thường xuyên theo dõi tin tức cờ vua. Khi sử dụng điện thoại, thường dùng tay trái để giữ điện thoại và sử dụng ngón cái tay phải để lướt tương tác.
+*   **Analysis & Key Observations:**
+    *   **Hộp thoại xác nhận (Confirmation Dialog) quá nhỏ:** Khi xuất hiện hộp thoại xác nhận (ví dụ để xác nhận hành động hoặc lựa chọn của người dùng), phần khung hiển thị của dialog quá nhỏ khiến phần nội dung văn bản bên trong bị cắt bớt và buộc người dùng phải cuộn (scroll) liên tục mới đọc hết nội dung trước khi đưa ra quyết định.
+        * *Phân tích hành vi & Cảm nhận:* Hộp thoại xác nhận trên di động cần ngắn gọn, rõ ràng để người dùng đọc lướt nhanh và đưa ra quyết định ngay. Việc bắt buộc phải cuộn trong một khung pop-up nhỏ (nested scroll) vừa làm gián đoạn luồng trải nghiệm (flow), vừa gây khó chịu cho người dùng. Người dùng nhận xét rằng nên mở rộng phần dialog này ra để hiển thị nội dung trực quan hơn.
+        * *Hàm ý thiết kế (Design Implication):* Khi thiết kế hộp thoại xác nhận trên mobile, cần giữ nội dung thông điệp ngắn gọn, súc tích và thiết kế khung dialog có chiều cao tự động co giãn (auto-height) theo độ dài văn bản để tránh việc phải cuộn. Các nút hành động (Đồng ý/Hủy) cần được bố trí rõ ràng, dễ chạm để người dùng thao tác nhanh chóng.    
 
 ### 6.2 Entry 2: Participant P02 (Reviewed by Trương Công Thiên Phú)
 
