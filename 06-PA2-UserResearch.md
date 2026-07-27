@@ -87,7 +87,7 @@ This combination helps the group collect both broad and deep data. The online su
 | Number of responses            | 72                                                                                                   |
 | Survey period                  | July 17, 2026 - July 20, 2026                                                                        |
 | Data collected                 | Multiple choice answers, checkbox answers, 1-5 rating scales, short text responses                   |
-| Data source                    | `Khảo sát trải nghiệm người dùng trên Freestyle Chess mobile web (Responses) - Form Responses 1.csv` |
+| Data source                    | [Form Responses CSV](./Khảo%20sát%20trải%20nghiệm%20người%20dùng%20trên%20Freestyle%20Chess%20mobile%20web%20(Responses)%20-%20Form%20Responses%201.csv) |
 
 ### 2.2 Direct Interview
 
@@ -96,11 +96,11 @@ This combination helps the group collect both broad and deep data. The online su
 | Method                 | Semi-structured interview with task-based observation               |
 | Product tested         | Freestyle Chess mobile website                                      |
 | Device context         | Participant's smartphone if possible                                |
-| Number of participants | [Fill in number]                                                    |
-| Interview duration     | [Fill in duration, e.g. 10-15 minutes per participant]              |
-| Interview period       | [Fill in date range]                                                |
+| Number of participants | 10 participants (across 13 interview sessions)                      |
+| Interview duration     | 10-15 minutes per session                                           |
+| Interview period       | July 18, 2026 - July 22, 2026                                       |
 | Data collected         | Observation notes, user comments, task difficulties, notable quotes |
-| Current status         | In progress                                                         |
+| Current status         | Completed                                                           |
 
 ### 2.3 Why These Methods Were Chosen
 
@@ -117,8 +117,8 @@ The direct interview was chosen because some usability problems cannot be fully 
 | Participant Group             | Description                                                             |                   Number of Participants |
 | ----------------------------- | ----------------------------------------------------------------------- | ---------------------------------------: |
 | Online survey respondents     | Users who tested the website independently and answered the Google Form |                                       72 |
-| Direct interview participants | Users who joined task-based interviews with the research team           |                            [In progress] |
-| Total participants            | Combined number of users involved in the research                       | At least 72, plus interview participants |
+| Direct interview participants | Users who joined task-based interviews with the research team           |                            10 (13 sessions) |
+| Total participants            | Combined number of users involved in the research                       |                                       82 |
 
 ### 3.2 Chess Interest Level
 
@@ -184,30 +184,28 @@ The survey included:
 
 ### 4.2 Direct Interview Procedure
 
-The direct interviews were conducted using a **semi-structured approach**. While the team followed the general task framework listed below, each interviewer adapted the specific prompts and follow-up questions dynamically based on the participant's background, device usage, and real-time reactions. This flexibility allowed the team to capture authentic user behaviors, unexpected pain points, and valuable qualitative feedback rather than strictly sticking to a rigid script.
+The direct interviews were conducted using a highly flexible, **semi-structured conversational approach**. Interviewers did not force participants through a rigid, sequence-based checklist of instructions. Instead, they introduced open-ended scenarios and allowed participants to explore the mobile website naturally, adapting specific prompts and tasks in real-time based on each participant's background, hand dominance, and interaction choices.
 
-| Task   | Prompt                                                           | Observation Focus                                 |
-| ------ | ---------------------------------------------------------------- | ------------------------------------------------- |
-| Task 1 | Open the website and explain what you think it is for.           | Homepage clarity, first impression, onboarding    |
-| Task 2 | Find the section where you can view player ratings.              | Menu discoverability, reachability, label clarity |
-| Task 3 | Find information about a chess player or browse the rating list. | Search behavior, scrolling effort, list length    |
-| Task 4 | Find news related to a Freestyle Chess event.                    | Filter usage, event grouping, content context     |
-| Task 5 | Choose a video or livestream to watch.                           | Clickability, video behavior, user expectation    |
-| Task 6 | Use one hand to open the menu, go to News, then return Home.     | Thumb reach, grip change, accidental taps         |
+The team guided the interviews around six **Exploratory Focus Areas** rather than static tasks:
 
-During each interview, the research team recorded:
+1. **Homepage Discovery & First Impression**: Participants opened the site and shared their immediate perceptions. Interviewers observed whether the visual hierarchy, text copy, or onboarding cues clearly explained the website's purpose without user confusion.
+2. **Natural Navigation & Menu Access**: Participants were asked to move to main sections like ratings, schedules, or videos. Interviewers observed whether they naturally located the menu button, scanned the text-only labels easily, or faced difficulty.
+3. **Player Information Retrieval**: Participants attempted to find details for a specific player or browse the rating leaderboard. Interviewers observed search behavior, scrolling effort, and how they handled long vertical lists on small screen interfaces.
+4. **Tournament News Filtering**: Participants attempted to find articles about past or current chess events. Interviewers observed how they navigated chronological feeds and dropdown lists without search keywords.
+5. **Media Player Interaction**: Participants selected a video or livestream to watch. Interviewers observed how they expected the player to load, and their reactions to multiple playbacks and controls.
+6. **Physical reachability & Grip Comfort**: Participants were asked to try one-handed scrolling and navigation. Interviewers focused on finger stretching (thumb zone constraints), grip shifts, or accidental taps during single-handed interaction.
 
-- Actions performed by the participant.
-- Places where the participant paused or looked confused.
-- Comments made by the participant.
-- Tasks that took longer than expected.
-- Any physical discomfort or grip changes during one-handed use.
+Throughout these session activities, the research team documented:
+- Critical moments where the participant paused, hesitated, or verbalized confusion.
+- Variations in grip styles (one-handed hold vs. two-handed use).
+- Spontaneous comments, suggestions, or frustration points.
+- Errors or bugs encountered during natural browsing.
 
 ---
 
 ## 5. Online Survey Findings
 
-The online survey collected 72 responses. The findings below summarize the main quantitative results and selected patterns from short-text responses.
+The online survey collected 72 responses (source data: [Form Responses CSV](./Kh%E1%BA%A3o%20s%C3%A1t%20tr%E1%BA%A3i%20nghi%E1%BB%87m%20ng%C6%B0%E1%BB%9Di%20d%C3%B9ng%20tr%C3%AAn%20Freestyle%20Chess%20mobile%20web%20%28Responses%29%20-%20Form%20Responses%201.csv)). The findings below summarize the main quantitative results and selected patterns from short-text responses.
 
 ### 5.1 User Expectations
 
@@ -221,7 +219,7 @@ The online survey collected 72 responses. The findings below summarize the main 
 | Videos or livestreams      |              22 |      30.6% | Media content matters to a smaller but relevant group |
 | Rules or tournament format |              16 |      22.2% | Newer users may still need explanation                |
 
-**Insight:** Users primarily want fast access to match results, latest news, ratings, and player information. In short 2-3 minute mobile sessions, many short-text answers also mentioned "kết quả", "tóm tắt", "thời gian", and "diễn biến", suggesting that users prefer concise, scannable event updates.
+**Insight:** Users primarily want fast access to match results, latest news, ratings, and player information. In short 2-3 minute mobile sessions, many short-text answers also mentioned "results", "summaries", "time", and "developments", suggesting that users prefer concise, scannable event updates.
 
 ### 5.2 Homepage Clarity
 
@@ -273,7 +271,7 @@ The online survey collected 72 responses. The findings below summarize the main 
 | Users expect the old video to stop when selecting a new one |      38 users (52.8%) | Most users expect familiar single-player behavior    |
 | Users were unsure whether some content was clickable        |      32 users (44.4%) | Clickability needs clearer visual signifiers         |
 
-**Insight:** The video section should match familiar media-player mental models. Open-ended responses about multiple videos playing at once often described the experience as "khó chịu", "không tập trung", or "không tốt".
+**Insight:** The video section should match familiar media-player mental models. Open-ended responses about multiple videos playing at once often described the experience as "annoying", "distracting", or "not good".
 
 ### 5.6 Return Intention
 
@@ -294,99 +292,98 @@ In addition to the survey, our group conducted task-based observation interviews
 
 Below are the detailed entries for each participant session, linking directly to the interview recordings and analyzing the key behaviors observed:
 
-### 6.1 Entry 1: Participant P01 (Reviewed by Lê Mai Hoài Bảo)
+### 6.1 Entry 1: Participant P01 (Reviewed by Le Mai Hoai Bao)
+
 
 - **Clip Link:** [Google Drive Clip](https://drive.google.com/file/d/12gRdTJyrjOzHykbO9sQRamWukOgcOkC6/view?usp=sharing)
 - **Participant Description:**
-  - **Fullname:** Mai Thị Kim Duyên
-  - **Gender:** Nữ
-  - **Device used during interview:** Không rõ (Unknown)
-  - **Description:** Người dùng mới, không thường xuyên theo dõi tin tức cờ vua. Khi sử dụng điện thoại, thường dùng tay trái để giữ điện thoại và sử dụng ngón cái tay phải để lướt tương tác.
+  - **Fullname:** M.T.K.D
+  - **Gender:** Female
+  - **Device used during interview:** Unknown
+  - **Description:** New user, does not regularly follow chess news. When using the phone, usually holds it in the left hand and uses the right thumb to scroll and interact.
 - **Analysis & Key Observations:**
-  - **Trải nghiệm tương tác với bàn cờ mô phỏng (Interactive Chessboard):** Khi nhấn vào xem một sự kiện/trận đấu cụ thể, người dùng nhìn thấy một bàn cờ động cùng các nút điều khiển như _Next Step_ và _Back Step_. Họ bắt đầu liên tục bấm thử các nút này để di chuyển các quân cờ theo diễn biến ván đấu.
-    - _Phân tích hành vi & Cảm nhận:_ Hành vi này chứng tỏ tính năng xem lại diễn biến ván đấu (game replay) trực quan ngay trên điện thoại cực kỳ thu hút sự chú ý và nâng cao trải nghiệm tương tác (delight/engagement) của người dùng, thay vì chỉ đọc tin tức chữ tĩnh đơn điệu.
-    - _Hàm ý thiết kế (Design Implication):_ Đây là tính năng rất giá trị mang lại trải nghiệm tốt cho người dùng và nên được giữ lại. Khi cải tiến thiết kế trên thiết bị di động, cần lưu ý đặt các nút điều khiển này ở vị trí thuận tiện (phù hợp tầm với của ngón cái khi cầm một tay) và có khoảng cách/kích thước nút hợp lý để tránh việc bấm nhầm hoặc mỏi tay khi người dùng thao tác liên tục nhiều nước đi.
-  - [Thêm các phân tích, trích dẫn hoặc quan sát thú vị khác của bạn tại đây]
+  - **Interactive Chessboard experience:** When tapping to view a specific event/match, the user saw an interactive chessboard with controls like _Next Step_ and _Back Step_. They repeatedly pressed these buttons to replay match steps.
+    - _Behavior Analysis & Perception:_ This behavior shows that the visual game replay feature on mobile is highly engaging, rather than just reading static text news.
+    - _Design Implication:_ This is a highly valuable feature and should be kept. In mobile redesign, these replay controls must be positioned within the natural thumb zone, with adequate size and spacing to prevent accidental clicks or thumb fatigue.
 
-### 6.1.1 Entry 2: Participant P01 (Reviewed by Lê Mai Hoài Bảo)
+### 6.2 Entry 2: Participant P01 (Reviewed by Le Mai Hoai Bao)
 
 - **Clip Link:** [Google Drive Clip](https://drive.google.com/file/d/1dJcL5sVL5BH1u0ngEHFFo77P6uN4Rx7l/view?usp=sharing)
 - **Participant Description:**
-  - **Fullname:** Mai Thị Kim Duyên
-  - **Gender:** Nữ
-  - **Device used during interview:** Không rõ (Unknown)
-  - **Description:** Người dùng mới, không thường xuyên theo dõi tin tức cờ vua. Khi sử dụng điện thoại, thường dùng tay trái để giữ điện thoại và sử dụng ngón cái tay phải để lướt tương tác.
+  - **Fullname:** M.T.K.D
+  - **Gender:** Female
+  - **Device used during interview:** Unknown
+  - **Description:** New user, does not regularly follow chess news. When using the phone, usually holds it in the left hand and uses the right thumb to scroll and interact.
 - **Analysis & Key Observations:**
-  - **Hộp thoại xác nhận (Confirmation Dialog) quá nhỏ:** Khi xuất hiện hộp thoại xác nhận (ví dụ để xác nhận hành động hoặc lựa chọn của người dùng), phần khung hiển thị của dialog quá nhỏ khiến phần nội dung văn bản bên trong bị cắt bớt và buộc người dùng phải cuộn (scroll) liên tục mới đọc hết nội dung trước khi đưa ra quyết định.
-    - _Phân tích hành vi & Cảm nhận:_ Hộp thoại xác nhận trên di động cần ngắn gọn, rõ ràng để người dùng đọc lướt nhanh và đưa ra quyết định ngay. Việc bắt buộc phải cuộn trong một khung pop-up nhỏ (nested scroll) vừa làm gián đoạn luồng trải nghiệm (flow), vừa gây khó chịu cho người dùng. Người dùng nhận xét rằng nên mở rộng phần dialog này ra để hiển thị nội dung trực quan hơn.
-    - _Hàm ý thiết kế (Design Implication):_ Khi thiết kế hộp thoại xác nhận trên mobile, cần giữ nội dung thông điệp ngắn gọn, súc tích và thiết kế khung dialog có chiều cao tự động co giãn (auto-height) theo độ dài văn bản để tránh việc phải cuộn. Các nút hành động (Đồng ý/Hủy) cần được bố trí rõ ràng, dễ chạm để người dùng thao tác nhanh chóng.
+  - **Confirmation Dialog is too small:** When a confirmation dialog appeared (e.g. to confirm actions or choices), the dialog's viewing frame was too small, cutting off the text content and forcing the user to scroll repeatedly to read the whole message before making a decision.
+    - _Behavior Analysis & Perception:_ Mobile confirmation dialogs need to be short and clear for quick scanning. Forcing the user to scroll inside a tiny pop-up (nested scroll) breaks the flow and causes frustration. The participant suggested expanding the dialog height to display content more naturally.
+    - _Design Implication:_ When designing mobile confirmation dialogs, keep messages concise and use auto-height dialog containers to avoid scrollbars. Action buttons (Confirm/Cancel) must be prominent and easy to tap for efficient task completion.
 
-### 6.1.2 Entry 3: Participant P01 (Reviewed by Lê Mai Hoài Bảo)
+### 6.3 Entry 3: Participant P01 (Reviewed by Le Mai Hoai Bao)
 
 - **Clip Link:** [Google Drive Clip](https://drive.google.com/file/d/1WujhKO_iSlUJqkQnKGucoJ8iOboW9y1f/view?usp=sharing)
 - **Participant Description:**
-  - **Fullname:** Mai Thị Kim Duyên
-  - **Gender:** Nữ
-  - **Device used during interview:** Không rõ (Unknown)
-  - **Description:** Người dùng mới, không thường xuyên theo dõi tin tức cờ vua. Khi sử dụng điện thoại, thường dùng tay trái để giữ điện thoại và sử dụng ngón cái tay phải để lướt tương tác.
+  - **Fullname:** M.T.K.D
+  - **Gender:** Female
+  - **Device used during interview:** Unknown
+  - **Description:** New user, does not regularly follow chess news. When using the phone, usually holds it in the left hand and uses the right thumb to scroll and interact.
 - **Analysis & Key Observations:**
-  - **Thanh điều hướng (Navigation Bar) khó thao tác một tay:** Người dùng phản hồi rằng thanh điều hướng nếu được đặt ở góc dưới bên phải sẽ giúp việc thao tác và điều hướng một tay trở nên dễ dàng và thuận tiện hơn nhiều.
-    - _Phân tích hành vi & Cảm nhận:_ Khi người dùng sử dụng điện thoại bằng một tay (cầm tay trái, ngón cái tay phải lướt tương tác), vùng chạm tự nhiên của ngón cái nằm ở nửa dưới màn hình. Do đó, việc đặt thanh điều hướng ở góc dưới bên phải giúp giảm thiểu việc rướn ngón tay hoặc thay đổi tư thế cầm nắm.
-    - _Hàm ý thiết kế (Design Implication):_ Đối với giao diện di động, thanh điều hướng chính hoặc các nút chức năng quan trọng cần được đặt ở nửa dưới màn hình (ví dụ: bottom navigation bar hoặc vị trí góc dưới bên phải) để tối ưu hóa trải nghiệm sử dụng một tay (one-handed design).
+  - **Navigation Bar is difficult for one-handed use:** The participant feedback indicated that placing the navigation bar in the bottom right corner would make one-handed navigation and operation much easier and more convenient.
+    - _Behavior Analysis & Perception:_ When holding the phone in one hand and interacting with the other, the natural thumb zone lies in the bottom half of the screen. Placing navigation items in the bottom right corner minimizes finger stretching and grip changes.
+    - _Design Implication:_ For mobile UI, primary navigation menus or critical action buttons should be placed in the lower half of the screen (e.g. bottom navigation bar or floating action button at the bottom-right corner) to support one-handed ergonomic reachability.
 
-### 6.1.3 Entry 4: Participant P01 (Reviewed by Lê Mai Hoài Bảo)
+### 6.4 Entry 4: Participant P01 (Reviewed by Le Mai Hoai Bao)
 
-*   **Clip Link:** [Google Drive Clip](https://drive.google.com/file/d/1FLfp7hlLy9cHM3C2On4Z7pcI0F6_kOKl/view?usp=sharing)
-*   **Participant Description:** 
-    * **Fullname:** Mai Thị Kim Duyên
-    * **Gender:** Nữ
-    * **Device used during interview:** Không rõ (Unknown)
-    * **Description:** Người dùng mới, không thường xuyên theo dõi tin tức cờ vua. Khi sử dụng điện thoại, thường dùng tay trái để giữ điện thoại và sử dụng ngón cái tay phải để lướt tương tác.
-*   **Analysis & Key Observations:**
-    *   **Thiếu phản hồi trạng thái tải trang (No Loading Indicator) khi chuyển mục:** Khi người dùng bấm vào các mục trên thanh điều hướng để chuyển trang, hệ thống không hiển thị bất kỳ ký hiệu hay thanh trạng thái loading nào. Điều này khiến người dùng cảm thấy bối rối và không biết liệu trang web có đang hoạt động hay không.
-        * *Phân tích hành vi & Cảm nhận:* Khi không nhận được phản hồi trực quan ngay lập tức từ hệ thống (System Status Visibility), người dùng dễ nảy sinh tâm lý nghi ngờ rằng trang web bị lỗi hoặc đơ, dẫn đến việc chạm liên tục nhiều lần.
-        * *Hàm ý thiết kế (Design Implication):* Cần bổ sung thanh chỉ báo trạng thái tải trang (như loading spinner, thanh progress bar chạy ở đầu trang, hoặc hiệu ứng chuyển cảnh mượt mà) để phản hồi trực quan tức thì ngay khi người dùng click chọn mục điều hướng.
+- **Clip Link:** [Google Drive Clip](https://drive.google.com/file/d/1FLfp7hlLy9cHM3C2On4Z7pcI0F6_kOKl/view?usp=sharing)
+- **Participant Description:**
+  - **Fullname:** M.T.K.D
+  - **Gender:** Female
+  - **Device used during interview:** Unknown
+  - **Description:** New user, does not regularly follow chess news. When using the phone, usually holds it in the left hand and uses the right thumb to scroll and interact.
+- **Analysis & Key Observations:**
+  - **No Loading Indicator during page transitions:** When the user tapped navigation items to switch pages, the system displayed no loading indicator or progress status. This made the user confused, unsure if the website was working or frozen.
+    - _Behavior Analysis & Perception:_ Without immediate visual feedback from the system (violating System Status Visibility), users assume the website is broken or unresponsive, leading to frustrating repeated taps (rage clicks).
+    - _Design Implication:_ Add page-load indicators (e.g., loading spinners, progress bars, or smooth transition skeletons) to provide instant visual confirmation that the page is loading when a navigation item is selected.
 
-### 6.2 Entry 2: Participant P02 (Reviewed by Trương Công Thiên Phú)
+### 6.5 Entry 5: Participant P02 (Reviewed by Truong Cong Thien Phu)
 
 *   **Clip Link:** [Google Drive Clip](https://drive.google.com/file/d/1pC_BxAkzJX7djP9RkLlzDAB_nueVr_aL/view?usp=sharing)
 *   **Participant Description:** 
     * **Fullname:** V.Q.T
-    * **Gender:** Nam
-    * **Device used during interview:** Điện thoại Samsung Galaxy
-    * **Description:** Người dùng mới, thỉnh thoảng có xem tin tức cờ vua và chưa từng nghe qua về thể loại free-style chess. Hay dùng điện thoại để xem và đọc tin tức mới.    
+    * **Gender:** Male
+    * **Device used during interview:** Samsung Galaxy phone
+    * **Description:** New user, occasionally watches chess news but has never heard of Freestyle Chess. Frequently uses smartphone to view and read new updates.    
 *   **Analysis & Key Observations:**
-    *   **Inconvenient when scrolling horizontally (Home Page) (at 00:00):** Khi **T** lướt tới mục "Video & Streams", mục này là một danh sách nằm ngang với dấu hiệu nhận biết là một phần của nội dung bị cắt làm **T** thấy đây là một danh sách ngang và kì vọng có thể lướt sang ngang để xem các video tiếp theo. Tuy nhiên, trang web không hề hỗ trợ lướt ngang bằng cách vuốt ngang màn hình ở mục này, thay vào đó, họ cung cấp 2 nút ***Prev*** và ***Next*** để cuộn ngang. Điều này không đảm bảo được tính nhất quán của nền tảng do có một số mục được phép vuốt ngang. Đồng thời, việc dùng 2 nút trên cũng gây bất tiện cho người dùng điện thoại khi trải nghiệm của họ đối với loại thiết bị này là phải cho họ vuốt được khi gặp danh sách và nó làm họ khựng lại để tìm hiểu nguyên nhân trong khi đang dùng mượt mà trước đó.
-    * **Menu Button is out of reach:** Khi bắt đầu dùng, **T** dùng tay phải để cầm trong khi tay trái thì đang nhàn rỗi và không có tương tác gì với điện thoại. Nút Menu (biểu tượng 3 dấu gạch ngang nằm dọc) được đặt ở phía trên cùng bên trái màn hình, với tư thế cầm lúc đầu là lòng bàn tay ôm lấy phần lưng điện thoại trong khi các ngón tay (trừ ngón cái) giữ mép bên trái còn ngón cái thì tương tác với màn hình, **T** không thể nào với tới được. Do đó, **T** đã thay đổi cách cầm của mình, bằng cách cho các ngón tay (trừ ngón cái) đặt ngay phần lưng điện thoại để ngón cái có thể rướn tới xa hơn. Lúc này, cố gắng lắm **T** mới vươn tới tầm của nút Menu. Sau một vài lần như thế **T** đã đổi thành cầm bằng tay trái nhưng cũng không với tới dễ dàng hơn, cuối cùng **T** vừa dùng tay trái để cầm điện thoại và thực hiện các tương tác vuốt màn hình trong khi tay phải sẽ không giữ điện thoại và thực hiện các tương tác chạm vào màn hình.
-    * **Unpredictable Buttons and Icons in Schedule (at 00:28):** Khi danh sách Menu được mở ra, **T** có mở trang ***Schedule*** với sự xuất hiện của icon hình mũi tên hướng xuống ngụ ý thông tin sẽ xuất hiện bên dưới hoặc theo chiều dọc. Tuy nhiên, thông tin lại hiện từ phía bên trái làm **T** có chút bối rối và có khựng lại 1 giây. Trang Schedule có 2 nút ngay đầu trang, một nút là **X** và nút còn lại là **<- Back to Main Menu**, **T** không rõ tại sao lại có tận 2 nút ngụ ý việc thoát khỏi trang, khi ấn nút X, **T** quay về trang trước đó còn ấn nút Back to Main Menu thì sẽ quay lại danh sách Menu. Trong vai trò của người dùng, họ khó lý giải được nguyên nhân tại sao lại có sự xuất hiện của 2 nút trên, điều đó làm họ phân vân việc lựa chọn nút nào trong 2 nút. Lý giải cho vấn đề này là do trang schedule không hẳn là một trang, nó là một Modal hoặc là một side bar khác đang nằm chồng lên danh sách Menu. Do đó, nút X thật ra là nút X của danh sách Menu, khi ấn vào đồng nghĩa là đang tắt menu và cái gọi là "quay về trang trước đó" thực chất chúng ta chưa hề chuyển trang mà chỉ là có nhiều lớp nằm chồng lên và che khuất trang đó.
-    * **Search bar (Rating Page) (at 1:51):** Khi vào danh sách xếp hạng, **T** lướt xuống rất nhanh để xem danh sách, nhưng sau đó lại lướt lên đầu trang lại và dùng thanh tìm kiếm để tìm thông tin cờ thủ. **T** bảo rằng đã có trải nghiệm với các nền tảng khác nên việc xuất hiện của thanh search ở những trang danh sách là điều hiển nhiên với bạn, đồng thời **T** cũng có nhìn thấy biểu tượng kính lúp lúc mới vào trang nên cũng nhận ra ngay lập tức đây là thanh tìm kiếm.
-    * **Poor Searching Method (News Page) (at 2:11):** Trang này hiện gần như là vô hạn nội dung khi không có phân trang hay cho **T** biết điểm đến cụ thể vì lướt xuống dưới mãi mà vẫn không thấy nội dung mình cần xem. **T** quyết định dùng menu thả xuống để lọc nội dung, tuy nhiên, đập vào mắt **T** là một danh sách dài che hết màn hình gồm các sự kiện cờ vua từ trước tới nay. **T** phải đọc từng nội dung một để tìm ra sự kiện rồi tiếp tục lướt tiếp để tìm đúng tin tức mình muốn xem. Việc thiếu thanh tìm kiếm làm cho **T** phải mất tới 2 lần thao tác, mỗi thao tác cần 5-10 giây và có thể tốn nhiều thời gian hơn nếu tin tức đó đã quá cũ.
-    * **Unable to watch video (Video & Stream page) (at 2:34):** Sau khi đã tìm được một video ưng ý, **T** nhấn vào để xem, tuy nhiên không có một phản hồi cho thấy video đang được khởi động hay đang chạy. Dù đã cố gắng nhấn nhiều lần không chỉ 1 mà nhiều video khác, không một video nào có thể chạy. Đồng thời, **T** cũng khó hiểu nguyên nhân là do đâu trong khi video ở trang chủ thì lại có thể xem được. Ngoài ra, loay hoay mãi một hồi, **T** vẫn không tìm ra được cách để xem video ấy nên đã quyết định bỏ cuộc và chuyển sang trang khác, chứng tỏ khả năng người dùng có thể khắc phục khi gặp lỗi là hoàn toàn không có trong trường hợp này.
+    *   **Inconvenient when scrolling horizontally (Home Page) (at 00:00):** When V.Q.T scrolled to the "Video & Streams" section, which is a horizontal list, part of the thumbnail was cut off. This visual cue made him expect a swipeable list, but the page does not support horizontal swiping. Instead, it relies on "Prev" and "Next" buttons. This breaks the interface's consistency since other sections support swiping. Using buttons is also unnatural for mobile users, causing them to hesitate and try to figure out why the swipe gesture didn't work.
+    *   **Menu Button is out of reach:** When starting, V.Q.T held the phone in the right hand while the left hand was idle. The Menu button (three horizontal lines icon) is placed at the top-left, making it impossible to reach with the right thumb in a natural grip. V.Q.T had to shift the fingers and stretch the thumb, barely touching the button. Later, V.Q.T switched the phone to the left hand but still found it hard to reach. Eventually, V.Q.T held the phone with the left hand and tapped with the right index finger, losing one-handed convenience.
+    *   **Unpredictable Buttons and Icons in Schedule (at 00:28):** When the Menu list opened, V.Q.T selected the "Schedule" tab, which had a down-arrow icon implying content would expand vertically. However, the information slid in from the left, causing him to pause in confusion for a second. The Schedule view had two close buttons at the top: an "X" and "<- Back to Main Menu". V.Q.T did not understand why there were two ways to exit the view, making it hard to decide. This issue occurs because the Schedule is not a separate page, but a modal/sidebar overlaying the Menu. Tapping "X" closes the entire Menu, while "Back to Main Menu" returns to the navigation list.
+    *   **Search bar (Rating Page) (at 1:51):** When opening the Rating page, V.Q.T scrolled down quickly, then back to the top to use the search bar. He noted that search bars are standard on long listing pages based on experience, and they immediately recognized the magnifying glass icon.
+    *   **Poor Searching Method (News Page) (at 2:11):** The News page has near-infinite content without pagination or progress indicators, making it hard for V.Q.T to find specific items. He used the event dropdown filter, which popped up a long list covering the screen with every past chess event. He had to read through it to select the event, then scroll again to find the article. The lack of a search bar forced the user to perform multiple steps, taking 5-10 seconds per step, which could be much longer for older news.
+    *   **Unable to watch video (Video & Stream page) (at 2:34):** After finding a video, V.Q.T clicked to play it, but there was no visual feedback showing that the video was loading or starting. He tried tapping multiple videos, but none played. He was confused since the homepage video worked. He eventually gave up and left the page, showing that users have no way to recover from this feedback failure.
 
-### 6.3 Entry 3: Participant P03 (Reviewed by Lâm Hữu Khánh)
+### 6.6 Entry 6: Participant P03 (Reviewed by Lam Huu Khanh)
 
 - **Clip Link:** [Google Drive Clip](https://drive.google.com/file/d/1uVYfZtpVcmyfY7I4bngX-1Q1xRGhTAh-/view?usp=sharing)
 - **Participant Description:**
-  - **Fullname:** Lê Trung Kiên
-  - **Gender:** Nam
-  - **Device used during interview:** Điện thoại Android (Unknown Brand)
-  - **Description:** Người dùng mới hoàn toàn, chưa từng theo dõi cờ vua cũng như chưa từng biết đến ứng dụng Freestyle Chess. Thói quen sử dụng điện thoại chủ yếu là để lướt mạng xã hội. Thường có xu hướng thao tác bằng một tay.
+  - **Fullname:** L.T.K
+  - **Gender:** Male
+  - **Device used during interview:** Android phone (Unknown Brand)
+  - **Description:** A complete newcomer who has never followed chess or heard of Freestyle Chess. Primarily uses the smartphone to browse social media, with a strong preference for one-handed operation.
 - **Analysis & Key Observations:**
-  - **Hero section quá tải và thiếu ấn tượng cho người mới:** Khi vừa truy cập trang web lần đầu tiên, Kiên cảm thấy bối rối trước phần Hero section. Kiên nhận xét phần này chứa quá nhiều thông tin hỗn độn (banner lớn, ảnh giải đấu, chữ viết, và các nút bấm) nhưng không hề giải thích Freestyle Chess là gì hay ứng dụng này giải quyết nhu cầu gì. Người chơi mới hoàn toàn không thể hiểu được nội dung và không có ấn tượng đặc biệt nào, tạo rào cản lớn ngay từ bước tiếp cận đầu tiên.
-    - _Phân tích hành vi & Cảm nhận:_ Hero section đóng vai trò quyết định trong việc định hướng và giữ chân người dùng mới. Việc thiếu đi một lời chào đón (onboarding message) ngắn gọn, rõ ràng kèm theo việc nhồi nhét quá nhiều thông tin sự kiện khiến người dùng mới dễ có cảm giác quá tải (cognitive overload) và mất phương hướng.
-    - _Hàm ý thiết kế (Design Implication):_ Cần thiết kế lại phần Hero section tinh gọn hơn, bổ sung dòng thông điệp onboarding giới thiệu ngắn về bản chất và mục tiêu của Freestyle Chess dành riêng cho người mới, đồng thời làm nổi bật một nút CTA rõ ràng để dẫn dắt họ đi tiếp.
-  - **Khó khăn khi cầm một tay và nhu cầu điều hướng bên phải:** Trong quá trình thực hiện tác vụ di chuyển giữa các trang, Kiên gặp nhiều khó khăn khi cố gắng sử dụng một tay. Để bấm vào nút menu hoặc chuyển trang, ngón cái tay phải của Kiên không thể chạm tới góc trên cùng bên trái. Kiên mong muốn thanh điều hướng hoặc các nút chức năng chính nên được đặt lệch về phía bên phải để dễ dàng chạm và thao tác một tay hơn là phải dùng cả hai tay để bấm.
-    - _Phân tích hành vi & Cảm nhận:_ Do thói quen lướt mạng xã hội bằng một tay, người dùng có xu hướng đặt vùng ngón cái tự nhiên (natural thumb zone) ở nửa dưới và lệch về phía tay thuận (bên phải). Việc đặt các nút điều hướng quan trọng ở phía trên hoặc bên trái ép buộc người dùng phải đổi cách cầm (grip change) hoặc dùng hai tay, làm giảm tốc độ thao tác và tăng nguy cơ rơi thiết bị.
-    - _Hàm ý thiết kế (Design Implication):_ Cần dịch chuyển thanh điều hướng di động hoặc thiết kế lại menu điều hướng dạng bottom bar hoặc menu nổi (floating button) ở góc dưới bên phải màn hình để phù hợp hơn với tầm với ngón tay của người dùng thuận tay phải.
-  - **Trình phát video stream không phản hồi tức thời:** Khi Kiên bấm vào xem video/livestream, trang web hoàn toàn không có phản hồi thị giác tức thì (visual feedback) để báo hiệu hệ thống đang xử lý (không có loading spinner, không đổi trạng thái nút bấm). Kiên phải bấm liên tục và chờ đợi một khoảng thời gian rất lâu video mới bắt đầu phát.
-    - _Phân tích hành vi & Cảm nhận:_ Khi thiếu phản hồi trạng thái từ hệ thống (System Status Visibility), người dùng sẽ nảy sinh tâm lý nghi ngờ rằng trang web bị đơ hoặc nút bấm bị hỏng, dẫn đến hành động bấm liên tục nhiều lần (rage click). Điều này làm tăng độ trễ tải trang và làm giảm lòng tin của người dùng.
-    - _Hàm ý thiết kế (Design Implication):_ Bắt buộc phải tích hợp hiệu ứng loading (như skeleton loader hoặc vòng xoay tải dữ liệu) ngay khi người dùng chạm vào nút phát video. Đồng thời, tối ưu hóa các API nhúng và tải dữ liệu video từ Youtube để phản hồi nhanh chóng hơn dưới 1 giây.
+  - **Overloaded Hero section lacks onboarding for new users:** Upon accessing the homepage, L.T.K was overwhelmed by the Hero section, which contains too much cluttered information (large banners, tournament images, text, and buttons) without explaining what Freestyle Chess is or what the website is for. A first-time user cannot understand the content or gain a clear first impression, creating a significant entry barrier.
+    - _Behavior Analysis & Perception:_ The Hero section is critical in orienting and retaining new users. The absence of a concise onboarding message combined with too much event clutter causes cognitive overload and leaves the user disoriented.
+    - _Design Implication:_ Redesign the Hero section to be minimalist, introducing a brief onboarding message about Freestyle Chess for newcomers, with a prominent call-to-action (CTA) button to guide their next steps.
+  - **Difficulty in one-handed use and preference for right-side navigation:** During navigation tasks, L.T.K struggled with one-handed use. When tapping the menu or switching pages, the right thumb could not reach the top-left corner. L.T.K suggested that the navigation menu or primary controls should be positioned on the right side for easy one-handed reach rather than requiring two hands.
+    - _Behavior Analysis & Perception:_ Due to one-handed social media habits, mobile users naturally place their thumb sweep zone in the lower-right area. Placing navigation controls at the top left forces grip changes or two-handed use, slowing down interaction and increasing drop risk.
+    - _Design Implication:_ Relocate the mobile navigation menu to a bottom bar or a floating navigation drawer on the bottom-right corner to accommodate right-handed users.
+  - **Video player lacks instant feedback:** When L.T.K tapped to watch a video, the website gave no immediate visual feedback (no loading spinner, no state change on the button) to indicate it was loading. L.T.K had to tap repeatedly and wait a long time before the video played.
+    - _Behavior Analysis & Perception:_ Lacking system status feedback (System Status Visibility) leads users to think the site is frozen or the button is broken, causing frustrated repeated clicks (rage clicks). This increases loading delay and degrades user trust.
+    - _Design Implication:_ Integrate loading feedback (such as a skeleton loader or a loading spinner) immediately upon tapping. Optimize API loading speed to resolve video streams in under 1 second.
 
-
-### 6.4 Entry 4: Participant P04 (Reviewed by Phạm Chí Bảo Ninh)
+### 6.7 Entry 7: Participant P04 (Reviewed by Pham Chi Bao Ninh)
 *   **Clip Link:** [Youtube video](https://youtu.be/B7fHfqv-Xsk)
 *   **Person's Description:**
-    * **Fullnname**: Prefer to not disclose
+    * **Fullname**: Prefer to not disclose
     * **Gender**: Male
     * **Device during interview**: Iphone (Unknown model)
     * **Description**: Right handed, one-handed use. Doesn't regularly watch news of any sports. Doesn't play chess. Usually use phone when free, resting.    
@@ -407,11 +404,10 @@ Below are the detailed entries for each participant session, linking directly to
         - Prefer the video to not run simutaniously.
         - Multiple videos running at the same time make it hard to focus on one video. They prefer only the latest one running and the previous one to stop.
 
-
-### 6.5 Entry 5: Participant P05 (Reviewed by Phạm Chí Bảo Ninh)
+### 6.8 Entry 8: Participant P05 (Reviewed by Pham Chi Bao Ninh)
 *   **Clip Link:** [Youtube video](https://youtu.be/zzidjcj8hWg)
 *   **Person's Description:**
-    * **Fullnname**: Prefer to not disclose
+    * **Fullname**: Prefer to not disclose
     * **Gender**: Male
     * **Device during interview**: Iphone (Unknown model)
     * **Description**: Right handed, usually one handed, but context dependent.Watch news of sports they like but not chess related. Doesn't play chess but still know notable things about chess. Does not know about Freestyle Chess. Uses phone when free or don't have anything to do.
@@ -430,9 +426,8 @@ Below are the detailed entries for each participant session, linking directly to
     * Video tab (6:06):
         - Does not like multiple videos running at the same time. Brought up that they might be using too much data if they are on 5G with multiple videos running, implying they do not think they could stop a video once it has started.
         - The fact that they don't like multiple video running is nothing new, but they implied that they couldn't stop a video once it has started running. This feeds into usability and showing the users what they could or could not do. With each video screen being so small, they think it is a stabic embed with no controls, so they think once a video starts, they can't stop it and therefore brought up that they might lose data losing them all.
-    
 
-### 6.6 Entry 6: Participant P06 (Reviewed by Phạm Chí Bảo Ninh)
+### 6.9 Entry 9: Participant P06 (Reviewed by Pham Chi Bao Ninh)
 *   **Clip Link:** [Youtube video](https://youtu.be/e23vy663Bpw)
 *   **Person's Description:**
     * **Fullname**: Prefer to not disclose
@@ -442,7 +437,7 @@ Below are the detailed entries for each participant session, linking directly to
 *   **Analysis & Key Observations:**
     * Main page (1:11):
         - Thinks the "Freestyle" is just a name, otherwise feels like it's just a normal chess website that serve chess news.
-        - This is the only person in the group that plays chess actively, so they have heard of it before, but they only focus on the main stream chess stance, rather than any subcategories. This is normal, even so the name isn't one, Freestyle Chess is also known as Chess960. So some people might know the format but not know this site is referring to that. 
+        - This is the only person in the group that plays chess actively, so they have heard of it before, but they only focus on the main stream chess stance, rather than any subcategories. This is normal, even so the name isn't one, Freestyle Chess is also known as Chess960. Some people might know the format but not know this site is referring to that. 
     * Burger menu (2:06):
         - Does not feel any discomfort when needing to press that button. Claims they are used to it due to using many sites with similar button placements, as well as being comfortable with their own phone.
         - This is the only user that reported absolutely no discomfort to the button placement, but not because the button was placed well, but rather a combination of their habits and phone size that they managed to reach it without issues, for someone with a bigger phone they might have problems with it.
@@ -462,7 +457,7 @@ Below are the detailed entries for each participant session, linking directly to
         - Does not mind multiple video running, this is the only person in my group to actually prefer multiple video to run simultaneously.
         - Reasoning given is that they could scroll down and watch a few seconds of the new video to see if it is interesting enough to switch, and if they do decide to, they could go back and switch it themselves. This is rather a special case from many, since most would prefer only one video to run at a time, so they arent overwhelmed and confused on what they are looking or hearing. This could only be explained by habit, is someone regularly watches multiple things together, they might even prefer the page have this feature, otherwise this is an edge case not worth discussing until more data is gathered.
 
-### 6.7 Entry 7: Participant P07 (Reviewed by Phạm Chí Bảo Ninh)
+### 6.10 Entry 10: Participant P07 (Reviewed by Pham Chi Bao Ninh)
 **Clip Link:** [Youtube video](https://www.youtube.com/watch?v=Ltmg4To_2Cs)
 *   **Person's Description:**
     * **Fullname**: Prefer to not disclose
@@ -486,7 +481,7 @@ Below are the detailed entries for each participant session, linking directly to
         - Want the previous the video to stop itself.
         - Nothing of note
 
-### 6.8 Entry 8: Participant P08 (Reviewed by Phạm Chí Bảo Ninh)
+### 6.11 Entry 11: Participant P08 (Reviewed by Pham Chi Bao Ninh)
 **Clip Link:** [Youtube video](https://www.youtube.com/watch?v=48L-XPRKuhc)
 *   **Person's Description:**
     * **Fullname**: Prefer to not disclose
@@ -510,8 +505,7 @@ Below are the detailed entries for each participant session, linking directly to
         - Prefers the previous video to stop itself.
         - Nothing of note
 
-
-### 6.9 Entry 9: Participant P09 (Reviewed by Phùng Ngọc Tuấn)
+### 6.12 Entry 12: Participant P09 (Reviewed by Phung Ngoc Tuan)
 
 - **Person's Description:**
   - **Gender:** Male
@@ -534,7 +528,7 @@ Below are the detailed entries for each participant session, linking directly to
 - **Summary**  
 Overall, the participant had trouble with three main areas: search precision in Ranking, unclear/missing structure in Schedule, and weak interaction behavior in the video sections. The most serious issue was the video experience: not only did tapping fail to produce any visible response — leading the user to wrongly blame the network — but switching videos in the carousel also caused overlapping audio, which was noticed immediately and made the experience feel broken and poorly controlled.
 
-### 6.10 Entry 10: Participant P10 (Reviewed by Phùng Ngọc Tuấn)
+### 6.13 Entry 13: Participant P10 (Reviewed by Phung Ngoc Tuan)
 
 - **Person's Description:**
   - **Gender:** Female
@@ -562,7 +556,7 @@ Overall, the participant — a complete newcomer to chess — ran into problems 
 
 ## 7. Key User Insights
 
-Based on the current online survey results, our group identified the following key insights. These insights will be refined after the direct interview sessions are completed.
+Based on the online survey and direct interview results, our group identified the following key insights. These insights have been refined and validated across both research methods.
 
 ### Insight 1: Users Prefer Fast Access to Results and Key Event Updates
 
@@ -591,7 +585,7 @@ Based on the current online survey results, our group identified the following k
 ### Insight 5: Video Interaction Should Follow Familiar Single-Player Behavior
 
 **Finding:** Users expect video selection to behave like common media platforms, where selecting a new video stops or replaces the old one.  
-**Evidence:** 38 users (52.8%) expected the old video to stop and the new video to play. Open-ended responses about multiple videos playing at once included negative reactions such as "khó chịu", "không tập trung", and "không tốt".  
+**Evidence:** 38 users (52.8%) expected the old video to stop and the new video to play. Open-ended responses about multiple videos playing at once included negative reactions such as "annoying", "distracting", and "not good".  
 **Meaning:** The video/livestream section should clearly indicate the active video and prevent multiple videos from competing for the user's attention.
 
 ---
@@ -617,40 +611,40 @@ The following personas are fictional user profiles created based on the research
 
 | Attribute      | Description                                                                      |
 | -------------- | -------------------------------------------------------------------------------- |
-| Name           | [Persona name]                                                                   |
-| Age            | [ ]                                                                              |
-| Background     | [Often follows chess tournaments, players, and ratings.]                         |
-| Goals          | [Quickly check latest chess news, ratings, schedules, and event results.]        |
-| Mobile context | [Uses phone during breaks or while watching chess content.]                      |
-| Needs          | [Fast navigation, search, filters, updated information.]                         |
-| Pain points    | [Too much scrolling, inefficient search, unclear grouping of event information.] |
-| Quote          | "[Insert representative quote]"                                                  |
+| Name           | N.H.A                                                                            |
+| Age            | 24                                                                               |
+| Background     | Regularly follows chess tournaments, players, and FIDE ratings. Updates daily.  |
+| Goals          | Quickly check latest match results, player leaderboards, next round schedules, and event news. |
+| Mobile context | Uses the phone during short breaks, while commuting, or during live streams of games. |
+| Needs          | Fast navigation, efficient search function, advanced filters (by rating, title), and constantly updated info. |
+| Pain points    | Too much scrolling on long lists, sub-optimal search (requiring exact spelling), and unclear schedule layouts. |
+| Quote          | "I want to open the site and see the latest results or ratings immediately, not scroll endlessly or type name characters perfectly." |
 
 ### Persona 2: Event-Driven Viewer
 
 | Attribute      | Description                                                                     |
 | -------------- | ------------------------------------------------------------------------------- |
-| Name           | [Persona name]                                                                  |
-| Age            | [ ]                                                                             |
-| Background     | [Only follows chess during major events or when friends share links.]           |
-| Goals          | [Find event news, schedule, results, and important players quickly.]            |
-| Mobile context | [Uses phone for short sessions, often 2-3 minutes.]                             |
-| Needs          | [Clear homepage, event-based navigation, simple explanations.]                  |
-| Pain points    | [Does not know where to start, may not understand Freestyle Chess immediately.] |
-| Quote          | "[Insert representative quote]"                                                 |
+| Name           | T.M.P                                                                           |
+| Age            | 29                                                                              |
+| Background     | Only follows chess during major events or when friends share match links.        |
+| Goals          | Find event highlights, general schedule overview, and key player updates.       |
+| Mobile context | Uses phone for short browsing sessions (2-3 mins) during free time or before sleeping. |
+| Needs          | Simple and intuitive homepage, event-based categories, easy explanations, and a stable video player. |
+| Pain points    | Disoriented on where to start, hard to search related news due to lack of keyword search, and annoyed by overlapping video audios. |
+| Quote          | "I just want to browse for 2-3 minutes to check the schedules and highlights; the interface should be clear for casual users." |
 
 ### Persona 3: First-Time Mobile User
 
 | Attribute      | Description                                                                                                                                             |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Name           | Lê Trung Kiên                                                                                                                                           |
+| Name           | L.T.K                                                                                                                                                   |
 | Age            | 21                                                                                                                                                      |
-| Background     | Người dùng mới hoàn toàn, thói quen chủ yếu là lướt mạng xã hội trên di động, chưa từng theo dõi cờ vua hoặc biết đến ứng dụng.                         |
-| Goals          | Hiểu nhanh mục đích của trang web, xem được các trận đấu video stream mà không gặp lỗi phản hồi, điều hướng dễ dàng bằng 1 tay.                         |
-| Mobile context | Sử dụng điện thoại Android bằng một tay khi đang di chuyển hoặc thư giãn.                                                                               |
-| Needs          | Giao diện trang chủ đơn giản (có giới thiệu onboarding), phím điều hướng đặt ở vị trí thuận tiện bên phải/phía dưới, trình phát video phản hồi tức thì. |
-| Pain points    | Hero section quá nhiều thông tin gây ngợp; menu hamburger quá cao khó với bằng ngón cái; bấm xem video stream bị đơ và không có phản hồi thị giác.      |
-| Quote          | "Trang chủ đập vào mắt nhiều chữ quá chẳng hiểu gì, menu thì xa tầm tay khó bấm bằng ngón cái, còn video thì đứng im một lúc lâu mới chịu chạy."        |
+| Background     | A complete newcomer whose mobile habit is mostly social media browsing. Has never followed chess or heard of the website.                               |
+| Goals          | Quickly grasp the website's purpose, play livestream videos without feedback delay, and navigate easily with one hand.                                  |
+| Mobile context | Uses an Android phone with one hand while on the move or relaxing.                                                                                      |
+| Needs          | A simple home screen with onboarding guidance, navigation buttons placed in a convenient bottom/right position, and instant video player feedback.      |
+| Pain points    | An overloaded Hero section causing cognitive fatigue; a hamburger menu placed too high to reach with one thumb; unresponsive video player when played.  |
+| Quote          | "The homepage has too much text and is confusing; the menu is too far to tap with my thumb, and the video stays frozen for a long time before playing." |
 
 ---
 
@@ -660,30 +654,30 @@ The following personas are fictional user profiles created based on the research
 
 | Step | User Action                                 | System/Interface Response            | Problem Observed                                                                                                                        | Opportunity                                                                                              |
 | ---- | ------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| 1    | User opens Freestyle Chess website on phone | Home page appears                    | Hero section nhồi nhét quá nhiều banner/tin tức và thiếu thông tin giải thích thể thức cho người mới (P03)                              | Thiết kế lại Hero section tối giản, thêm banner Onboarding/Giới thiệu ngắn gọn kèm CTA rõ ràng           |
-| 2    | User looks for navigation menu              | Menu icon is placed on mobile layout | Nút Hamburger đặt ở góc trên bên trái quá cao, nằm ngoài tầm với ngón cái khi cầm điện thoại một tay (P01, P02, P03)                    | Di chuyển nút menu xuống dưới cùng (Bottom Navigation) hoặc lệch sang góc dưới bên phải màn hình         |
-| 3    | User opens menu and selects Rating          | Rating page appears                  | Menu hiển thị dạng side-panel trượt chồng lên màn hình chính, phản hồi trễ, nhãn danh mục dài                                           | Thiết kế menu gọn nhẹ dạng tab hoặc drawer dễ lướt, phản hồi lập tức dưới 0.3s                           |
-| 4    | User scans or searches for a player         | Rating list/search field appears     | Bảng xếp hạng quá dài (Infinite Scroll), không có ô tìm kiếm cố định (Sticky Search), người dùng cuộn mỏi tay dễ mất định vị (P01, P02) | Tích hợp Sticky Search Bar cố định trên đầu trang và chia trang (Pagination) để rút ngắn chiều dài trang |
-| 5    | User reads player rating information        | Player name, title, rating are shown | Chỉ hiển thị chữ thô đơn điệu, thiếu các yếu tố đồ họa trực quan (như cờ quốc tịch hay ảnh kỳ thủ)                                      | Bổ sung cờ quốc gia dưới dạng icon trực quan và thiết kế dạng thẻ (player card) dễ đọc lướt              |
+| 1    | User opens Freestyle Chess website on phone | Home page appears                    | Hero section is cluttered with too many banners/news and lacks onboarding information explaining the format to newcomers (P03)          | Redesign a minimalist Hero section, adding a brief onboarding/intro banner with a clear CTA              |
+| 2    | User looks for navigation menu              | Menu icon is placed on mobile layout | Hamburger button is placed at the top-left, out of reach for one-handed thumb interaction (P01, P02, P03)                                | Move the menu button to the bottom (Bottom Navigation) or shift it towards the bottom-right corner       |
+| 3    | User opens menu and selects Rating          | Rating page appears                  | Menu slides in as a side panel overlaying the screen, showing sluggish response and long category labels                                | Design a lightweight menu using tabs or a smooth drawer, responding instantly in under 0.3s              |
+| 4    | User scans or searches for a player         | Rating list/search field appears     | Leaderboard list is too long (Infinite Scroll) with no sticky search bar, causing repetitive scrolling and losing position context (P01, P02) | Integrate a sticky search bar at the top of the page and use pagination to reduce vertical length        |
+| 5    | User reads player rating information        | Player name, title, rating are shown | Shows only plain monotone text, lacking visual elements such as nationality flags or player photos                                      | Add country flags as visual icons and design player cards to improve scanability                         |
 
 ### 10.2 Sequence Model: Finding Event News
 
 | Trigger                                 | User Intention                    | Action                                | Breakdown / Difficulty                                                                                                                | Design Implication                                                                                                          |
 | --------------------------------------- | --------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| User wants to follow a chess event      | Find relevant news quickly        | Opens News page                       | Phải mở menu hamburger khuất ở góc trên bên trái, thao tác một tay rất khó tiếp cận (P01, P03, P05)                                   | Đưa liên kết "News" ra thanh Bottom Navigation cố định để người dùng chạm trực tiếp bằng ngón cái                           |
-| News list appears                       | Identify relevant event           | Scrolls or looks for filter           | Danh sách tin tức hiển thị tuần tự theo thời gian kéo dài vô tận, thiếu bộ lọc sự kiện rõ ràng, người dùng phải đọc lướt mò mẫm (P04) | Thêm các thẻ lọc nhanh theo sự kiện lớn (như "Geller Cup", "Freestyle Chess 2026") ngay đầu trang News                      |
-| User does not remember exact event name | Search by approximate information | Uses keyword/date/player if available | Không có ô tìm kiếm tin tức bằng từ khóa, gây khó khăn cho người dùng khi muốn tìm lại tin cũ (P04)                                   | Cung cấp ô Search có tính năng gợi ý (Auto-suggest) theo tên kỳ thủ hoặc tên sự kiện                                        |
-| User finds article                      | Read summary or full content      | Taps article card                     | Thẻ tin tức thiếu tương tác (không đổi màu khi hover/tap), ranh giới vùng bấm (clickable area) chưa rõ ràng                           | Thiết kế card tin tức có hiệu ứng phản hồi xúc giác nhẹ (haptic feedback) hoặc đổi màu nền khi tap để khẳng định trạng thái |
+| User wants to follow a chess event      | Find relevant news quickly        | Opens News page                       | Must open the hamburger menu hidden at the top left, making one-handed access very difficult (P01, P03, P05)                          | Add the 'News' link to a persistent Bottom Navigation bar for direct thumb access                                           |
+| News list appears                       | Identify relevant event           | Scrolls or looks for filter           | News list displays chronologically in an infinite scroll, lacking clear event filters, forcing users to browse aimlessly (P04)        | Add quick filter chips for major events (e.g., 'Geller Cup', 'Freestyle Chess 2026') at the top of the News page            |
+| User does not remember exact event name | Search by approximate information | Uses keyword/date/player if available | No search bar to search news by keywords, making it difficult to find older news articles (P04)                                       | Provide a keyword search bar with auto-suggestions for player or event names                                                |
+| User finds article                      | Read summary or full content      | Taps article card                     | News cards lack interaction feedback (no color change on hover/tap), and click boundaries are ambiguous                               | Design news cards to provide subtle visual feedback (e.g. background color change on tap) to confirm click state            |
 
 ### 10.3 Artifact Model: Current Mobile Website Elements
 
 | Artifact               | Purpose                           | Current Issue                                                                                                 | Evidence                                                                                                 | Possible Improvement                                                                                         |
 | ---------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| Mobile navigation menu | Move between main sections        | Hamburger menu đặt quá cao góc trái, khó với bằng ngón cái khi cầm một tay                                    | P01, P03 phải rướn tay hết cỡ suýt rơi máy; P02 phải đổi tư thế cầm điện thoại liên tục                  | Chuyển thành Bottom Navigation Bar hoặc đặt nút điều hướng lệch sang góc dưới bên phải màn hình              |
-| Homepage content       | Introduce website and key content | Hero section nhồi nhét quá nhiều thông tin, thiếu onboarding giải thích Freestyle Chess cho người mới         | P03 (Kiên) thấy ngợp, không ấn tượng và không hiểu mục đích trang web do chưa từng biết cờ vua           | Thiết kế phần Hero tối giản, thêm banner giới thiệu ngắn gọn kèm nút CTA (Ví dụ: "Khám phá Freestyle Chess") |
-| Rating list            | Show player rankings              | Bảng xếp hạng quá dài (Infinite Scroll) không có thanh tìm kiếm cố định và thiếu phân trang                   | P01 cuộn liên tục mất hơn 20s; P02 lướt lên lướt xuống để định vị kỳ thủ                                 | Tích hợp Sticky Search Bar cố định ở đầu trang xếp hạng và áp dụng phân trang (Pagination)                   |
-| Search/filter controls | Help users find information       | Không có ô tìm kiếm tin tức, bộ lọc sự kiện dài dòng và bị ẩn                                                 | P04 phải dùng Ctrl+F của trình duyệt để tìm bài viết; P02 bị bối rối trước list sự kiện dài che màn hình | Cung cấp thanh Search bằng từ khóa ở các trang News/Videos và hiển thị bộ lọc dạng tab nút chạm              |
-| Video/livestream cards | Let users select media content    | Bấm phát không phản hồi thị giác tức thì gây cảm giác đơ; hỗ trợ phát song song nhiều video gây loạn âm thanh | P03 bấm liên tục vì đợi quá lâu mà không thấy phản hồi; P02 bị âm thanh 2 video đè lên nhau gây nhức đầu | Thêm skeleton loader/spinner khi bấm phát và áp dụng Single-player model (phát video mới tự dừng video cũ)   |
+| Mobile navigation menu | Move between main sections        | Hamburger menu is placed too high on the left, hard to reach with one thumb during one-handed use             | P01, P03 had to stretch their thumbs completely and almost dropped the phone; P02 changed grips repeatedly | Change to a Bottom Navigation Bar or shift the navigation button to the bottom-right corner                  |
+| Homepage content       | Introduce website and key content | Hero section is overloaded with too much info, lacking onboarding to explain Freestyle Chess to newcomers     | P03 (L.T.K) felt overwhelmed, unimpressed, and did not understand the website's purpose as a newcomer    | Simplify the Hero section, adding a brief introductory banner with a CTA (e.g., 'Explore Freestyle Chess')   |
+| Rating list            | Show player rankings              | Rating list is too long (Infinite Scroll) with no sticky search bar and lacking pagination                    | P01 scrolled continuously for over 20s; P02 scrolled up and down to find a player's position             | Integrate a sticky search bar at the top of the rating list and apply pagination                            |
+| Search/filter controls | Help users find information       | No search bar for news, and the event filter is long and hidden                                               | P04 had to use browser's Ctrl+F to find articles; P02 was confused by the long event list overlaying the screen | Provide a keyword search bar on News/Videos pages and display event filters as selectable tabs               |
+| Video/livestream cards | Let users select media content    | Tapping play lacks immediate visual feedback, feeling frozen; allowing simultaneous playback causes overlapping audio | P03 clicked repeatedly due to lack of immediate feedback; P02 experienced overlapping audio from two videos, causing frustration | Add a skeleton loader/spinner when playing, and enforce a single-player media model (new play stops previous video) |
 
 ---
 
@@ -699,7 +693,7 @@ The research suggests that the main mobile UX issues are:
 4. Long lists and uncertain search tasks require filters, sticky search, pagination, and search suggestions.
 5. Video/livestream interactions should follow familiar single-player media behavior.
 
-These findings will be updated after direct interviews are completed. They will then be used in Requirement 2 to brainstorm user problems, organize them into an affinity diagram, and generate potential design ideas.
+These findings have been consolidated and validated based on both the online survey and direct interview sessions. They will be used in Requirement 2 to brainstorm user problems, organize them into an affinity diagram, and generate potential design ideas.
 
 ---
 
@@ -708,27 +702,10 @@ These findings will be updated after direct interviews are completed. They will 
 This research has the following limitations:
 
 1. The online survey depends on participants' self-reported answers, so it may not capture every real interaction difficulty.
-2. The direct interview sample size is limited because interviews are still in progress.
+2. The direct interview sample size is limited to 10 participants (13 sessions) due to time constraints.
 3. Some participants may not be familiar with chess websites, which can affect how they interpret the website content.
 4. Participants used different phone models and screen sizes, which may affect navigation and reachability feedback.
 
 Despite these limitations, combining survey data with direct interview observations helps the group identify common user needs and mobile usability problems with enough evidence for the next stages of PA2.
 
----
 
-## 13. Appendix
-
-### 13.1 Survey Questions
-
-The full Google Form content is documented in `06-PA2-GoogleForm-VI.md`.
-
-### 13.2 Evidence Checklist
-
-| Evidence Type                               | Included? | Location / Notes                                       |
-| ------------------------------------------- | --------- | ------------------------------------------------------ |
-| Google Form response charts                 | Yes       | Lưu trong file báo cáo khảo sát và docs/               |
-| Survey response summary                     | Yes       | File CSV dữ liệu thô tại thư mục gốc                   |
-| Interview notes                             | Yes       | Ghi nhận chi tiết tại Mục 6 của tài liệu này           |
-| User quotes                                 | Yes       | Được tổng hợp tại Mục 6 và phần Persona                |
-| Screenshots of website issues               | Yes       | Hình ảnh minh họa lưu trong thư mục docs/              |
-| Photos or screen recordings from interviews | Yes       | Liên kết Google Drive đính kèm tại mỗi Entry phỏng vấn |
