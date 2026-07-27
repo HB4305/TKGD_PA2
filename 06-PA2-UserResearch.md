@@ -391,19 +391,19 @@ Below are the detailed entries for each participant session, linking directly to
     * **Device during interview**: Iphone (Unknown model)
     * **Description**: Right handed, one-handed use. Doesn't regularly watch news of any sports. Doesn't play chess. Usually use phone when free, resting.    
 *   **Analysis & Key Observations:**
-    * Main Page: 
+    * Main Page (1:10): 
         - Prefers to know the leaderboard at first.  
         - Being not familar to chess, most people tend to prefer something that is easier to understand outside of chess, like people. Seeing chess players and their rating is easier to understand that "this person is good" instead of reading some random headline about "Player X played this insane move that checkmated Y".
-    * Burger Button:
+    * Burger Button (2:20):
         - Finds reaching the button annoying due to one hand - right hand use.  
         - He originally used a phone lying on 4 fingers, palm and fingers flat, so the thumb is far from the top left. So their grip is already loose, having to reach up means they have to slide their fingers up and push the phone closer to the thumb, because they aren't gripping the phone, it could slid off the hand. The thumb also has to reach up and looked stiff. Also because they had to push the phone up and to the right for the thumb to reach, that means they are no longer look directly at the screen and just pressing on where the button would probably be in their memory. That means they could miss it, lower the phone to look again, and continue until they actually hit the button.
-    * Burger Menu tab names:
+    * Burger Menu tab names (2:54):
         - Easily understand what each tab means quickly.  
-        - Like most other participants, they words does seem clear and short enough that icons are not needed.
-    * Rating tab:
+        - Like most other participants, the words does seem clear and short enough that icons are not needed.
+    * Rating tab (3:13):
         - Prefers other pages like Schedule or News to also have a search bar  
         - Participant was prompted to look for another page with "something to search for" and moved to the Schedule tab, and then the News tab, quickly realizing that only the Rating tab is the only one with a search bar. They found this to be quite annoying because they might still need to reach for something, and they prefer to search it rather than scrolling and finding it.
-    * Video tab:
+    * Video tab (4:32):
         - Prefer the video to not run simutaniously.
         - Multiple videos running at the same time make it hard to focus on one video. They prefer only the latest one running and the previous one to stop.
 
@@ -416,18 +416,18 @@ Below are the detailed entries for each participant session, linking directly to
     * **Device during interview**: Iphone (Unknown model)
     * **Description**: Right handed, usually one handed, but context dependent.Watch news of sports they like but not chess related. Doesn't play chess but still know notable things about chess. Does not know about Freestyle Chess. Uses phone when free or don't have anything to do.
 *   **Analysis & Key Observations:**
-    * Main page:
+    * Main page (1:28):
         - Prefer to have something notable about the chess that the page is showing or something that can describe the chess form. Said that if someone knew Freestyle chess already would understand, but the opposite person might not understand anything.
         - This is quite common for most participants in my group. They all would like the home page to show more than just the news. If they already know chess, they would like to know what this chess is about, or that it's just the name of the website and therefore they don't need to worry about. And this page is very much designed for someone who already know what they are getting themselves into, so that is a reasonable observation.
-    * Burger Menu:
+    * Burger Menu (3:23):
         - Feels natural when pressing because the person was using both hands. But when prompted to use one hand, it very much felt uncomfortable.
         - This is quite normal, if the phone is small enough and the user is either left handed or just happen to have the left hand there, they can easily reach the button as it is on the left corner. The phone being quite small also helped with no needing to reach up with the left hand. But the right hand still needed that finger pushing + thumb reach to touch.
-    * Burger menu tab names:
+    * Burger menu tab names (4:12):
         - Can easily understand, not much worth talking about.
-    * Rating tab:
+    * Rating tab (4:30):
         - Noted that the word font style look too similar on each row so they might accidentally miss something they were looking for. On the infinite page scroll, they have never seen much of the like, but they prefer it to pagination because it reduce load time and having to press buttons to change pages, but doesn't have any strong opinion due to seeing it so infrequently.
         - This is the only person to have commented on the design of each row looking too monotinous, which could hinder search speed because it forces you to slow down while searching to look. And combined with the phone having a smaller font size and the user is often quicker to do interactions on a phone, it is easy and understandable that they might scroll past something they need completely unintentionally. As for the page scroll list, they actually prefer it, phone interaction usually need to feel quick, users don't want to wait, and being able to school quite a time before need to press a button to scroll more reduces loading time and let users do more things, even if those things could contain problems, like scrolling cross something important.
-    * Video tab:
+    * Video tab (6:06):
         - Does not like multiple videos running at the same time. Brought up that they might be using too much data if they are on 5G with multiple videos running, implying they do not think they could stop a video once it has started.
         - The fact that they don't like multiple video running is nothing new, but they implied that they couldn't stop a video once it has started running. This feeds into usability and showing the users what they could or could not do. With each video screen being so small, they think it is a stabic embed with no controls, so they think once a video starts, they can't stop it and therefore brought up that they might lose data losing them all.
     
@@ -440,29 +440,78 @@ Below are the detailed entries for each participant session, linking directly to
     * **Device during interview**: Oppo A9 2020 , Android
     * **Description**: Right handed, 2 hand use most of the time. Read a lot of news, like football. Sometimes read about chess. Plays chess, also knows about Freestyle Chess, but just heard of it, nothing specific.
 *   **Analysis & Key Observations:**
-    * Main page:
+    * Main page (1:11):
         - Thinks the "Freestyle" is just a name, otherwise feels like it's just a normal chess website that serve chess news.
         - This is the only person in the group that plays chess actively, so they have heard of it before, but they only focus on the main stream chess stance, rather than any subcategories. This is normal, even so the name isn't one, Freestyle Chess is also known as Chess960. So some people might know the format but not know this site is referring to that. 
-    * Burger menu:
+    * Burger menu (2:06):
         - Does not feel any discomfort when needing to press that button. Claims they are used to it due to using many sites with similar button placements, as well as being comfortable with their own phone.
         - This is the only user that reported absolutely no discomfort to the button placement, but not because the button was placed well, but rather a combination of their habits and phone size that they managed to reach it without issues, for someone with a bigger phone they might have problems with it.
-    * Burger menu tab names:
+    * Burger menu tab names (2:28):
         - Also doesn't think that the names are difficult to understand, but did suggest combining some tabs to make it shorter. 
         - Again nothing of note here for easily understanding the tab names, the suggesttion also seem to be a commonly reached one because some tabs to give names that naturally push people to group them.
-    * Rating tab search: 
+    * Rating tab search (2:57): 
         - User tried to seach for someone directly and could not find them, and then later when scrolling down do find their name. This signal that the search bar demand accurate inputs to work. Which they did not like and say that they usually search people by first name last name, instead of last name first name like the website.
         - This is a big issue, the function is clearly hiding information it clear has, and while not its fault that the function didn't return the information since the search term was incorrect, users prefer it when the mistakes is clearer, typo is a very human mistake and easy to overlook, as well as when the website isn't doing its job, people tend to blame the website, rather than thinking they did something wrong
-    * Rating tab list:
+    * Rating tab list (3:58):
         - Prefer pagination, does not like to scroll down repeatedly, think that its quicker to jump between pages and see topX people than to scroll.
         - This is among the few people that prefer pagination, because on a phone, pagination is often annoying because the contents have to be small and therefore many pages are needed to display the same amount of information. Their reasoning is that since if a page size is fixed, the page change button is always at the bottom, and then only need to press the same spot repeated to hop pages, which to them is easier.
-    * News tab:
+    * News tab (4:33):
         - Wants a search bar, mainly for lossy search, because they might not remember the full name of a competition or a news segment, think that a search bar is both quicker and easier to use than a filter for past events.
         - They prefer a search bar for speed rather than looking from what they are trying to say, since the events are clearly listed in a filter list they could look through, so they don't need to remember as much already if there wasnt anything at all. This is an interesting comment by the user, because usually most people prefer a search bar to search, but they prefer it for the speed, which is a factor too, but usually people think of searching when a search bar is mentioned.
-    * Video tab:
+    * Video tab (5:25):
         - Does not mind multiple video running, this is the only person in my group to actually prefer multiple video to run simultaneously.
         - Reasoning given is that they could scroll down and watch a few seconds of the new video to see if it is interesting enough to switch, and if they do decide to, they could go back and switch it themselves. This is rather a special case from many, since most would prefer only one video to run at a time, so they arent overwhelmed and confused on what they are looking or hearing. This could only be explained by habit, is someone regularly watches multiple things together, they might even prefer the page have this feature, otherwise this is an edge case not worth discussing until more data is gathered.
 
-### 6.7 Entry 7: Participant P07 (Reviewed by Phùng Ngọc Tuấn)
+### 6.7 Entry 7: Participant P07 (Reviewed by Phạm Chí Bảo Ninh)
+**Clip Link:** [Youtube video](https://www.youtube.com/watch?v=Ltmg4To_2Cs)
+*   **Person's Description:**
+    * **Fullname**: Prefer to not disclose
+    * **Gender**: Male
+    * **Device during interview**: Iphone 12 Pro Max
+    * **Description**: Right Handed, One handed. Doesn't find news directly, read them accidentally as they look online. Aren't interested in Chess.
+*   **Analysis & Key Observations:**
+    * Main page (1:10):
+        - Wants to see News segment that quite major, like new records or upcoming tournaments. Thinks that the website is hard to tell what it is trying to show other than chess in general, due to the logo and naming.
+        - Nothing of note from the others.
+    * Burger menu (2:31):
+        - Fine with reaching up to the button
+        - Again because they are used to it, not because it is actually easy. In the video they are still shown to perform the motion of pushing the phone up to the right then reach with their thumb, despite having a high posture of the hand, because the phone's bottom was resting on the table, the hand was naturally high. Despite that they still had to perform that motion.
+    * Rating tab (3:10):
+        - Prefer scrolling inifnitely rather than pagination.
+        - Again, like the majority of my group, they all seem to prefer scrolling on the phone. Again this may simply just because the prhone naturally encourage such motion, scrolling is quite a standard thing to do on a phone, and pagination might just slow thing down because it needs to load more per segment of time spent searching, but again, depeneding on the user, that searching might not be fully efficient.
+    * News tab (4:17):
+        - Prefers a search bar to exist, but says nothing beyond "it would be easier"
+        - This is rather vague, it could just be that most people prefer to have a search bar just be there and not need it than to need it and not have one. The filter alone is quite good already as it groups by events, and news segment usually concern a short periof of time where an event is happening, but a search bar is a common want.
+    * Video tab (4:45):
+        - Want the previous the video to stop itself.
+        - Nothing of note
+
+### 6.8 Entry 8: Participant P08 (Reviewed by Phạm Chí Bảo Ninh)
+**Clip Link:** [Youtube video](https://www.youtube.com/watch?v=48L-XPRKuhc)
+*   **Person's Description:**
+    * **Fullname**: Prefer to not disclose
+    * **Gender**: Male
+    * **Device during interview**: Iphone 11 (Unknown Specific Model)
+    * **Description**: Right Handed, One handed. Doesn't find news directly, read them accidentally as they look online. Aren't interested in Chess.
+*   **Analysis & Key Observations:**:
+    * Main page (0:51):
+        -   Want the to see the people in the chess world first, like who recently won. Thinks the page is not quite enough at explaining itself, like tutorial how to play Freestyle Chess.
+        - Again a common opinion, but they don't know that by looking at the front page, they don't see the explanation for the website. They are inside the appropiately named "Rules and FC Players Club" tab, in there the specific rules are inside PDF's and a visual is explain what the game mode is. This is fine but for most users, they want to know immediately what they are doing, so they don't get loss, as they are new and can easily quit if they don't know what they are supposed to be doing and there is no one there to guide them.
+    * Burger menu (1:55):
+        - User felt like they had to reach a little when pressing it.
+        - The user says they needed to reach, but visually, their hands are quite big compared to their phone. They are the only person to be able to reach the button without needing to push the phone up at all. Now this could either be habit to keep the screen in view, or because their hands are big, or because this motion is learnt well, all of that I do not know. At first they used 2 hands, the left to hold and the right to press, which is common for right handed people, some though might reach up with their left thumb because then they don't need to move their entire hand. Which is actually seen afterwards when they are prompted to move to other tabs, they sometimes use their left hand, sometimes their right, whichever is in position to be easier to use.
+    * Rating tab (2:38):
+        - Prefers pagination
+        - Reasoning given is that the further down they go in the list, it is easier to keep track where they are with pagination than with scrolling infinitely. This often isn't an issue for most searching functions, like google. You rarely cross over the 2nd page because the algorithm is so efficient. But here you are searching for chess players sorted by their rating, which means you might follow someone that isn't highly rated which could take a while. This search bar helps with this of course, but as shown before, if you don't accurately remember their name, the record might not show up.
+    * News tab (4:00):
+        - Doesn't mind the lack of a search bar.
+        - Among the few that don't really need a search bar and is content with the filter. This segment is short though, they didn't have much to say, it could just be that they don't read news by looking for it that much, but rather just read whatever comes up first, which is how people usually read news, they find a source supplier they like and read the top post of the day, so in that sense, a search function is not really needed for these type of people.
+    * Video tab (4:31):
+        - Prefers the previous video to stop itself.
+        - Nothing of note
+
+
+### 6.9 Entry 9: Participant P09 (Reviewed by Phùng Ngọc Tuấn)
 
 - **Person's Description:**
   - **Gender:** Male
@@ -486,7 +535,7 @@ Below are the detailed entries for each participant session, linking directly to
 - **Summary**  
 Overall, the participant had trouble with three main areas: search precision in Ranking, unclear structure in Schedule, and weak interaction behavior in the video sections. The most serious issue was the video experience, because it not only failed to respond properly but also created audio overlap when switching content.
 
-### 6.8 Entry 8: Participant P08 (Reviewed by Phùng Ngọc Tuấn)
+### 6.10 Entry 10: Participant P10 (Reviewed by Phùng Ngọc Tuấn)
 
 - **Person's Description:**
   - **Gender:** Female
