@@ -48,17 +48,17 @@ Below is the structured Affinity Board generated during the group brainstorming 
 | **N02** | Problem  | Survey Q13 (43.1%), P02/P03/P04/P05/P07/P08  | Users must stretch fingers, shift phone grip, shift the phone, or use two hands to tap navigation items.|
 | **N03** | Idea     | Brainstorm                                   | Move primary navigation to a persistent Bottom Navigation Bar.|
 | **N04** | Idea     | Brainstorm, P05                              | Provide a floating action button (FAB) or bottom-right drawer for one-handed reachability.|
-| **N05** | Problem  | Survey Q09 (73.6%), P03/P05/P08              | Homepage Hero section is cluttered with banners and lacks onboarding explaining Freestyle Chess format to new users. |
-| **N06** | Problem  | Survey Q10 (52.8%), P03/P05/P08              | New users feel disoriented and do not understand website purpose upon landing.|
+| **N05** | Problem  | Survey Q09 (avg 3.68/5), P03/P05/P08         | Homepage Hero section is cluttered with banners and lacks onboarding explaining Freestyle Chess format to new users. |
+| **N06** | Problem  | Survey Q10 (51.4%), P03/P05/P08              | New users feel disoriented and do not understand website purpose upon landing.|
 | **N07** | Idea     | Brainstorm                                   | Redesign Hero section with a minimalist intro banner, clear onboarding text, and prominent CTA.|
 | **N08** | Idea     | Brainstorm                                   | Add an interactive "What is Freestyle Chess?" quick modal guide for newcomers.|
-| **N09** | Problem  | Survey Q16 (72%), P02/P05/P06/P08            | Rating leaderboard is an infinite scroll list with no sticky search bar, causing repetitive scrolling.|
+| **N09** | Problem  | Survey Q17 (81.9%), P02/P05/P06/P08            | Rating leaderboard is an infinite scroll list with no sticky search bar, causing repetitive scrolling.|
 | **N10** | Problem  | Survey Q19 (61.1%), P02/P04/P06/P07          | Users cannot search news/events by keywords and must browse long chronological lists.|
 | **N11** | Idea     | Brainstorm                                   | Add a Sticky Search Bar fixed at top of long listing pages (Rating, News, Videos).|
 | **N12** | Idea     | Brainstorm                                   | Provide filter chips (by major event, date, rating range) and auto-suggest search queries.|
 | **N13** | Problem  | Survey Q21 (52.8%), P02/P03/P05/P06/P07/P09  | Video player lacks immediate visual feedback (loading spinner) when tapped, leading to rage clicks.|
 | **N14** | Problem  | Interview P09/P10 clips; P04/P05/P07         | Playing a new video does not pause the previous video, resulting in overlapping audio channels.|
-| **N15** | Idea     | Brainstorm; P04/P05/P07/P09              | Enforce a Single-Player audio/video model (playing new video automatically stops old video).|
+| **N15** | Idea     | Brainstorm; P04/P05/P07/P09                  | Enforce a Single-Player audio/video model (playing new video automatically stops old video).|
 | **N16** | Idea     | Brainstorm; P02/P03/P09                      | Add skeleton loaders and loading spinners instantly upon tapping video play controls.|
 
 **Exceptions**:
