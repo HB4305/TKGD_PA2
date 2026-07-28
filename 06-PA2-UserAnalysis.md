@@ -118,11 +118,37 @@ Below is the structured Affinity Board generated during the group brainstorming 
 
 ## 3. Problem Prioritization Matrix
 
-To select the most critical problems for the design proposal phase, each identified problem was evaluated on a scale from 1 (Low) to 5 (High) across four criteria:
-* **Frequency:** How many users experience this issue?
-* **Severity:** How severely does it block task completion or degrade user experience?
-* **Evidence Strength:** Quality of quantitative (survey) and qualitative (interview clip) evidence.
-* **Feasibility:** Technical ease of solving the problem in a mobile web redesign.
+To scientifically select the most critical problems for the design proposal phase, each identified problem was evaluated on a scale from 1 to 5 using the following strict rubric:
+
+### 3.1 Evaluation Rubric
+
+* **Frequency:**
+  * **1**: < 10% users experienced it.
+  * **2**: 10% - 30% users experienced it.
+  * **3**: 30% - 50% users experienced it.
+  * **4**: 50% - 70% users experienced it (Very common).
+  * **5**: > 70% users experienced it (Almost everyone).
+
+* **Severity (Based on Nielsen's Severity):**
+  * **1**: Cosmetic issue (Minor visual flaw, no real impact on task).
+  * **2**: Minor usability problem (Slight annoyance but easily overcome).
+  * **3**: Moderate problem (Causes hesitation or extra steps, but task is completed).
+  * **4**: Major problem (Severe disruption, user gets frustrated or task takes significantly longer).
+  * **5**: Usability catastrophe (Task blocked, user gives up or clicks away).
+
+* **Evidence Strength:**
+  * **1**: Assumption or gut feeling (No data).
+  * **2**: Mentioned by only 1 interview participant, no survey data.
+  * **3**: Backed by minor survey data OR 2-3 interview clips.
+  * **4**: Backed by strong survey data AND clear interview observations.
+  * **5**: Overwhelming proof (High survey % AND repeatedly observed failing in video clips).
+
+* **Feasibility:**
+  * **1**: Requires total system architecture rewrite (Very Hard).
+  * **2**: Requires major backend/API logic changes.
+  * **3**: Requires creating entirely new complex UI screens.
+  * **4**: Requires moderate frontend adjustments (e.g., adding sticky CSS, new filters).
+  * **5**: Quick fix (e.g., repositioning a button, changing text, fixing CSS limits - Very Easy).
 
 $$ \text{Priority Score} = \text{Frequency} + \text{Severity} + \text{Evidence Strength} + \text{Feasibility} $$
 
