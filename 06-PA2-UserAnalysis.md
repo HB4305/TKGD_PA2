@@ -40,24 +40,51 @@ Below is the structured Affinity Board generated during the group brainstorming 
 
 ### 2.2 Raw Sticky Notes Inventory
 
+**Notes:** Data in the "Source / Evidence" column supports the "Stick Note Content", exceptions are listed below the table.
+
 | Note ID | Category | Source / Evidence | Sticky Note Content |
-|---|---|---|---|
-| **N01** | Problem | Survey Q12, Interview P01/P02/P03 | Mobile Hamburger menu is placed at top-left, making one-handed thumb interaction painful. |
-| **N02** | Problem | Survey Q13 (43.1%), P01 clip | Users must stretch fingers, shift phone grip, or use two hands to tap navigation items. |
-| **N03** | Idea | Brainstorm | Move primary navigation to a persistent Bottom Navigation Bar. |
-| **N04** | Idea | Brainstorm | Provide a floating action button (FAB) or bottom-right drawer for one-handed reachability. |
-| **N05** | Problem | Survey Q09 (3.68/5), P03 clip | Homepage Hero section is cluttered with banners and lacks onboarding explaining Freestyle Chess format to new users. |
-| **N06** | Problem | Survey Q10 (52.8% first-timers) | New users feel disoriented and do not understand website purpose upon landing. |
-| **N07** | Idea | Brainstorm | Redesign Hero section with a minimalist intro banner, clear onboarding text, and prominent CTA. |
-| **N08** | Idea | Brainstorm | Add an interactive "What is Freestyle Chess?" quick modal guide for newcomers. |
-| **N09** | Problem | Survey Q16 (3.60/5), P01/P02 clip | Rating leaderboard is an infinite scroll list with no sticky search bar, causing repetitive scrolling. |
-| **N10** | Problem | Survey Q19 (61.1%), P04 clip | Users cannot search news/events by keywords and must browse long chronological lists. |
-| **N11** | Idea | Brainstorm | Add a Sticky Search Bar fixed at top of long listing pages (Rating, News, Videos). |
-| **N12** | Idea | Brainstorm | Provide filter chips (by major event, date, rating range) and auto-suggest search queries. |
-| **N13** | Problem | Survey Q21 (52.8%), P03/P09 clip | Video player lacks immediate visual feedback (loading spinner) when tapped, leading to rage clicks. |
-| **N14** | Problem | Interview P02/P09 clip | Playing a new video does not pause the previous video, resulting in overlapping audio channels. |
-| **N15** | Idea | Brainstorm | Enforce a Single-Player audio/video model (playing new video automatically stops old video). |
-| **N16** | Idea | Brainstorm | Add skeleton loaders and loading spinners instantly upon tapping video play controls. |
+| --- | --- | --- | --- |
+| **N01** | Problem  | Survey Q12, P01/P02/P03/P04/P05/P07/P08      | Mobile Hamburger menu is placed at top-left, making one-handed thumb interaction painful/annoying.|
+| **N02** | Problem  | Survey Q13 (43.1%), P02/P03/P04/P05/P07/P08  | Users must stretch fingers, shift phone grip, shift the phone, or use two hands to tap navigation items.|
+| **N03** | Idea     | Brainstorm                                   | Move primary navigation to a persistent Bottom Navigation Bar.|
+| **N04** | Idea     | Brainstorm, P05                              | Provide a floating action button (FAB) or bottom-right drawer for one-handed reachability.|
+| **N05** | Problem  | Survey Q09 (73.6%), P03/P05/P08              | Homepage Hero section is cluttered with banners and lacks onboarding explaining Freestyle Chess format to new users. |
+| **N06** | Problem  | Survey Q10 (52.8%), P03/P05/P08              | New users feel disoriented and do not understand website purpose upon landing.|
+| **N07** | Idea     | Brainstorm                                   | Redesign Hero section with a minimalist intro banner, clear onboarding text, and prominent CTA.|
+| **N08** | Idea     | Brainstorm                                   | Add an interactive "What is Freestyle Chess?" quick modal guide for newcomers.|
+| **N09** | Problem  | Survey Q16 (72%), P02/P05/P06/P08            | Rating leaderboard is an infinite scroll list with no sticky search bar, causing repetitive scrolling.|
+| **N10** | Problem  | Survey Q19 (61.1%), P02/P04/P06/P07          | Users cannot search news/events by keywords and must browse long chronological lists.|
+| **N11** | Idea     | Brainstorm                                   | Add a Sticky Search Bar fixed at top of long listing pages (Rating, News, Videos).|
+| **N12** | Idea     | Brainstorm                                   | Provide filter chips (by major event, date, rating range) and auto-suggest search queries.|
+| **N13** | Problem  | Survey Q21 (52.8%), P02/P03/P05/P06/P07/P09  | Video player lacks immediate visual feedback (loading spinner) when tapped, leading to rage clicks.|
+| **N14** | Problem  | Interview P09/P10 clips; P04/P05/P07         | Playing a new video does not pause the previous video, resulting in overlapping audio channels.|
+| **N15** | Idea     | Brainstorm; P04/P05/P07/P09              | Enforce a Single-Player audio/video model (playing new video automatically stops old video).|
+| **N16** | Idea     | Brainstorm; P02/P03/P09                      | Add skeleton loaders and loading spinners instantly upon tapping video play controls.|
+
+**Exceptions**:
+  - P08 Neutral about N10.
+  - P08 supports N15 but neutral about N14.
+  - P06 doesn't think N14 is a problem, and actually like it that way.
+
+**Additional Problem Outside the Survey**:
+
+**Notes:** These are problems that arose from direct Interviews rather than from questionairs, worth considering.
+
+| Note ID | Category | Source / Evidence | Sticky Note Content|
+| --- | --- | --- | --- |
+| **N17**  | Problem  | P01 | Confirmation dialogs are too small, forcing users to scroll inside the dialog to read the full message before making a decision.|
+| **N18**  | Problem  | P01 | Page transitions provide no loading indicator, making users unsure whether the site is loading or frozen and encouraging repeated taps.|
+| **N19**  | Problem  | P02 | Video & Streams carousel looks swipeable because thumbnails are cut off, but horizontal swiping does not work and users must use Prev/Next buttons instead. |
+| **N20**  | Problem  | P02 | Schedule navigation uses a down-arrow icon suggesting expansion, but the content slides in from the side, causing confusion.|
+| **N21**  | Problem  | P02 | Schedule has two different exit controls ("X" and "Back to Main Menu"), making it unclear which one to use.|
+| **N22**  | Problem  | P05 | Rating list rows have overly similar typography/visual structure, making it easy to overlook the desired player while scanning.|
+| **N23**  | Problem  | P06/P09 | Rating search requires the player's name in a specific format/order, causing searches to fail when users enter a natural first-name/last-name order.|
+| **N24**  | Problem  | P09 | Schedule does not provide enough information about upcoming matches or tournament brackets, forcing users to look elsewhere for this information.|
+| **N25**  | Problem  | P09 | Video carousel stops responding to swipe gestures once a video is playing, forcing users to use Prev/Next controls instead.|
+| **N26**  | Problem  | P10 | Hero video "Stop" button does not actually stop the video OR restart the video from the beginning instead of correctly pausing/stopping it. Button state does not match the video's actual state |
+| **N27**  | Problem  | P10 | Ranking search cannot search by chess title or rating, despite users naturally wanting to find players using those attributes.|
+| **N28**  | Problem  | P10 | Schedule banners appear interactive/tappable but do nothing when tapped.|
+| **N29**  | Problem  | P10 | Schedule menu has a broken scroll boundary that prevents users from fully viewing some of its content.|
 
 ---
 

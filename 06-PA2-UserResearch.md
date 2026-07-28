@@ -416,7 +416,7 @@ Below are the detailed entries for each participant session, linking directly to
         - Prefer to have something notable about the chess that the page is showing or something that can describe the chess form. Said that if someone knew Freestyle chess already would understand, but the opposite person might not understand anything.
         - This is quite common for most participants in my group. They all would like the home page to show more than just the news. If they already know chess, they would like to know what this chess is about, or that it's just the name of the website and therefore they don't need to worry about. And this page is very much designed for someone who already know what they are getting themselves into, so that is a reasonable observation.
     * Burger Menu (3:23):
-        - Feels natural when pressing because the person was using both hands. But when prompted to use one hand, it very much felt uncomfortable.
+        - Feels natural when pressing because the person was using both hands. But when prompted to use one hand, it very much felt uncomfortable. Would like to have it be a bar to drag instead of a button.
         - This is quite normal, if the phone is small enough and the user is either left handed or just happen to have the left hand there, they can easily reach the button as it is on the left corner. The phone being quite small also helped with no needing to reach up with the left hand. But the right hand still needed that finger pushing + thumb reach to touch.
     * Burger menu tab names (4:12):
         - Can easily understand, not much worth talking about.
@@ -487,7 +487,7 @@ Below are the detailed entries for each participant session, linking directly to
     * **Fullname**: Prefer to not disclose
     * **Gender**: Male
     * **Device during interview**: Iphone 11 (Unknown Specific Model)
-    * **Description**: Right Handed, One handed. Doesn't find news directly, read them accidentally as they look online. Aren't interested in Chess.
+    * **Description**: Right Handed, One handed. Doesn't find news directly. Aren't interested in Chess.
 *   **Analysis & Key Observations:**:
     * Main page (0:51):
         -   Want the to see the people in the chess world first, like who recently won. Thinks the page is not quite enough at explaining itself, like tutorial how to play Freestyle Chess.
