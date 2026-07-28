@@ -31,10 +31,9 @@ The goal of this phase is to analyze the empirical evidence collected from Requi
 
 Below is the structured Affinity Board generated during the group brainstorming session, grouping user observations, pain points, and potential solution ideas into logical clusters.
 
-> *Note: Embed or link your Miro/Figma/FigJam canvas export image below.*
+![Affinity Diagram Board](img/AffinityBoard.png)
 
-![Affinity Diagram Board](./docs/artifacts/affinity_diagram.png)  
-*(Link to interactive FigJam/Figma board: [FigJam Affinity Diagram Canvas](#))*
+*Link to interactive FigJam board: [FigJam Affinity Diagram Canvas](https://www.figma.com/board/XtoEmRjB8L9dpqbRoITL94/Affinity-Board?node-id=0-1&t=JwXLRRP0YlhZup6f-1)*
 
 ---
 
