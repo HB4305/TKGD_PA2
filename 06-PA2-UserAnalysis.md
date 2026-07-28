@@ -106,6 +106,32 @@ $$ \text{Priority Score} = \text{Frequency} + \text{Severity} + \text{Evidence S
 | **P-03** | Overlapping video audio streams & lack of loading feedback | 4 | 4 | 5 | 5 | **18** | **Selected (High)** |
 | **P-04** | Overloaded Hero section & lack of onboarding for first-time users | 4 | 3 | 4 | 5 | **16** | **Selected (Medium)** |
 
+### 3.1 Scoring Rationale & Justification
+
+1. **P-01 (One-handed navigation reachability - Score 19/20)**:
+   * *Frequency (4/5)*: 44.4% of surveyed users operate smartphones with one hand, and 43.1% reported physical effort/reachability issues.
+   * *Severity (5/5)*: Crucial navigation failure; top-left menu placement forces grip shifts and thumb stretching, creating high device drop risks during mobile commuting.
+   * *Evidence Strength (5/5)*: Validated by survey Q12/Q13 and direct video clip observations (P01, P02, P03).
+   * *Feasibility (5/5)*: Highly feasible to solve by introducing a persistent mobile Bottom Navigation Bar or floating action drawer.
+
+2. **P-02 (Lack of sticky search & filtering on long lists - Score 18/20)**:
+   * *Frequency (5/5)*: 61.1% of users reported search difficulty when exact names are unknown; 81.9% requested search/filtering for long lists.
+   * *Severity (4/5)*: Forces 20+ seconds of repetitive vertical scrolling, severely degrading short 2-3 minute browsing sessions.
+   * *Evidence Strength (5/5)*: Validated by survey Q16/Q19/Q17 and interview clip observations (P01, P02, P04).
+   * *Feasibility (4/5)*: Feasible via sticky position CSS, query filter chips, and auto-suggest input handling.
+
+3. **P-03 (Video player feedback delay & audio overlap - Score 18/20)**:
+   * *Frequency (4/5)*: 52.8% of users expected old videos to auto-stop; 44.4% were confused by unresponsive video tap states.
+   * *Severity (4/5)*: Overlapping audio channels create extreme cognitive discomfort; missing loading spinners trigger repeated rage clicks.
+   * *Evidence Strength (5/5)*: Validated by survey Q20/Q21/Q22 and interview clip observations (P02, P03, P09).
+   * *Feasibility (5/5)*: Highly feasible via single-player event logic and skeleton loader components.
+
+4. **P-04 (Overloaded Hero section & onboarding gap - Score 16/20)**:
+   * *Frequency (4/5)*: 52.8% of surveyed participants were first-time users who had never heard of Freestyle Chess.
+   * *Severity (3/5)*: Disorients newcomers upon landing, though experienced users can scroll past it.
+   * *Evidence Strength (4/5)*: Validated by survey Q09/Q10 and interview clip observation (P03 L.T.K).
+   * *Feasibility (5/5)*: Highly feasible by reorganizing content hierarchy and adding a concise intro banner.
+
 ---
 
 ## 4. Final Problem Statements
