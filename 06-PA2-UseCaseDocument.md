@@ -156,7 +156,7 @@ flowchart TD
 | **Preconditions** | User is on the mobile website; `ART-FAB` is visible near the bottom-right corner. |
 | **Trigger** | User wants to access navigation while holding the phone in a non-standard or left-handed grip. |
 | **Main Success Scenario** | **1. User Action:** User presses and holds `ART-FAB`, then drags it to a comfortable thumb position (e.g., bottom-left corner).<br>**2. System Response:** System highlights `ART-FAB` with drop-shadow feedback and smoothly repositions the button following touch coordinates.<br>**3. User Action:** User releases touch; system snaps `ART-FAB` to the nearest edge and saves position to local storage.<br>**4. User Action:** User taps `ART-FAB`.<br>**5. System Response:** `ART-FAB` transforms into `ART-FND` (radial menu or bottom sheet) displaying section shortcuts.<br>**6. User Action:** User taps "Schedule".<br>**7. System Response:** System navigates to Schedule view and collapses `ART-FND` back into `ART-FAB`. |
-| **Alternative Flows** | **ALT-1 (Reset FAB Position):** User double-taps `ART-FAB` to reset its anchor back to the default bottom-right position. |
+| **Alternative Flows** | **ALT-1 (Open without dragging):** If the user taps `ART-FAB` without a hold-and-drag gesture, the system opens `ART-FND` directly. |
 | **Exception Flows** | **EX-1 (Accidental Drag):** If drag distance is under 5px, system treats touch as a tap and opens `ART-FND`. |
 | **Postconditions** | Navigation trigger is custom-anchored to the user's exact physical thumb reach. |
 | **Empirical Evidence** | Validates **N04**; directly answers P05's request for a customizable draggable control and supports 41.7% of users with situational grips (Q4). |

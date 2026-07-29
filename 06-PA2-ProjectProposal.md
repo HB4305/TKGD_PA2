@@ -83,7 +83,6 @@ N01, N02, N03, N04; Q11 (3.94/5 — menu is findable), Q12 (3.50/5 — but not r
 **Interaction rules:**
 - **Drag:** Press-and-hold, then drag to reposition the button anywhere along the screen edges; on release, the button snaps to the nearest edge (left or right) and the position is remembered for the user's next visit.
 - **Tap threshold:** Any touch movement under ~5px is treated as a tap (opens the menu), not a drag — preventing accidental drags from a slightly imprecise tap.
-- **Reset:** Double-tapping the button restores it to the default bottom-right position, giving users an escape hatch if they misplace it.
 - Selecting a core destination or a "More" sub-item that is a real page navigates there and collapses the button back to its resting state; tapping "Press & Media" or "More" itself only expands the list further and does not collapse the button.
 
 **Rationale:** Implements N04 and directly answers P05's own suggestion during interview ("a bar to drag instead of a fixed button"), while serving the 41.7% of users whose grip depends on the situation rather than being fixed to one hand (Q4).
