@@ -188,16 +188,14 @@ $$ \text{Priority Score} = \text{Frequency} + \text{Severity} + \text{Evidence S
 
 ## 4. Final Problem Statements
 
-Based on the synthesis and prioritization matrix above, Group 06 selected the top severe problems to solve in the project proposal:
-
 ### Problem Statement 1 (Navigation & Reachability)
-> **Mobile users need** an ergonomically reachable navigation system **because** placing critical navigation controls at the top-left corner causes thumb stretching, grip instability, and accidental taps, **especially when** operating the smartphone with one hand on the move.
+> **Mobile users need** the primary navigation to sit within natural thumb reach **because** the hamburger menu is anchored top-left, forcing users to stretch their thumb or shift their grip just to tap a nav item, **especially when** browsing one-handed while on the move.
 
 ### Problem Statement 2 (Information Retrieval & Search)
-> **Mobile users need** a flexible search and filtering mechanism (sticky search bar and filter chips) **because** browsing long rating leaderboards and chronological news feeds requires excessive vertical scrolling and exact keyword memory, **especially during** quick 2-3 minute mobile browsing sessions.
+> **Mobile users need** a fixed, filterable way to search long content lists **because** the Rating list has no sticky search bar and News/events can't be searched by keyword, leaving users to scroll repetitively through long, unfiltered lists, **especially when** they don't remember the exact name or date they're looking for.
 
 ### Problem Statement 3 (Media Interaction & Feedback)
-> **Mobile users need** clear visual feedback during loading and controlled single-video playback **because** unresponsive tap states lead to rage clicks and simultaneous video playback produces confusing overlapping audio, **especially when** viewing match highlights or livestreams.
+> **Mobile users need** instant tap feedback and single-video playback **because** tapping a video gives no loading indicator and starting a new video doesn't pause the one already playing, causing overlapping audio, **especially when** watching match highlights or livestreams back-to-back.
 
 ---
 
