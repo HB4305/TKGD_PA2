@@ -23,14 +23,13 @@ These two problems were chosen because they scored highest across Frequency, Sev
 
 ## 2. Overall Concept
 
-The team's solution keeps the same product form as the original scope defined in PA1: a **responsive mobile website** (not a native app), accessed through a smartphone browser. We are not proposing a platform change; we are proposing an interaction-model change.
+The team's solution keeps the same product form as the original scope defined in PA1: a **responsive mobile website** (not a native app), accessed through a smartphone browser. We are not proposing a platform change; we are proposing an interaction-model change, governed by three concrete design principles:
 
-The core conceptual shift is moving from a **top-down, desktop-inherited layout** (hamburger menu at top-left, long unfiltered scrolling lists) to a **thumb-zone-first design philosophy**, where:
+1. **Thumb-zone-first placement.** Any control a user must tap frequently or urgently (navigation, search) must be reachable within the lower ~60% of the viewport without requiring a grip change. This directly targets the 44.4% of users who hold the phone one-handed and the 41.7% whose grip depends on context (Q4).
+2. **Zero-step or one-step access to core actions.** Navigating to a section or searching a list should not require opening a hidden menu first; the control itself should be either always visible or always one gesture away.
+3. **Flexible input over exact recall.** Wherever a user is expected to type or remember something exactly (a name, a spelling, a word order), the interface should tolerate approximation or replace typing with tap-based selection, directly addressing the 61.1% of users who struggled when they could not recall an exact name or term (Q19).
 
-- Primary navigation and search controls are relocated or made reachable within the lower half of the screen, where one-handed users (44.4% per Q4) and situational grip-switchers (41.7% per Q4) can operate them without shifting grip.
-- Information retrieval (search/filter) is treated as a first-class, always-accessible action rather than a per-page afterthought.
-
-Users will conceptually interact with the redesigned site the same way they browse any modern mobile-first website — but with critical actions (navigate, search) always within a comfortable one-handed reach, instead of requiring two-handed operation or grip changes.
+Each conceptual solution below is a distinct way of implementing these principles, not a cosmetic variant of the same idea.
 
 ---
 
@@ -42,31 +41,67 @@ The hamburger menu is anchored top-left. This forces users (particularly the 43.
 
 ### 3.2 Evidence Base
 
-N01, N02, N03, N04; Q11 (3.94/5), Q12 (3.50/5), Q13 (43.1%); interview observations from P01, P02, P03, P05, P07, P08 all describing thumb-stretching, grip-shifting, or phone-repositioning behavior when reaching for the menu button.
+N01, N02, N03, N04; Q11 (3.94/5 — menu is findable), Q12 (3.50/5 — but not reachable one-handed), Q13 (43.1% reported physical adjustment); interview observations from P01, P02, P03, P05, P07, P08, all independently describing thumb-stretching, grip-shifting, or phone-repositioning behavior when reaching for the current top-left menu button.
 
-### 3.3 Proposed Conceptual Solutions
+### 3.3 Solution CS1.1 — Persistent Bottom Navigation Bar
 
-#### Solution 1 — Persistent Bottom Navigation Bar
-- **Concept:** A fixed navigation bar with 4-5 tabs (Home, News, Schedule, Rating, Videos) permanently visible at the bottom of the screen. No open/close interaction is required.
-- **Rationale:** Directly implements N03; repeatedly requested by P01, P02, P03 during interviews.
-- **Strengths:** Familiar mobile pattern; reduces navigation from two steps (open menu, then tap item) to one; no discoverability risk.
-- **Weaknesses:** Permanently occupies vertical screen space on an already small viewport; does not scale well if more top-level sections are added later.
+**Concept summary:** Replace the hidden hamburger menu with a navigation bar that is permanently visible and permanently in place at the bottom edge of the viewport. Navigation becomes a single tap on a visible icon rather than a two-step "open menu, then choose item" sequence.
 
-#### Solution 2 — Draggable Floating Action Button (FAB)
-- **Concept:** A floating circular button, not fixed in the page layout, defaulting to the bottom-right corner but **draggable** by the user to match their dominant hand. Tapping expands it into a short radial or list-style menu.
-- **Rationale:** Implements N04; directly addresses P05's own suggestion ("a bar to drag instead of a fixed button") and the 41.7% of users whose grip depends on the situation (Q4).
-- **Strengths:** Personalizes to actual handedness/grip rather than assuming one "correct" position for all users; does not consume layout space when idle.
-- **Weaknesses:** Can visually overlap page content when expanded; requires additional engineering to persist the user's chosen position across sessions.
+**Layout specification:**
+- A horizontal bar fixed at the bottom of the screen (`y = bottom`, `position: fixed`), spanning the full viewport width.
+- The full site menu (confirmed against the current production menu, which is larger than N03's simplified 5-item description) is: Home, Schedule, Videos & Streams, News, Press & Media (with children: Press Inquiries, Galleries), Rating, Rules & FC Players Club, Merch, Masterclass (which itself contains a Login link). To keep the bar usable, only **5 core destinations** get a permanent slot, matching the original N03 set: **Home, News, Schedule, Rating, Videos & Streams**. A 6th slot, **"More,"** holds everything else.
+- Each of the 6 slots shows an icon with a short text label stacked vertically, consistent with the labels already found understandable without icons (Q14: 3.83/5).
+- The currently active section is visually distinguished (e.g., filled icon + accent color) so the user always has a sense of location within the site.
 
-### 3.4 Comparison
+**"More" destination structure:**
+- Tapping "More" opens a bottom-sheet listing the remaining items: **Press & Media, Rules & FC Players Club, Merch, Masterclass**.
+- **Press & Media** expands inline (accordion) within this sheet to reveal its two children, **Press Inquiries** and **Galleries** — the only item in the entire menu that keeps the original inline-expand behavior, since it is the only branch with exactly two simple children and no further page-level content of its own.
+- **Schedule** and **Masterclass** do **not** expand inline. Both navigate to their own dedicated page instead: Schedule opens its existing overlay/submenu (unchanged from current behavior), and Masterclass opens its own full page, inside which the **Login** link lives as part of that page's own content — it is not shown as an accordion child in the main menu, since the current site already treats Masterclass as a standalone page rather than a togglable menu section.
 
-| Criteria | Sol.1: Bottom Nav Bar | Sol.2: Draggable FAB |
+**Interaction rules:**
+- Tapping any of the 5 core tabs navigates directly to that section and updates the active-state highlight immediately.
+- Tapping the tab for the section the user is *already* on scrolls the current page back to the top, rather than doing nothing (preventing a "dead tap" experience).
+- Tapping "More" opens the bottom-sheet described above; tapping outside the sheet or an explicit close control dismisses it without navigating.
+- The bar remains visible during scrolling on all pages; it does not hide on scroll-down, since hiding it would reintroduce a reachability problem for a returning tap.
+
+**Rationale:** Directly implements N03 and was independently and repeatedly requested by P01, P02, and P03 during interviews as the preferred fix.
+
+**Strengths:** Uses an interaction pattern nearly every smartphone user already knows from other apps; reduces the task to exactly one tap; carries no discoverability risk since the bar is always visible.
+
+**Weaknesses:** Permanently consumes vertical space on an already small viewport, competing with content height; does not scale gracefully if the site later needs to add a sixth or seventh top-level section, since a bottom bar has a practical limit of about 5 items before labels must shrink or icons must replace text.
+
+### 3.4 Solution CS1.2 — Draggable Floating Action Button (FAB)
+
+**Concept summary:** Instead of a fixed bar, provide a single floating circular button that is not bound to any fixed screen position. The user can drag it to wherever their thumb naturally rests, and the button then expands into a compact navigation menu when tapped.
+
+**Layout specification:**
+- A circular button (~48-56px diameter, per standard mobile touch-target sizing) floating above page content, with a default resting position at the bottom-right corner.
+- The button casts a subtle shadow to indicate it floats above content rather than being part of the page layout.
+- On tap, the button expands into a short list containing the same 5 core destinations as CS1.1 (Home, News, Schedule, Rating, Videos & Streams), plus a 6th "More" entry at the bottom of the list.
+- Tapping "More" expands the same list in place to also show: Press & Media, Rules & FC Players Club, Merch, Masterclass — with Press & Media further expanding inline to reveal Press Inquiries and Galleries, identical to the "More" behavior specified in CS1.1. Schedule and Masterclass still navigate to their own dedicated pages rather than expanding, for the same reason given in CS1.1.
+
+**Interaction rules:**
+- **Drag:** Press-and-hold, then drag to reposition the button anywhere along the screen edges; on release, the button snaps to the nearest edge (left or right) and the position is remembered for the user's next visit.
+- **Tap threshold:** Any touch movement under ~5px is treated as a tap (opens the menu), not a drag — preventing accidental drags from a slightly imprecise tap.
+- **Reset:** Double-tapping the button restores it to the default bottom-right position, giving users an escape hatch if they misplace it.
+- Selecting a core destination or a "More" sub-item that is a real page navigates there and collapses the button back to its resting state; tapping "Press & Media" or "More" itself only expands the list further and does not collapse the button.
+
+**Rationale:** Implements N04 and directly answers P05's own suggestion during interview ("a bar to drag instead of a fixed button"), while serving the 41.7% of users whose grip depends on the situation rather than being fixed to one hand (Q4).
+
+**Strengths:** Personalizes to the user's actual handedness and grip instead of assuming one "correct" position for everyone; consumes almost no screen space when collapsed, unlike a bar that is always fully expanded.
+
+**Weaknesses:** The expanded menu can visually overlap page content beneath it; requires additional engineering effort to persist a per-user custom position across sessions (e.g., local storage), which CS1.1 does not need at all.
+
+### 3.5 Comparison
+
+| Criteria | CS1.1: Persistent Bottom Nav Bar | CS1.2: Draggable FAB |
 |---|---|---|
-| Familiarity to users | High | Medium |
-| Adapts to handedness | No | Yes |
-| Screen space used (idle) | Fixed, always-on | Minimal |
-| Implementation complexity | Low | Medium-High |
-| Discoverability risk | Low | Medium |
+| Familiarity to users | High (standard mobile pattern) | Medium (drag-to-reposition is less common) |
+| Adapts to individual handedness | No — fixed layout for all users | Yes — repositionable per user |
+| Screen space used when idle | Fixed strip, always present | Minimal (single small button) |
+| Steps to navigate | 1 tap | 2 taps (open, then select) |
+| Implementation complexity | Low | Medium-High (drag physics + position persistence) |
+| Discoverability risk | Low | Medium (drag affordance must be visually hinted) |
 
 ---
 
@@ -78,31 +113,60 @@ Long content lists (Rating leaderboard, News feed) rely on unassisted infinite s
 
 ### 4.2 Evidence Base
 
-N09, N10, N11, N12, N22, N23, N27; Q16 (3.60/5), Q17 (81.9%), Q19 (61.1%); interview observations from P02 (no search bar on News), P04/P07/P08 (want search beyond Rating), P06 (search fails on natural first-name/last-name order), P09 (needed three attempts — "Le Quang" → "Liem Le" → "Liem" — before a search succeeded), P10 (searching "FM" or a numeric rating returns nothing because the field only matches player names).
+N09, N10, N11, N12, N22, N23, N27; Q16 (3.60/5 — finding info is only moderately easy), Q17 (81.9% want some form of list-browsing support), Q19 (61.1% struggled with imprecise recall); interview observations from P02 (no search bar exists on News at all), P04/P07/P08 (all wanted search extended beyond Rating), P06 (search fails when a name is entered in natural first-name/last-name order instead of the stored "Last, First" format), P09 (needed three separate attempts — "Le Quang" → "Liem Le" → "Liem" — before a search finally succeeded), P10 (typing "FM" or a numeric rating value returns nothing at all, because the field only ever matches against player names).
 
-### 4.3 Proposed Conceptual Solutions
+### 4.3 Solution CS2.1 — Sticky Search Bar with Flexible Name Matching
 
-#### Solution 1 — Sticky Search Bar with Flexible Name Matching
-- **Concept:** A text search bar that stays fixed (sticky) at the top of the Rating and News pages while scrolling. The underlying matching logic is upgraded to accept names in any word order, with diacritic-insensitive input and auto-suggestions as the user types.
-- **Rationale:** Directly fixes the root cause behind P06 and P09's failed searches (stored-name-order dependency).
-- **Strengths:** Preserves a familiar interaction model (a search bar); low structural change to existing pages.
-- **Weaknesses:** Still requires the user to recall and type at least part of a name; does not address searching by attribute (title, rating) as raised by P10 and P08.
+**Design note — accepted trade-off with Principle #1:** A prior draft moved the search entry point into the thumb zone via a small icon that opened a dedicated overlay, to strictly satisfy the "Thumb-zone-first placement" principle. The group decided against this: the reachability problem with the *original* hamburger menu was specifically about a **small, precisely-positioned icon confined to one corner** (top-left), which forces the thumb to stretch toward one exact point. A **full-width sticky bar** does not have that failure mode — the tap target spans the entire top edge, so the user can tap wherever is horizontally comfortable rather than reaching for one fixed corner. The remaining reach (vertical, to the top of the screen) is judged an acceptable trade-off in exchange for keeping the search bar always visible while scrolling, without adding an extra tap or a second control (an icon plus an overlay) just to open it.
 
-#### Solution 2 — Faceted Filter Chips (tap-to-filter, no typing required)
-- **Concept:** Replace or supplement the search box with tappable filter chips: by chess title (GM, FM, IM...), by rating range, and by event/date for News. Results update in real time as chips are selected, with no text entry needed.
-- **Rationale:** Directly resolves N27 and P10's failed attempts to search by "FM" or a numeric rating; also matches the most-selected support option in Q17 ("filters by event/date/player," chosen by 31 users).
-- **Strengths:** Removes dependency on remembering exact names — well suited to newcomers like P10 who don't know any player names yet; tapping is faster than typing on mobile.
-- **Weaknesses:** Less efficient for users who already know the exact name they want (still requires scrolling/selecting through chips); needs careful compact UI design to avoid cluttering a small screen.
+**Concept summary:** Keep the familiar text-search interaction, but fix the two things actually broken about it: it disappears when scrolling, and it fails on any input that isn't in the exact stored name order.
 
-### 4.4 Comparison
+**Layout specification:**
+- A search input field fixed at the top of the viewport (`y = 0`, `position: sticky`), spanning the full width of the screen, on both the Rating and News pages, remaining visible regardless of scroll position.
+- Includes a clear ("×") button to reset the search instantly, and a dropdown area beneath the field for live auto-suggest results.
 
-| Criteria | Sol.1: Sticky Search + Flexible Matching | Sol.2: Faceted Filter Chips |
+**Interaction & matching rules:**
+- The matching engine tokenizes the query into individual words and matches them against all name fields (first name, last name, full name) **regardless of the order typed** — so "Liem Le," "Le Liem," and "Liem" all correctly resolve to the same player, directly fixing the failure mode observed with P06 and P09.
+- Matching is diacritic-insensitive (accepts input with or without Vietnamese tone marks).
+- As the user types, a live auto-suggest list appears beneath the field showing candidate matches (e.g., "GM Le Quang Liem — Rating 2736").
+- If no match is found, the system shows a "No player found" state with a suggested closest match ("Did you mean: Liem Le?") rather than a silent empty result.
+
+**Rationale:** Directly fixes the confirmed root cause behind P06 and P09's failed searches — the search engine's dependency on stored name order — rather than only cosmetically adding "stickiness." The full-width bar shape also keeps the control materially easier to reach than the original top-left hamburger icon, even though it remains at the top of the viewport.
+
+**Strengths:** Preserves an interaction model every user already understands (typing into a search box); requires comparatively low structural change to the existing Rating and News pages; no extra tap needed to reveal the field, unlike an icon-triggered overlay.
+
+**Weaknesses:** Still fundamentally a name-based search — it does not help a user who wants to filter by an attribute they know (a title like "FM," or a rating threshold) but not a name, which is exactly the gap P10 and P08 encountered. Also still requires an upward reach to the top of the screen to actually tap into the field, even if the wide target reduces the precision required.
+
+### 4.4 Solution CS2.2 — Faceted Filter Chips (Tap-to-Filter)
+
+**Concept summary:** Replace typed recall with tap-based selection. Instead of asking the user to remember and spell a name, present the dimensions people actually search by — title, rating range, event/date — as selectable chips.
+
+**Layout specification:**
+- A horizontally scrollable row of chip-shaped toggle buttons positioned directly beneath the page title on the Rating page (e.g., `All`, `GM`, `IM`, `FM`, `Rating > 2700`) and on the News page (e.g., event names, date ranges).
+- Selected chips show a filled/active visual state; unselected chips remain outlined.
+
+**Interaction rules:**
+- Tapping a chip immediately filters the visible list — no confirmation step, no keyboard.
+- Multiple chips can be active simultaneously, combined with AND logic (e.g., `Title = GM` AND `Rating > 2700` narrows to only players matching both).
+- Tapping an already-active chip deselects it, restoring the broader result set.
+- If a combination of active chips returns zero results, the system shows a clear empty state ("No players match these filters") with a one-tap "Reset Filters" action, rather than leaving the user staring at a blank list.
+
+**Rationale:** Directly resolves N27 and the failed searches P10 experienced when typing "FM" or a numeric rating into a name-only field; also matches the single most-selected support option from the survey (Q17 — "filters by event/date/player," chosen by 31 of 72 respondents, the highest count of any listed option).
+
+**Strengths:** Removes any dependency on remembering or spelling a name correctly — well suited to newcomers like P10, who does not know any specific player's name yet but does know what she's looking for (a title, a rating range); tapping is faster than typing on a mobile keyboard.
+
+**Weaknesses:** Less efficient for a user who already knows the *exact* name they want — a returning core chess follower may still find scanning/selecting chips slower than a direct name search would be; requires careful, compact chip-row design to avoid consuming excessive horizontal space on a small screen.
+
+### 4.5 Comparison
+
+| Criteria | CS2.1: Sticky Search + Flexible Matching | CS2.2: Faceted Filter Chips |
 |---|---|---|
-| Fixes name-order failures (P06/P09) | Yes (directly) | Yes (indirectly, no typing) |
-| Search by title/rating (P10) | No | Yes (directly) |
-| Extends to News | Requires separate dev effort | Yes, via event/date chips |
-| Implementation complexity | Low-Medium | Medium |
-| Suited to users who don't know exact names | Low | High |
+| Fixes name-order failures (P06, P09) | Yes — directly, via flexible tokenized matching | Yes — indirectly, by removing the need to type a name at all |
+| Supports searching by title/rating (P10) | No | Yes — directly, via dedicated chips |
+| Entry point reachability | Full-width bar at top; wide target reduces the precision-reach problem of the old corner icon, though vertical reach remains | Chip row sits near page top, below the title; single visible tap, no typing |
+| Extends naturally to the News page | Requires separate keyword-search logic for articles | Yes — via event/date chips, same mechanism as Rating |
+| Best suited for | Users who know the exact or approximate name | Users who know an attribute but not a name (e.g., newcomers) |
+| Implementation complexity | Low-Medium (matching-logic upgrade) | Medium (multi-select filter state + combination logic) |
 
 ---
 
