@@ -860,12 +860,15 @@
       color: #332920;
       cursor: pointer;
       display: grid;
-      place-items: center
+      place-items: center;
+      align-content: center;
+      gap: 2px
     }
 
     .nav i {
       font-style: normal;
-      font-size: 18px
+      font-size: 18px;
+      line-height: 1
     }
 
     .nav.active {
@@ -881,14 +884,16 @@
       border: 3px solid var(--ink);
       border-radius: 24px;
       padding: 14px;
-      transform: translateY(120%);
-      transition: transform .28s var(--ease);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s ease;
       z-index: 9;
       box-shadow: 0 12px 0 rgba(28, 23, 18, .14)
     }
 
     .sheet.open {
-      transform: translateY(0)
+      opacity: 1;
+      pointer-events: auto;
     }
 
     .sheet-title {
@@ -906,8 +911,7 @@
       gap: 8px
     }
 
-    .sheet button,
-    .fabmenu button {
+    .sheet button {
       border: 2px solid var(--ink);
       background: white;
       border-radius: 14px;
@@ -917,6 +921,7 @@
       cursor: pointer
     }
 
+    /* Radial FAB menu */
     .fab {
       position: absolute;
       right: 24px;
@@ -935,30 +940,69 @@
       cursor: grab;
       box-shadow: 0 8px 0 rgba(28, 23, 18, .16);
       user-select: none;
-      touch-action: none
+      touch-action: none;
+      transition: transform .15s ease
     }
 
     .fab.drag {
       cursor: grabbing
     }
 
+    .fab.open {
+      transform: rotate(45deg)
+    }
+
+    /* The radial overlay — sits at FAB centre, items fan out via JS */
     .fabmenu {
       display: none;
       position: absolute;
-      right: 24px;
-      bottom: 172px;
-      width: 160px;
-      background: #fffaf0;
-      border: 3px solid var(--ink);
-      border-radius: 22px;
-      padding: 10px;
       z-index: 11;
-      box-shadow: 0 10px 0 rgba(28, 23, 18, .14);
-      gap: 7px
+      pointer-events: none
     }
 
     .fabmenu.open {
-      display: grid
+      display: block
+    }
+
+    .radial-item {
+      position: absolute;
+      display: grid;
+      place-items: center;
+      width: 56px;
+      pointer-events: auto;
+      cursor: pointer;
+      transform: translate(-50%, -50%);
+      transition: opacity .18s ease, transform .18s ease;
+      opacity: 0;
+      gap: 2px
+    }
+
+    .fabmenu.open .radial-item {
+      opacity: 1
+    }
+
+    .radial-item-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid var(--ink);
+      background: #fffaf0;
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      box-shadow: 0 4px 0 rgba(28, 23, 18, .14)
+    }
+
+    .radial-item-label {
+      font-size: 9px;
+      font-weight: 800;
+      color: var(--ink);
+      background: #fffaf0;
+      border: 1.5px solid var(--ink);
+      border-radius: 999px;
+      padding: 2px 5px;
+      white-space: nowrap;
+      box-shadow: 0 2px 0 rgba(28, 23, 18, .1)
     }
 
     .note {
@@ -1168,7 +1212,33 @@
         </div>
       </section>
 
-    <section class="slide"><div class="slide-content"><div class="eyebrow reveal"><span class="kicker">Research setup</span><span class="rule"></span></div><h2 class="reveal">Broad survey, interviews reveal real behavior</h2><div class="grid2" style="margin-top:96px;align-items:start;height:auto"><div class="card green reveal"><div class="num">72</div><h3>Online survey responses</h3><div class="bullets"><div class="bullet">Open the website on a smartphone</div><div class="bullet">Explore for 3–5 minutes</div><div class="bullet">Evaluate homepage, navigation, rating, news, schedule, and video</div></div></div><div class="card coral reveal"><div class="num">13</div><h3>Direct interview sessions</h3><div class="bullets"><div class="bullet">Semi-structured tasks, without forcing a rigid flow</div><div class="bullet">Observe grip, thumb stretch, and hesitation</div><div class="bullet">Capture failed searches, long scrolling, and frustration</div></div></div></div><div class="no">02 / 16</div></div></section>
+      <section class="slide">
+        <div class="slide-content">
+          <div class="eyebrow reveal"><span class="kicker">Research setup</span><span class="rule"></span></div>
+          <h2 class="reveal">Broad survey, interviews reveal real behavior</h2>
+          <div class="grid2" style="margin-top:96px;align-items:start;height:auto">
+            <div class="card green reveal">
+              <div class="num">72</div>
+              <h3>Online survey responses</h3>
+              <div class="bullets">
+                <div class="bullet">Open the website on a smartphone</div>
+                <div class="bullet">Explore for 3–5 minutes</div>
+                <div class="bullet">Evaluate homepage, navigation, rating, news, schedule, and video</div>
+              </div>
+            </div>
+            <div class="card coral reveal">
+              <div class="num">13</div>
+              <h3>Direct interview sessions</h3>
+              <div class="bullets">
+                <div class="bullet">Semi-structured tasks, without forcing a rigid flow</div>
+                <div class="bullet">Observe grip, thumb stretch, and hesitation</div>
+                <div class="bullet">Capture failed searches, long scrolling, and frustration</div>
+              </div>
+            </div>
+          </div>
+          <div class="no">02 / 16</div>
+        </div>
+      </section>
 
       <section class="slide">
         <div class="slide-content">
@@ -1325,7 +1395,7 @@
           <div class="eyebrow reveal"><span class="kicker">Proposal demo</span><span class="rule"></span></div>
           <h2 class="reveal">Keep the platform — change the interaction model</h2>
           <div class="proposal">
-            <div class="phone reveal">
+            <div class="phone reveal" data-phone>
               <div class="screen" id="screen">
                 <div class="status"><span>09:41</span><span>Freestyle Chess</span><span>●●●</span></div>
                 <div class="page">
@@ -1360,13 +1430,30 @@
                       Club</button><button>Merch</button><button>Masterclass</button></div>
                 </div>
                 <div class="fabmenu" id="fabmenu">
-                  <button>Home</button><button>News</button><button>Schedule</button><button>Rating</button><button>Videos</button><button>More</button>
+                  <div class="radial-item" data-label="Home">
+                    <div class="radial-item-circle">⌂</div><span class="radial-item-label">Home</span>
+                  </div>
+                  <div class="radial-item" data-label="News">
+                    <div class="radial-item-circle">☰</div><span class="radial-item-label">News</span>
+                  </div>
+                  <div class="radial-item" data-label="Schedule">
+                    <div class="radial-item-circle">◷</div><span class="radial-item-label">Schedule</span>
+                  </div>
+                  <div class="radial-item" data-label="Rating">
+                    <div class="radial-item-circle">♙</div><span class="radial-item-label">Rating</span>
+                  </div>
+                  <div class="radial-item" data-label="Videos">
+                    <div class="radial-item-circle">▶</div><span class="radial-item-label">Videos</span>
+                  </div>
+                  <div class="radial-item" data-label="More">
+                    <div class="radial-item-circle">•••</div><span class="radial-item-label">More</span>
+                  </div>
                 </div>
-                <div class="fab" id="fab">＋</div>
+                <div class="fab" id="fab">♟</div>
                 <div class="bottom"><button class="nav active"><i>⌂</i>Home</button><button
                     class="nav"><i>☰</i>News</button><button class="nav"><i>◷</i>Schedule</button><button
-                    class="nav"><i>♙</i>Rating</button><button class="nav"><i>▶</i>Videos</button><button class="nav"
-                    id="more"><i>•••</i>More</button></div>
+                    class="nav"><i>♙</i>Rating</button><button class="nav"><i>▶</i>Videos</button><button
+                    class="nav nav-more" id="more"><i>•••</i>More</button></div>
               </div>
             </div>
             <div class="demo-cards reveal">
@@ -1393,7 +1480,76 @@
           <div class="eyebrow reveal"><span class="kicker">CS1.1</span><span class="rule"></span></div>
           <h2 class="reveal">Persistent Bottom Navigation Bar</h2>
 
-          <div class="grid2" style="margin-top:44px;grid-template-columns:1fr 1fr 0.75fr;align-items:start">
+          <div class="grid2" style="grid-template-columns:auto 1fr 1fr;align-items:center;gap:20px">
+            <div class="phone reveal" data-phone data-hide-fab>
+              <div class="screen">
+                <div class="status"><span>09:41</span><span>Freestyle Chess</span><span>●●●</span></div>
+                <div class="page">
+                  <div class="ptitle">Rating Leaderboard</div>
+                  <div class="search">⌕ Try: "Liem Le" — sticky search</div>
+                  <div class="suggest">
+                    <div>GM Le Quang Liem — Rating 2736</div>
+                    <div>Did you mean: Liem Le?</div>
+                  </div>
+                  <div class="chips"><button class="chip">All</button><button class="chip">GM</button><button
+                      class="chip">Rating &gt; 2700</button><button class="chip">2026 Events</button></div>
+                  <div class="plist">
+                    <div class="row">
+                      <div class="avatar">1</div>
+                      <div><b>Magnus Carlsen</b><span>GM · Freestyle leader</span></div><em>2839</em>
+                    </div>
+                    <div class="row">
+                      <div class="avatar">2</div>
+                      <div><b>Hikaru Nakamura</b><span>GM · active event</span></div><em>2802</em>
+                    </div>
+                    <div class="row">
+                      <div class="avatar">3</div>
+                      <div><b>Le Quang Liem</b><span>GM · matched</span></div><em>2736</em>
+                    </div>
+                  </div>
+                  <div class="note">Tap Search, chips, or More.</div>
+                </div>
+                <div class="sheet">
+                  <div class="sheet-title">More destinations</div>
+                  <div class="sheet-grid"><button>Press &amp; Media</button><button>Rules &amp;
+                      Club</button><button>Merch</button><button>Masterclass</button></div>
+                </div>
+                <div class="fabmenu">
+                  <div class="radial-item">
+                    <div class="radial-item-circle">⌂</div><span class="radial-item-label">Home</span>
+                  </div>
+                  <div class="radial-item">
+                    <div class="radial-item-circle">☰</div><span class="radial-item-label">News</span>
+                  </div>
+                  <div class="radial-item">
+                    <div class="radial-item-circle">◷</div><span class="radial-item-label">Schedule</span>
+                  </div>
+                  <div class="radial-item">
+                    <div class="radial-item-circle">♙</div><span class="radial-item-label">Rating</span>
+                  </div>
+                  <div class="radial-item">
+                    <div class="radial-item-circle">▶</div><span class="radial-item-label">Videos</span>
+                  </div>
+                  <div class="radial-item">
+                    <div class="radial-item-circle">•••</div><span class="radial-item-label">More</span>
+                  </div>
+                </div>
+                <div class="fab">♟</div>
+                <div class="bottom"><button class="nav active"><i>⌂</i>Home</button><button
+                    class="nav"><i>☰</i>News</button><button class="nav"><i>◷</i>Schedule</button><button
+                    class="nav"><i>♙</i>Rating</button><button class="nav"><i>▶</i>Videos</button><button
+                    class="nav nav-more"><i>•••</i>More</button></div>
+              </div>
+            </div>
+
+            <div class="reveal" style="display:flex;align-items:flex-start;justify-content:center;gap:10px">
+              <img src="img/hiddenMenuActiveButton.png" alt="Hidden navigation menu active button"
+                style="width:48%;height:550px;object-fit:contain">
+
+              <img src="img/hiddenMenu.png" alt="Hidden hamburger navigation menu"
+                style="width:48%;height:550px;object-fit:contain">
+            </div>
+
             <div class="reveal">
               <p class="lead">
                 Replace hidden hamburger navigation with a bottom bar fixed to the viewport.
@@ -1412,40 +1568,6 @@
               </div>
             </div>
 
-            <div class="reveal" style="display:flex;align-items:flex-start;justify-content:center;gap:20px">
-              <img src="img/hiddenMenuActiveButton.png" alt="Hidden navigation menu active button"
-                style="width:48%;height:620px;object-fit:contain">
-
-              <img src="img/hiddenMenu.png" alt="Hidden hamburger navigation menu"
-                style="width:48%;height:620px;object-fit:contain">
-            </div>
-
-
-            <div class="card reveal" style="display:grid;place-items:center;min-height:650px">
-              <div class="mini-phone">
-                <div class="mini-screen">
-                  <h3 style="font-size:30px">News Feed</h3>
-                  <div class="mini-top">Latest event updates</div>
-
-                  <div class="row">
-                    <div class="avatar">N</div>
-                    <div>
-                      <b>Geller Cup</b>
-                      <span>2 min read</span>
-                    </div>
-                    <em>→</em>
-                  </div>
-
-                  <div class="mini-bottom">
-                    <div>Home</div>
-                    <div>News</div>
-                    <div>Sched</div>
-                    <div>Rating</div>
-                    <div>More</div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
           <div class="no">08 / 16</div>
@@ -1481,22 +1603,69 @@
         <div class="slide-content">
           <div class="eyebrow reveal"><span class="kicker">CS1.2</span><span class="rule"></span></div>
           <h2 class="reveal">Draggable Floating Action Button</h2>
-          <div class="grid2" style="margin-top:44px">
-            <div class="card reveal" style="display:grid;place-items:center;min-height:650px">
-              <div class="mini-phone">
-                <div class="mini-screen">
-                  <h3 style="font-size:30px">Schedule</h3>
-                  <div class="mini-top">Upcoming matches</div>
-                  <div class="row">
-                    <div class="avatar">F</div>
-                    <div><b>Finals</b><span>20:00 today</span></div><em>→</em>
+          <div class="grid2" style="grid-template-columns:auto 1fr;align-items:center;gap:50px">
+            <div class="phone reveal" data-phone data-hide-nav>
+              <div class="screen">
+                <div class="status"><span>09:41</span><span>Freestyle Chess</span><span>●●●</span></div>
+                <div class="page" style="bottom:0">
+                  <div class="ptitle">Rating Leaderboard</div>
+                  <div class="search">⌕ Try: "Liem Le" — sticky search</div>
+                  <div class="suggest">
+                    <div>GM Le Quang Liem — Rating 2736</div>
+                    <div>Did you mean: Liem Le?</div>
                   </div>
-                  <div class="mini-fab">＋</div>
+                  <div class="chips"><button class="chip">All</button><button class="chip">GM</button><button
+                      class="chip">Rating &gt; 2700</button><button class="chip">2026 Events</button></div>
+                  <div class="plist">
+                    <div class="row">
+                      <div class="avatar">1</div>
+                      <div><b>Magnus Carlsen</b><span>GM · Freestyle leader</span></div><em>2839</em>
+                    </div>
+                    <div class="row">
+                      <div class="avatar">2</div>
+                      <div><b>Hikaru Nakamura</b><span>GM · active event</span></div><em>2802</em>
+                    </div>
+                    <div class="row">
+                      <div class="avatar">3</div>
+                      <div><b>Le Quang Liem</b><span>GM · matched</span></div><em>2736</em>
+                    </div>
+                  </div>
+                  <div class="note">Drag FAB to any position; tap to open radial menu.</div>
                 </div>
+                <div class="sheet">
+                  <div class="sheet-title">More destinations</div>
+                  <div class="sheet-grid"><button>Press &amp; Media</button><button>Rules &amp;
+                      Club</button><button>Merch</button><button>Masterclass</button></div>
+                </div>
+                <div class="fabmenu">
+                  <div class="radial-item">
+                    <div class="radial-item-circle">⌂</div><span class="radial-item-label">Home</span>
+                  </div>
+                  <div class="radial-item">
+                    <div class="radial-item-circle">☰</div><span class="radial-item-label">News</span>
+                  </div>
+                  <div class="radial-item">
+                    <div class="radial-item-circle">◷</div><span class="radial-item-label">Schedule</span>
+                  </div>
+                  <div class="radial-item">
+                    <div class="radial-item-circle">♙</div><span class="radial-item-label">Rating</span>
+                  </div>
+                  <div class="radial-item">
+                    <div class="radial-item-circle">▶</div><span class="radial-item-label">Videos</span>
+                  </div>
+                  <div class="radial-item">
+                    <div class="radial-item-circle">•••</div><span class="radial-item-label">More</span>
+                  </div>
+                </div>
+                <div class="fab">♟</div>
+                <div class="bottom"><button class="nav active"><i>⌂</i>Home</button><button
+                    class="nav"><i>☰</i>News</button><button class="nav"><i>◷</i>Schedule</button><button
+                    class="nav"><i>♙</i>Rating</button><button class="nav"><i>▶</i>Videos</button><button
+                    class="nav nav-more"><i>•••</i>More</button></div>
               </div>
             </div>
             <div class="reveal">
-              <p class="lead">A single floating trigger can be moved to the user’s actual thumb position.</p>
+              <p class="lead">A single floating trigger can be moved to the user's actual thumb position.</p>
               <div class="bullets">
                 <div class="bullet">Press-and-hold then drag along screen edges</div>
                 <div class="bullet">Release snaps to nearest edge and saves position</div>
@@ -1679,8 +1848,255 @@
       class="counter" id="counter">1 / 16</span><button id="next" aria-label="Next">›</button></div>
   <script>
     /* === Slide presentation controller === */
-    class Deck { constructor() { this.slides = [...document.querySelectorAll('.slide')]; this.i = 0; this.stage = document.getElementById('stage'); this.counter = document.getElementById('counter'); this.progress = document.getElementById('progress'); this.lastWheel = 0; this.scale(); this.bind(); this.demo(); this.show(0) } scale() { const run = () => { const f = Math.min(innerWidth / 1920, innerHeight / 1080), x = (innerWidth - 1920 * f) / 2, y = (innerHeight - 1080 * f) / 2; this.stage.style.transform = `translate(${x}px,${y}px) scale(${f})` }; run(); addEventListener('resize', run) } bind() { document.getElementById('prev').onclick = () => this.show(this.i - 1); document.getElementById('next').onclick = () => this.show(this.i + 1); document.addEventListener('keydown', e => { if (e.target && e.target.isContentEditable) return; if (e.key.toLowerCase() === 'e') return; if (['ArrowRight', ' ', 'PageDown'].includes(e.key)) { e.preventDefault(); this.show(this.i + 1) } if (['ArrowLeft', 'PageUp'].includes(e.key)) { e.preventDefault(); this.show(this.i - 1) } if (e.key === 'Home') this.show(0); if (e.key === 'End') this.show(this.slides.length - 1) }); let sx = 0, sy = 0; document.addEventListener('touchstart', e => { if (e.target.closest('.phone')) return; sx = e.changedTouches[0].clientX; sy = e.changedTouches[0].clientY }, { passive: true }); document.addEventListener('touchend', e => { if (e.target.closest('.phone')) return; const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy; if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy)) dx < 0 ? this.show(this.i + 1) : this.show(this.i - 1) }, { passive: true }); document.addEventListener('wheel', e => { if (e.target.closest('.phone')) return; const now = Date.now(); if (now - this.lastWheel < 650) return; if (Math.abs(e.deltaY) > 30) { e.deltaY > 0 ? this.show(this.i + 1) : this.show(this.i - 1); this.lastWheel = now } }, { passive: true }); const edit = document.getElementById('edit'); let on = false; edit.onclick = () => { on = !on; edit.textContent = on ? 'Edit: on' : 'Edit: off'; edit.classList.toggle('on', on); document.querySelectorAll('h1,h2,h3,p,.bullet,.node span,.node strong,.cluster span,.cluster b,.tag,.small,.kicker').forEach(n => n.contentEditable = on) } } show(n) { this.i = Math.max(0, Math.min(n, this.slides.length - 1)); this.slides.forEach((s, k) => { s.classList.toggle('active', k === this.i); s.classList.toggle('visible', k === this.i) }); this.counter.textContent = `${this.i + 1} / ${this.slides.length}`; this.progress.style.width = `${(this.i + 1) / this.slides.length * 100}%` } demo() { const more = document.getElementById('more'), sheet = document.getElementById('sheet'), search = document.getElementById('search'), suggest = document.getElementById('suggest'), fab = document.getElementById('fab'), menu = document.getElementById('fabmenu'), screen = document.getElementById('screen'); if (!fab) return; more.onclick = e => { e.stopPropagation(); sheet.classList.toggle('open'); menu.classList.remove('open') }; search.onclick = e => { e.stopPropagation(); suggest.classList.toggle('show') }; document.querySelectorAll('.chip').forEach(c => c.onclick = e => { e.stopPropagation(); c.classList.toggle('on') }); document.querySelectorAll('.nav:not(#more)').forEach(n => n.onclick = () => { document.querySelectorAll('.nav').forEach(x => x.classList.remove('active')); n.classList.add('active'); sheet.classList.remove('open') }); let sx = 0, sy = 0, ol = 0, ot = 0, moved = false; const clamp = (v, a, b) => Math.max(a, Math.min(b, v)); const start = (x, y) => { const fr = fab.getBoundingClientRect(), sr = screen.getBoundingClientRect(); sx = x; sy = y; ol = fr.left - sr.left; ot = fr.top - sr.top; moved = false; fab.classList.add('drag') }; const move = (x, y) => { if (!fab.classList.contains('drag')) return; const sr = screen.getBoundingClientRect(), dx = x - sx, dy = y - sy; if (Math.abs(dx) + Math.abs(dy) > 5) moved = true; const l = clamp(ol + dx, 14, sr.width - 72), t = clamp(ot + dy, 54, sr.height - 146); fab.style.left = l + 'px'; fab.style.top = t + 'px'; fab.style.right = 'auto'; fab.style.bottom = 'auto'; menu.style.left = clamp(l - 48, 14, sr.width - 174) + 'px'; menu.style.top = clamp(t - 240, 58, sr.height - 280) + 'px'; menu.style.right = 'auto'; menu.style.bottom = 'auto' }; const end = () => { if (!fab.classList.contains('drag')) return; fab.classList.remove('drag'); if (!moved) { menu.classList.toggle('open'); sheet.classList.remove('open') } }; fab.onmousedown = e => { e.stopPropagation(); start(e.clientX, e.clientY) }; addEventListener('mousemove', e => move(e.clientX, e.clientY)); addEventListener('mouseup', end); fab.addEventListener('touchstart', e => { e.stopPropagation(); const t = e.changedTouches[0]; start(t.clientX, t.clientY) }, { passive: true }); addEventListener('touchmove', e => { const t = e.changedTouches[0]; move(t.clientX, t.clientY) }, { passive: true }); addEventListener('touchend', end, { passive: true }); screen.onclick = e => { if (!e.target.closest('.sheet') && !e.target.closest('#more')) sheet.classList.remove('open'); if (!e.target.closest('.suggest') && !e.target.closest('#search')) suggest.classList.remove('show') }; menu.querySelectorAll('button').forEach(b => b.onclick = () => menu.classList.remove('open')) } }
+    class Deck {
+      constructor() {
+        this.slides = [...document.querySelectorAll('.slide')];
+        this.i = 0;
+        this.stage = document.getElementById('stage');
+        this.counter = document.getElementById('counter');
+        this.progress = document.getElementById('progress');
+        this.lastWheel = 0;
+        this.scale();
+        this.bind();
+        this.demo();
+        this.show(0);
+      }
+
+      scale() {
+        const run = () => {
+          const f = Math.min(innerWidth / 1920, innerHeight / 1080),
+            x = (innerWidth - 1920 * f) / 2,
+            y = (innerHeight - 1080 * f) / 2;
+          this.stage.style.transform = `translate(${x}px,${y}px) scale(${f})`;
+        };
+        run();
+        addEventListener('resize', run);
+      }
+
+      bind() {
+        document.getElementById('prev').onclick = () => this.show(this.i - 1);
+        document.getElementById('next').onclick = () => this.show(this.i + 1);
+        document.addEventListener('keydown', e => {
+          if (e.target && e.target.isContentEditable) return;
+          if (e.key.toLowerCase() === 'e') return;
+          if (['ArrowRight', ' ', 'PageDown'].includes(e.key)) { e.preventDefault(); this.show(this.i + 1); }
+          if (['ArrowLeft', 'PageUp'].includes(e.key)) { e.preventDefault(); this.show(this.i - 1); }
+          if (e.key === 'Home') this.show(0);
+          if (e.key === 'End') this.show(this.slides.length - 1);
+        });
+        let sx = 0, sy = 0;
+        document.addEventListener('touchstart', e => {
+          if (e.target.closest('.phone')) return;
+          sx = e.changedTouches[0].clientX;
+          sy = e.changedTouches[0].clientY;
+        }, { passive: true });
+        document.addEventListener('touchend', e => {
+          if (e.target.closest('.phone')) return;
+          const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+          if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy)) dx < 0 ? this.show(this.i + 1) : this.show(this.i - 1);
+        }, { passive: true });
+        document.addEventListener('wheel', e => {
+          if (e.target.closest('.phone')) return;
+          const now = Date.now();
+          if (now - this.lastWheel < 650) return;
+          if (Math.abs(e.deltaY) > 30) { e.deltaY > 0 ? this.show(this.i + 1) : this.show(this.i - 1); this.lastWheel = now; }
+        }, { passive: true });
+        const edit = document.getElementById('edit');
+        let on = false;
+        edit.onclick = () => {
+          on = !on;
+          edit.textContent = on ? 'Edit: on' : 'Edit: off';
+          edit.classList.toggle('on', on);
+          document.querySelectorAll('h1,h2,h3,p,.bullet,.node span,.node strong,.cluster span,.cluster b,.tag,.small,.kicker').forEach(n => n.contentEditable = on);
+        };
+      }
+
+      show(n) {
+        this.i = Math.max(0, Math.min(n, this.slides.length - 1));
+        this.slides.forEach((s, k) => {
+          s.classList.toggle('active', k === this.i);
+          s.classList.toggle('visible', k === this.i);
+        });
+        this.counter.textContent = `${this.i + 1} / ${this.slides.length}`;
+        this.progress.style.width = `${(this.i + 1) / this.slides.length * 100}%`;
+      }
+
+      demo() {
+        document.querySelectorAll('[data-phone]').forEach(phone => {
+          const screenEl = phone.querySelector('.screen');
+          if (!screenEl) return;
+          this.setupPhone(
+            screenEl,
+            phone.hasAttribute('data-hide-fab'),
+            phone.hasAttribute('data-hide-nav')
+          );
+        });
+      }
+
+      setupPhone(screen, hideFab, hideNav) {
+        const more = screen.querySelector('.nav-more');
+        const sheet = screen.querySelector('.sheet');
+        const search = screen.querySelector('.search');
+        const suggest = screen.querySelector('.suggest');
+        const fab = screen.querySelector('.fab');
+        const menu = screen.querySelector('.fabmenu');
+
+        // Apply visibility options
+        if (hideFab && fab) fab.style.display = 'none';
+        if (hideNav) {
+          const bottom = screen.querySelector('.bottom');
+          if (bottom) bottom.style.display = 'none';
+          // Extend page area to fill the freed space
+          const page = screen.querySelector('.page');
+          if (page) page.style.bottom = '0';
+        }
+
+        if (more) {
+          more.onclick = e => {
+            e.stopPropagation();
+            sheet.classList.toggle('open');
+            closeRadial();
+          };
+        }
+
+        if (search) search.onclick = e => { e.stopPropagation(); suggest && suggest.classList.toggle('show'); };
+
+        screen.querySelectorAll('.chip').forEach(c => c.onclick = e => {
+          e.stopPropagation();
+          c.classList.toggle('on');
+        });
+
+        screen.querySelectorAll('.nav:not(.nav-more)').forEach(n => n.onclick = () => {
+          screen.querySelectorAll('.nav').forEach(x => x.classList.remove('active'));
+          n.classList.add('active');
+          if (sheet) sheet.classList.remove('open');
+        });
+
+        if (!fab || hideFab) return; // no FAB interaction needed
+
+        // ── Radial menu positioning ──────────────────────────────────────
+        const ITEMS = menu ? menu.querySelectorAll('.radial-item') : [];
+        const RADIUS = 78;
+
+        const layoutRadial = (fabCx, fabCy, srW, srH) => {
+          if (!menu) return;
+          menu.style.cssText = `left:0;top:0;right:auto;bottom:auto;width:${srW}px;height:${srH}px`;
+
+          const n = ITEMS.length;
+          const THRESH_X = 0.32, THRESH_Y = 0.35;
+          const nx = fabCx / srW, ny = fabCy / srH;
+          let bx = 0, by = 0;
+          if (nx < THRESH_X) bx = 1;
+          else if (nx > 1 - THRESH_X) bx = -1;
+          if (ny < THRESH_Y) by = 1;
+          else if (ny > 1 - THRESH_Y) by = -1;
+          if (bx === 0 && by === 0) by = -1;
+
+          const centerDeg = Math.atan2(by, bx) * 180 / Math.PI;
+          const isCorner = bx !== 0 && by !== 0;
+          const spread = isCorner ? 110 : 140;
+          const step = spread / (n - 1);
+
+          ITEMS.forEach((item, i) => {
+            const deg = centerDeg - spread / 2 + step * i;
+            const rad = deg * Math.PI / 180;
+            let ix = fabCx + RADIUS * Math.cos(rad);
+            let iy = fabCy + RADIUS * Math.sin(rad);
+            ix = Math.max(30, Math.min(srW - 30, ix));
+            iy = Math.max(38, Math.min(srH - 80, iy));
+            item.style.left = ix + 'px';
+            item.style.top = iy + 'px';
+          });
+        };
+
+        // ── Scale factor (CSS transform on stage) ────────────────────────
+        const getScale = () => {
+          const sr = screen.getBoundingClientRect();
+          return sr.width / screen.offsetWidth;
+        };
+
+        const getFabPos = () => {
+          const fr = fab.getBoundingClientRect();
+          const sr = screen.getBoundingClientRect();
+          const f = getScale();
+          return { l: (fr.left - sr.left) / f, t: (fr.top - sr.top) / f };
+        };
+
+        const openRadial = () => {
+          if (!menu) return;
+          const { l, t } = getFabPos();
+          layoutRadial(l + 29, t + 29, screen.offsetWidth, screen.offsetHeight);
+          menu.classList.add('open');
+          fab.classList.add('open');
+        };
+
+        const closeRadial = () => {
+          if (!menu) return;
+          menu.classList.remove('open');
+          fab.classList.remove('open');
+        };
+
+        // ── FAB drag (scale-corrected) ───────────────────────────────────
+        let offsetX = 0, offsetY = 0, moved = false, dragging = false;
+        const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+
+        const start = (clientX, clientY) => {
+          const fr = fab.getBoundingClientRect();
+          offsetX = clientX - fr.left;
+          offsetY = clientY - fr.top;
+          moved = false;
+          dragging = true;
+          fab.classList.add('drag');
+        };
+
+        const move = (clientX, clientY) => {
+          if (!dragging) return;
+          const sr = screen.getBoundingClientRect();
+          const f = getScale();
+          let l = (clientX - sr.left) / f - offsetX / f;
+          let t = (clientY - sr.top) / f - offsetY / f;
+          l = clamp(l, 14, screen.offsetWidth - 72);
+          t = clamp(t, 14, screen.offsetHeight - 146);
+          if (Math.abs(l - (parseFloat(fab.style.left) || 0)) +
+            Math.abs(t - (parseFloat(fab.style.top) || 0)) > 3) moved = true;
+          fab.style.cssText += `;left:${l}px;top:${t}px;right:auto;bottom:auto`;
+          if (menu && menu.classList.contains('open'))
+            layoutRadial(l + 29, t + 29, screen.offsetWidth, screen.offsetHeight);
+        };
+
+        const end = () => {
+          if (!dragging) return;
+          dragging = false;
+          fab.classList.remove('drag');
+          if (!moved) {
+            if (menu && menu.classList.contains('open')) closeRadial();
+            else { if (sheet) sheet.classList.remove('open'); openRadial(); }
+          }
+        };
+
+        fab.onmousedown = e => { e.stopPropagation(); start(e.clientX, e.clientY); };
+        addEventListener('mousemove', e => move(e.clientX, e.clientY));
+        addEventListener('mouseup', end);
+        fab.addEventListener('touchstart', e => {
+          e.stopPropagation();
+          const t = e.changedTouches[0]; start(t.clientX, t.clientY);
+        }, { passive: true });
+        addEventListener('touchmove', e => {
+          const t = e.changedTouches[0]; move(t.clientX, t.clientY);
+        }, { passive: true });
+        addEventListener('touchend', end, { passive: true });
+
+        screen.onclick = e => {
+          if (!e.target.closest('.sheet') && !e.target.closest('.nav-more')) sheet && sheet.classList.remove('open');
+          if (!e.target.closest('.suggest') && !e.target.closest('.search')) suggest && suggest.classList.remove('show');
+          if (!e.target.closest('.fab') && !e.target.closest('.fabmenu')) closeRadial();
+        };
+
+        ITEMS.forEach(item => item.addEventListener('click', closeRadial));
+      }
+    }
     new Deck();
   </script>
 </body>
+
 </html>
