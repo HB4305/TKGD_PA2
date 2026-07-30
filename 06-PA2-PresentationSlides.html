@@ -73,7 +73,74 @@
 
     <section class="slide"><div class="slide-content"><div class="eyebrow reveal"><span class="kicker">User context</span><span class="rule"></span></div><h2 class="reveal">Mobile context turns small issues into real friction</h2><div class="statrow"><div class="card stat reveal"><div class="value">63.9%</div><p>Use smartphones to read sports/chess news</p></div><div class="card stat yellow reveal"><div class="value">44.4%</div><p>Usually hold the phone with one hand</p></div><div class="card stat green reveal"><div class="value">41.7%</div><p>Change grip depending on context</p></div><div class="card stat blue reveal"><div class="value">52.8%</div><p>Had never heard of Freestyle Chess</p></div></div><p class="lead reveal" style="margin-top:46px">We prioritize issues that happen in short sessions, on small screens, and when users do not want to retry repeatedly.</p><div class="no">03 / 16</div></div></section>
 
-    <section class="slide"><div class="slide-content"><div class="eyebrow reveal"><span class="kicker">Key findings</span><span class="rule"></span></div><h2 class="reveal">Three insights directly shape the proposal</h2><div class="grid3" style="margin-top:58px"><div class="card coral reveal"><h3>Fast access first</h3><p style="margin-top:18px">Users want quick access to results, latest news, ratings, and player information within 2–3 minutes.</p></div><div class="card yellow reveal"><h3>The menu is visible, but hard to reach</h3><p style="margin-top:18px">Findability is acceptable, but 43.1% had to stretch, change grip, or use the other hand.</p></div><div class="card green reveal"><h3>Long lists need support</h3><p style="margin-top:18px">61.1% struggled when they could not recall the exact player, event, or information name.</p></div></div><p class="quote reveal" style="margin-top:64px;max-width:1300px">Navigation and information retrieval are the clearest mobile bottlenecks.</p><div class="no">04 / 16</div></div></section>
+    <section class="slide">
+      <div class="slide-content">
+        <div class="eyebrow reveal">
+          <span class="kicker">Key findings</span>
+          <span class="rule"></span>
+        </div>
+    
+        <h2 class="reveal">Three insights directly shape the proposal</h2>
+    
+        <div
+          style="display:grid;grid-template-columns:1.35fr 0.65fr;gap:34px;align-items:start;margin-top:28px"
+        >
+          <div
+            class="reveal"
+            style="display:flex;align-items:flex-start;justify-content:center;gap:24px;height:610px"
+          >
+            <img
+              src="/img/stretchThump.png"
+              alt="User stretching their thumb to reach the navigation menu"
+              style="width:49%;height:100%;object-fit:contain;object-position:top"
+            >
+    
+            <img
+              src="/img/longRatingList.png"
+              alt="Long mobile rating list"
+              style="width:49%;height:100%;object-fit:contain;object-position:top"
+            >
+          </div>
+    
+          <div style="display:grid;gap:18px">
+            <div class="card coral reveal" style="padding:22px">
+              <h3 style="font-size:40px">Fast access first</h3>
+              <p style="margin-top:10px;font-size:28px;line-height:1.28">
+                Users want quick access to results, latest news, ratings, and
+                player information within 2–3 minutes.
+              </p>
+            </div>
+    
+            <div class="card yellow reveal" style="padding:22px">
+              <h3 style="font-size:40px">
+                The menu is visible, but hard to reach
+              </h3>
+              <p style="margin-top:10px;font-size:28px;line-height:1.28">
+                Findability is acceptable, but 43.1% had to stretch, change grip,
+                or use the other hand.
+              </p>
+            </div>
+    
+            <div class="card green reveal" style="padding:22px">
+              <h3 style="font-size:40px">Long lists need support</h3>
+              <p style="margin-top:10px;font-size:28px;line-height:1.28">
+                61.1% struggled when they could not recall the exact player,
+                event, or information name.
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <p
+          class="quote reveal"
+          style="position:absolute;left:92px;bottom:64px;max-width:1180px;font-size:43px"
+        >
+          Navigation and information retrieval are the clearest mobile bottlenecks.
+        </p>
+    
+        <div class="no">04 / 16</div>
+      </div>
+    </section>
 
     <section class="slide"><div class="slide-content"><div class="eyebrow reveal"><span class="kicker">Affinity board</span><span class="rule"></span></div><h2 class="reveal">From scattered observations to four problem clusters</h2><div class="affinity"><img class="reveal" src="./img/AffinityBoard.png" alt="Affinity board"><div class="clusters reveal"><div class="cluster"><b>A · Ergonomic Navigation</b><span>The top-left hamburger forces one-handed users to change grip.</span></div><div class="cluster"><b>B · Homepage Onboarding</b><span>New users need to understand Freestyle Chess faster.</span></div><div class="cluster"><b>C · Search & Retrieval</b><span>Long Rating and News lists need clear search/filter support.</span></div><div class="cluster"><b>D · Video Feedback</b><span>Loading and multiple playback are frustrating, but lean more toward bug fixes.</span></div></div></div><div class="no">05 / 16</div></div></section>
 
@@ -81,7 +148,79 @@
 
     <section class="slide"><div class="slide-content"><div class="eyebrow reveal"><span class="kicker">Proposal demo</span><span class="rule"></span></div><h2 class="reveal">Keep the platform — change the interaction model</h2><div class="proposal"><div class="phone reveal"><div class="screen" id="screen"><div class="status"><span>09:41</span><span>Freestyle Chess</span><span>●●●</span></div><div class="page"><div class="ptitle">Rating Leaderboard</div><div class="search" id="search">⌕ Try: “Liem Le” — sticky flexible search</div><div class="suggest" id="suggest"><div>GM Le Quang Liem — Rating 2736</div><div>Did you mean: Liem Le?</div></div><div class="chips"><button class="chip">All</button><button class="chip">GM</button><button class="chip">Rating &gt; 2700</button><button class="chip">2026 Events</button></div><div class="plist"><div class="row"><div class="avatar">1</div><div><b>Magnus Carlsen</b><span>GM · Freestyle leader</span></div><em>2839</em></div><div class="row"><div class="avatar">2</div><div><b>Hikaru Nakamura</b><span>GM · active event</span></div><em>2802</em></div><div class="row"><div class="avatar">3</div><div><b>Le Quang Liem</b><span>GM · matched suggestion</span></div><em>2736</em></div></div><div class="note">Demo: click Search to show suggestions; click chips to toggle filters; click More or FAB.</div></div><div class="sheet" id="sheet"><div class="sheet-title">More destinations</div><div class="sheet-grid"><button>Press & Media</button><button>Rules & Club</button><button>Merch</button><button>Masterclass</button></div></div><div class="fabmenu" id="fabmenu"><button>Home</button><button>News</button><button>Schedule</button><button>Rating</button><button>Videos</button><button>More</button></div><div class="fab" id="fab">＋</div><div class="bottom"><button class="nav active"><i>⌂</i>Home</button><button class="nav"><i>☰</i>News</button><button class="nav"><i>◷</i>Schedule</button><button class="nav"><i>♙</i>Rating</button><button class="nav"><i>▶</i>Videos</button><button class="nav" id="more"><i>•••</i>More</button></div></div></div><div class="demo-cards reveal"><div class="card yellow"><h3>Thumb-zone-first</h3><p>Bottom nav and FAB move primary actions into the thumb zone instead of the top-left corner.</p></div><div class="card green"><h3>One-step access</h3><p>Core sections stay visible; More opens a bottom sheet for lower-frequency items.</p></div><div class="card coral"><h3>Flexible input</h3><p>The search mock illustrates tolerant name matching; chips illustrate zero-typing filtering.</p></div></div></div><div class="no">07 / 16</div></div></section>
 
-    <section class="slide"><div class="slide-content"><div class="eyebrow reveal"><span class="kicker">CS1.1</span><span class="rule"></span></div><h2 class="reveal">Persistent Bottom Navigation Bar</h2><div class="grid2" style="margin-top:44px"><div class="reveal"><p class="lead">Replace hidden hamburger navigation with a bottom bar fixed to the viewport.</p><div class="bullets"><div class="bullet">5 core destinations: Home, News, Schedule, Rating, Videos</div><div class="bullet">More bottom-sheet contains lower-frequency destinations</div><div class="bullet">Active state gives immediate location feedback</div></div></div><div class="card reveal" style="display:grid;place-items:center;min-height:650px"><div class="mini-phone"><div class="mini-screen"><h3 style="font-size:30px">News Feed</h3><div class="mini-top">Latest event updates</div><div class="row"><div class="avatar">N</div><div><b>Geller Cup</b><span>2 min read</span></div><em>→</em></div><div class="mini-bottom"><div>Home</div><div>News</div><div>Sched</div><div>Rating</div><div>More</div></div></div></div></div></div><div class="no">08 / 16</div></div></section>
+    <section class="slide"><div class="slide-content"><div class="eyebrow reveal"><span class="kicker">CS1.1</span><span class="rule"></span></div><h2 class="reveal">Persistent Bottom Navigation Bar</h2>
+
+      <div
+        class="grid2"
+        style="margin-top:44px;grid-template-columns:1fr 1fr 0.75fr;align-items:start"
+      >
+        <div class="reveal">
+          <p class="lead">
+            Replace hidden hamburger navigation with a bottom bar fixed to the viewport.
+          </p>
+      
+          <div class="bullets">
+            <div class="bullet">
+              5 core destinations: Home, News, Schedule, Rating, Videos
+            </div>
+            <div class="bullet">
+              More bottom-sheet contains lower-frequency destinations
+            </div>
+            <div class="bullet">
+              Active state gives immediate location feedback
+            </div>
+          </div>
+        </div>
+      
+        <div
+        class="reveal"
+        style="display:flex;align-items:flex-start;justify-content:center;gap:20px"
+      >
+        <img
+          src="/img/hiddenMenuActiveButton.png"
+          alt="Hidden navigation menu active button"
+          style="width:48%;height:620px;object-fit:contain"
+        >
+
+        <img
+          src="/img/hiddenMenu.png"
+          alt="Hidden hamburger navigation menu"
+          style="width:48%;height:620px;object-fit:contain"
+        >
+      </div>
+
+      
+        <div
+          class="card reveal"
+          style="display:grid;place-items:center;min-height:650px"
+        >
+          <div class="mini-phone">
+            <div class="mini-screen">
+              <h3 style="font-size:30px">News Feed</h3>
+              <div class="mini-top">Latest event updates</div>
+      
+              <div class="row">
+                <div class="avatar">N</div>
+                <div>
+                  <b>Geller Cup</b>
+                  <span>2 min read</span>
+                </div>
+                <em>→</em>
+              </div>
+      
+              <div class="mini-bottom">
+                <div>Home</div>
+                <div>News</div>
+                <div>Sched</div>
+                <div>Rating</div>
+                <div>More</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="no">08 / 16</div></div></section>
 
     <section class="slide"><div class="slide-content"><div class="eyebrow reveal"><span class="kicker">UC-01</span><span class="rule"></span></div><h2 class="reveal">Navigate via Persistent Bottom Nav</h2><div class="flow reveal"><div class="node"><strong>Actor</strong><span>Mobile visitor browsing with one hand</span></div><div class="arrow">→</div><div class="node"><strong>User action</strong><span>Tap “Rating” in bottom navigation</span></div><div class="arrow">→</div><div class="node"><strong>System response</strong><span>Highlight active tab + load Rating view</span></div><div class="arrow">→</div><div class="node"><strong>Outcome</strong><span>Section reached in 1 tap, zero grip adjustment</span></div></div><div class="compare reveal"><div class="card green"><span class="label">Alternative flow</span><p>Tap active tab → smooth-scroll current page back to top.</p></div><div class="card coral"><span class="label">Exception flow</span><p>Network latency → skeleton loader + retry while bottom nav remains available.</p></div></div><div class="no">09 / 16</div></div></section>
 
