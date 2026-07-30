@@ -371,39 +371,117 @@
     }
 
     /* === Slide-specific visuals === */
+    .cover-slide {
+      background:
+        linear-gradient(90deg, rgba(34, 79, 68, .08) 1px, transparent 1px),
+        linear-gradient(rgba(34, 79, 68, .08) 1px, transparent 1px),
+        var(--slide-bg);
+      background-size: 56px 56px
+    }
+
+    .cover-slide:before {
+      mask-image: none;
+      opacity: .45
+    }
+
+    .cover-slide .slide-content {
+      padding: 74px 92px 64px
+    }
+
+    .cover-mark {
+      position: absolute;
+      left: 92px;
+      top: 156px;
+      font-family: var(--font-display);
+      font-size: 104px;
+      line-height: .9;
+      color: var(--accent)
+    }
+
+    .cover-title {
+      position: absolute;
+      left: 92px;
+      top: 268px;
+      max-width: 900px;
+      font-size: 108px
+    }
+
+    .cover-lead {
+      position: absolute;
+      left: 96px;
+      top: 622px;
+      max-width: 790px;
+      font-size: 34px;
+      line-height: 1.28;
+      color: #332920
+    }
+
     .hero {
       position: absolute;
-      right: 130px;
+      right: 92px;
       top: 170px;
-      width: 520px;
-      height: 620px;
-      background: var(--green);
-      border: 4px solid var(--ink);
-      border-radius: 44% 56% 52% 48%;
-      box-shadow: 14px 18px 0 rgba(28, 23, 18, .12)
+      width: 560px;
+      height: 548px;
+      display: grid;
+      place-items: center;
+      background: var(--paper);
+      border: 3px solid var(--ink);
+      border-radius: 28px;
+      box-shadow: 16px 20px 0 rgba(28, 23, 18, .12)
     }
 
     .hero:before {
-      content: "♟";
+      content: "";
       position: absolute;
-      left: 105px;
-      top: 96px;
-      font-size: 350px;
-      color: #fff8e8
+      inset: 22px;
+      border: 2px solid rgba(28, 23, 18, .14);
+      border-radius: 20px
     }
 
-    .ribbon {
+    .hero-logo {
+      position: relative;
+      z-index: 1;
+      width: 380px;
+      height: auto
+    }
+
+    .cover-footer {
       position: absolute;
-      right: 72px;
-      top: 224px;
-      transform: rotate(7deg);
-      background: var(--accent);
-      color: white;
-      border: 3px solid var(--ink);
-      border-radius: 999px;
-      padding: 18px 30px;
-      font-size: 28px;
-      font-weight: 900
+      left: 92px;
+      right: 92px;
+      bottom: 62px;
+      display: grid;
+      grid-template-columns: 1fr 150px;
+      gap: 26px;
+      align-items: end
+    }
+
+    .cover-footer b {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 18px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: .12em
+    }
+
+    .cover-footer span {
+      display: block;
+      font-size: 22px;
+      line-height: 1.32;
+      color: var(--muted)
+    }
+
+    .cover-footer .members {
+      color: #332920
+    }
+
+    .cover-footer .slide-no {
+      font-size: 22px;
+      letter-spacing: .12em;
+      color: var(--muted);
+      font-weight: 800;
+      text-align: right
     }
 
     .statrow {
@@ -1023,16 +1101,22 @@
   <button class="edit" id="edit" style="visibility: hidden">Edit: off</button>
   <div class="deck-viewport">
     <main class="deck-stage" id="stage">
-      <section class="slide active visible">
+      <section class="slide cover-slide active visible">
         <div class="slide-content">
           <div class="eyebrow reveal"><span class="kicker">Group 06 · PA2</span><span class="rule"></span></div>
-          <h1 class="reveal">Freestyle Chess mobile UX research</h1>
-          <p class="lead reveal" style="margin-top:34px">From user evidence to proposal and use case flows.</p>
-          <div class="hero reveal"></div>
-          <div class="ribbon reveal">thumb-zone first</div>
-          <p class="small reveal" style="position:absolute;left:92px;bottom:86px"><b>Responsive mobile website</b> ·
-            smartphone browser · light theme</p>
-          <div class="no">01 / 16</div>
+          <div class="cover-mark reveal">06</div>
+          <h1 class="cover-title reveal">Freestyle Chess mobile UX research</h1>
+          <p class="cover-lead reveal">From user evidence to focused interaction proposals and use case flows.</p>
+          <div class="hero reveal">
+            <img class="hero-logo" src="./img/logo.png" alt="Freestyle Chess logo">
+          </div>
+          <div class="cover-footer reveal">
+            <div>
+              <b>Team members</b>
+              <span class="members">Lê Mai Hoài Bảo · Trương Công Thiên Phú · Lâm Hữu Khánh · Phạm Chí Bảo Ninh · Phùng Ngọc Tuấn</span>
+            </div>
+            <div class="slide-no">01 / 16</div>
+          </div>
         </div>
       </section>
 
