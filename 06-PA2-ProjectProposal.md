@@ -180,9 +180,21 @@ The Schedule Tab shows only the date and location of where the next event will o
 
 P09 is the only person that reported this as an issue, but considering they are an active player of chess and concerns themselves with news frequently. 
 
-### 3.3 Solution CS1.1 — 
+### 3.3 Solution CS3.1 — Additional important information popup
 
-### 3.4 Solution CS1.2 — 
+**Concept summary:** Right now there are 2 rows, events that will soon happen and past events. Keep them the same, but should add additional information on a popup. 
+
+**Layout specification:** A new box will cover the item, holding imporant information. For past events, it will be the top 3. For upcoming events it should be who are (some of) the big names that will be playing.
+
+**Interaction rules:** Clicking on "Read more" will lead the user to the normal page dedicated to that section as usual. If they click inside the box but not the "Read more", the new box appears, click anywhere on it again to close it, or click "Read more" directly to move on.
+
+**Rationale:** Usually for most decided chess players, they have someone they follow, usually a national top player, or the top of the world. And showing who is playing or who won draws more interests. Keeping the row layout the same also keep the user who is already familiar to the site feel like the site added an additional tool instead of needing to relearn.
+
+**Strengths:** Familiar layout for those who are dedicated users. The box is easy to make appear. Users also tend to not click directly on texts but rather the region around it, expecting the same action to happen, this clarify the difference between the box and the button.
+
+**Weaknesses:** The page remains rows of items, most people expect a schedule to look like a timeline or a calendar looking place. This can slow learning for new users.
+
+### 3.4 Solution CS3.2 — 
 
 ### 3.5 Comparison
 
