@@ -174,7 +174,7 @@ N09, N10, N11, N12, N22, N23, N27; Q16 (3.60/5 — finding info is only moderate
 
 ### 3.1 Problem Restated
 
-The Schedule Tab shows only the date and location of where the next event will occur. This lacks a lot of information that an actual interested person would probably want. For example: Time of the matches, how many matches, who is playing, potential big name players, format, style. 
+The Schedule Tab shows only the date and location of where the next event will occur. This lacks a lot of information that an actual interested person would probably want. For example: Time of the matches, how many matches, who is playing, potential big name players, format, style. It also lacks a calendar option to have a big view of the time line of all the events in a period of time. It also doesn't show any item in the past, only now/soon/future.
 
 ### 3.2 Evidence Base
 
