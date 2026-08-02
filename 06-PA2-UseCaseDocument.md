@@ -22,6 +22,8 @@ This document formalizes the actors, artifacts, interaction flows, and detailed 
 | **P-01** | Hamburger menu at top-left is out of reach for one-handed users | **CS1.2** | Draggable Floating Action Button (FAB) | Customizable, floating trigger that can be placed anywhere on screen |
 | **P-02** | Lack of sticky search & filtering on long listing pages | **CS2.1** | Sticky Search Bar with Flexible Name Matching | Always-accessible text search accepting diacritics, partial names, and any word order |
 | **P-02** | Lack of sticky search & filtering on long listing pages | **CS2.2** | Faceted Filter Chips (Tap-to-Filter) | Instant, zero-typing filtering by title (GM, IM), rating range, or event date |
+| **P-03** | Schedule does not provide enough information, forcing users to look elsewhere for this information | **CS3.1** | | |
+| **P-03** | Schedule does not provide enough information, forcing users to look elsewhere for this information | **CS3.1** | | |
 
 ---
 

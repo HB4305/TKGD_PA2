@@ -16,6 +16,7 @@ Following the assignment's guidance to focus on a few "tough problems" rather th
 |---|---|---:|
 | **P-01** | One-handed reachability issues with top-left hamburger menu | 19/20 |
 | **P-02** | Lack of sticky search & filtering on long listing pages (Rating & News) | 18/20 |
+| **P-03** | Schedule does not provide enough information, forcing users to look elsewhere for this information. | 15/20 |
 
 These two problems were chosen because they scored highest across Frequency, Severity, Evidence Strength, and Feasibility, and because existing market solutions (competing chess/sports sites) do not sufficiently address either issue on mobile. P-03 (video feedback/audio overlap) was considered but set aside for this proposal, as its underlying issues read more as implementation bugs (state-desynced controls, missing loading feedback) to be fixed rather than a genuine UX redesign opportunity.
 
@@ -169,6 +170,22 @@ N09, N10, N11, N12, N22, N23, N27; Q16 (3.60/5 — finding info is only moderate
 
 ---
 
-## 5. Summary
+## 5. Problem 3 — P-03: Schedule does not provide enough information, forcing users to look elsewhere for this information.
+
+### 3.1 Problem Restated
+
+The Schedule Tab shows only the date and location of where the next event will occur. This lacks a lot of information that an actual interested person would probably want. For example: Time of the matches, how many matches, who is playing, potential big name players, format, style. 
+
+### 3.2 Evidence Base
+
+P09 is the only person that reported this as an issue, but considering they are an active player of chess and concerns themselves with news frequently. 
+
+### 3.3 Solution CS1.1 — 
+
+### 3.4 Solution CS1.2 — 
+
+### 3.5 Comparison
+
+## 6. Summary
 
 Both problems are addressed within the same overall concept — a responsive mobile website redesigned around thumb-zone accessibility and always-available information retrieval — while each is given two meaningfully distinct conceptual solutions rather than superficial variations of one idea. This gives the team a genuine basis for comparison before committing to a single direction for prototyping.
