@@ -194,7 +194,94 @@ P09 is the only person that reported this as an issue, but considering they are 
 
 **Weaknesses:** The page remains rows of items, most people expect a schedule to look like a timeline or a calendar looking place. This can slow learning for new users.
 
-### 3.4 Solution CS3.2 — 
+### 3.4 Solution CS3.2 — Interactive Chess Schedule Calendar
+
+**Concept Summary:**
+
+The proposed solution redesigns the Schedule feature as a dedicated calendar page for viewing and exploring chess matches. The chevron-down icon beside the Schedule tab will be removed because it incorrectly suggests that a dropdown menu will appear. Selecting the Schedule tab will instead navigate users to a full page, matching their expectation of how a primary navigation tab behaves.
+
+The new page will use a familiar calendar metaphor similar to the real-world calendar. It will organize previous and upcoming chess matches by date and allow users to browse schedules, inspect event summaries, open expanded schedule cards, and navigate to detailed match pages.
+
+The calendar highlights the current date, for example, August 2, 2026. When the current date is outside the visible area, a directional indicator helps users locate it: a downward arrow appears at the bottom when the current date is below the visible calendar position, while an upward arrow appears at the top when it is above. Users can touch over the arrow to go back to the current date area.
+
+**Layout Specification:**
+
+* **Schedule navigation tab:** Remove the chevron-down icon. Selecting the tab navigates directly to the Schedule page.
+
+* **Calendar header:** Display the currently selected date range, such as the current week, month, or year. Controls may be provided for changing the calendar view.
+
+* **Date selection input:** Allow users to select a specific date and immediately move the calendar to that period.
+
+* **Search bar:** Allow users to search by location, match, tournament, or chess player. Search results should indicate when the corresponding match will be played or when it was played.
+
+* **Calendar area:** Present matches according to their dates and times. Users can swipe vertically to view previous or future weeks, months, and years.
+
+* **Schedule items:** Display a concise summary for each event, including its start time, match name, and location. Visual styling should make each item clearly distinguishable from ordinary calendar text.
+
+* **Expanded schedule card:** When a schedule item is selected, expand it into a card containing additional information, such as:
+
+  * Date and time
+  * Location
+  * Chess players
+  * Tournament
+  * Match status
+  * Short description
+  * Detail button
+
+* **Match detail page:** The Detail button navigates users to a separate page containing complete information about the match, players, tournament, and other related content.
+
+**Interaction Rules:**
+
+1. When users select the Schedule tab, the application navigates to the dedicated Schedule page.
+
+2. Users can swipe upward to view previous time periods and downward to view upcoming time periods.
+
+3. Users can use the date input to jump directly to a specific date instead of swiping through the calendar.
+
+4. Users can enter a location, match, tournament, or player name in the search bar. The calendar then displays or highlights matching events.
+
+5. When users touch a schedule item, it provides visual feedback and expands into a summary card without leaving the Schedule page.
+
+7. Selecting the expanded item again, touching outside it, or opening another item collapses the current card.
+
+8. When users select another schedule item, the previously expanded card closes and the newly selected item expands. This limits visual clutter.
+
+9. When users select the Detail button, the application navigates to the corresponding match detail page.
+
+10. After users return from the detail page, the calendar should preserve their selected date, scroll position, search query, and expanded event whenever possible.
+
+**Rationale:**
+
+The current interface creates an inaccurate mental model. A chevron-down icon conventionally communicates that selecting the associated element will reveal a dropdown menu or expand content beneath it. However, the existing Schedule tab opens a large overlapping layer that resembles a separate page. This conflict between the visual cue and the resulting behavior can make users uncertain about their current location and how to return to the previous interface.
+
+The overlapping layer also weakens the information hierarchy because it visually covers the current page without clearly behaving as either a dropdown, modal dialog, or full page. Replacing it with explicit page navigation gives the Schedule feature a clear position within the application.
+
+The current schedule presentation relies heavily on text and images. Users must carefully read individual entries to determine when matches occur and how events relate to one another. A calendar organizes the same information spatially and chronologically. Users can therefore recognize match dates and nearby events without processing every line of text.
+
+**Strengths:**
+
+* **Interaction metaphor:** The interface uses a calendar metaphor that users are likely to understand from physical and digital calendars. For example, a user looking for next week’s chess matches can swipe downward and inspect events positioned under the relevant dates.
+
+* **Recognition rather than recall:** Important information is presented within the calendar, so users do not have to remember match dates, player names, or locations while navigating between screens. For example, a user can search for a player and recognize the correct match from its visible date, opponent, and location.
+
+* **Reduced information load:** Schedule items initially display only essential information. Additional details appear only when requested. For example, users can scan several match names and start times without being distracted by full player and tournament descriptions.
+
+* **Visibility of interaction:** Hover, focus, and pressed states make schedule items visibly interactive. For example, when the pointer moves over a match, its background or border changes, indicating that it can be selected.
+
+* **Natural mapping:** Vertical movement corresponds to chronological movement. Scrolling upward shows previous periods, while scrolling downward shows future periods. This resembles browsing through a chronological calendar.
+
+* **Progressive disclosure:** Information is revealed in stages: calendar summary, expanded card, and complete detail page. For example, a user can first identify an interesting match, open its card to check the location, and visit the detail page only when more information is required.
+
+* **Consistency and predictability:** The Schedule tab behaves like other primary navigation tabs by opening a dedicated page. Meanwhile, the Detail button consistently indicates navigation to a more comprehensive view.
+
+* **User control and efficiency:** Users can browse naturally, jump to an exact date, or search directly. For example, a user who knows the tournament date can use the date input, while another user who only knows a player’s name can use search.
+
+* **Clear temporal orientation:** Highlighting the current date and displaying directional indicators when it is outside the visible area helps users maintain awareness of their position in the calendar and quickly return to today.
+
+
+**Weaknesses:**
+
+If many chess events occur on the same day, the calendar may not have enough space to display every schedule item clearly. This can create visual crowding, increase the height of the date section, or make individual events difficult to distinguish. A possible future improvement would be to show a limited number of events followed by a “View more” indicator, but this introduces an additional interaction and may hide information from immediate view.
 
 ### 3.5 Comparison
 
