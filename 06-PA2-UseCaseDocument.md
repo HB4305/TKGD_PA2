@@ -10,7 +10,7 @@
 
 ## 1. Overview & Conceptual Solution Mapping
 
-In `06-PA2-ProjectProposal.md`, Group 06 proposed four conceptual solutions across two high-priority user problems (**P-01: One-Handed Reachability** and **P-02: Lack of Sticky Search & Filtering**).
+In `06-PA2-ProjectProposal.md`, Group 06 proposed six conceptual solutions across three user problems (**P-01: One-Handed Reachability**, **P-02: Lack of Sticky Search & Filtering**, and **P-03: Lack of Schedule Information**).
 
 This document formalizes the actors, artifacts, interaction flows, and detailed use case specifications for each proposed solution.
 
@@ -22,8 +22,8 @@ This document formalizes the actors, artifacts, interaction flows, and detailed 
 | **P-01** | Hamburger menu at top-left is out of reach for one-handed users | **CS1.2** | Draggable Floating Action Button (FAB) | Customizable, floating trigger that can be placed anywhere on screen |
 | **P-02** | Lack of sticky search & filtering on long listing pages | **CS2.1** | Sticky Search Bar with Flexible Name Matching | Always-accessible text search accepting diacritics, partial names, and any word order |
 | **P-02** | Lack of sticky search & filtering on long listing pages | **CS2.2** | Faceted Filter Chips (Tap-to-Filter) | Instant, zero-typing filtering by title (GM, IM), rating range, or event date |
-| **P-03** | Schedule does not provide enough information, forcing users to look elsewhere for this information | **CS3.1** | | |
-| **P-03** | Schedule does not provide enough information, forcing users to look elsewhere for this information | **CS3.1** | | |
+| **P-03** | Schedule does not provide enough information, forcing users to look elsewhere | **CS3.1** | Additional Important Information Popup | Quick expandable preview of top performers or star players without layout overhaul |
+| **P-03** | Schedule does not provide enough information, forcing users to look elsewhere | **CS3.2** | Interactive Chess Schedule Calendar | Chronological calendar view with date navigation, search, and expanded event cards |
 
 ---
 
@@ -33,7 +33,7 @@ This document formalizes the actors, artifacts, interaction flows, and detailed 
 
 * **Mobile Visitor (Primary Actor):** General smartphone user browsing the Freestyle Chess mobile website in short sessions (2-3 minutes) while commuting, resting, or multi-tasking.
 * **First-Time / Casual User:** Visitor unfamiliar with Freestyle Chess who needs quick orientation and simple, low-effort navigation.
-* **Core Chess Follower:** Experienced chess enthusiast seeking fast access to specific player ratings, rankings, and match developments.
+* **Core Chess Follower:** Experienced chess enthusiast seeking fast access to specific player ratings, rankings, match developments, and detailed schedule information.
 
 ### 2.2 System & Interface Artifacts
 
@@ -42,6 +42,8 @@ This document formalizes the actors, artifacts, interaction flows, and detailed 
 * **Sticky Search Header Artifact (`ART-SSH`):** Fixed header component at top viewport ($y = 0$) containing a text input field, clear button, and real-time auto-suggest dropdown.
 * **Faceted Filter Chips Artifact (`ART-FFC`):** Horizontal scrollable row of interactive chip toggles (e.g., `GM`, `IM`, `Rating > 2700`, `Geller Cup 2026`) that apply instant client/server data filters.
 * **Data Listing View Artifact (`ART-DLV`):** Dynamic list container (Rating Leaderboard or News Feed) that renders filtered results with skeleton loading indicators.
+* **Additional Information Popup Artifact (`ART-AIP`):** Expandable overlay card rendered over schedule item rows, displaying top-3 results for past events or featured player names for upcoming events, with a direct "Read more" section link.
+* **Interactive Schedule Calendar Artifact (`ART-ISC`):** Dedicated schedule page containing chronological match listings, vertical time swiping, a date-picker jump control, sticky search bar, and expandable event cards (`ART-EEC`).
 
 ---
 
@@ -67,15 +69,24 @@ graph LR
         UC04[UC-04: Filter Content via Faceted Filter Chips - CS2.2]
     end
 
+    subgraph Solution 3: Schedule Details & Exploration [P-03]
+        UC05[UC-05: View Highlights via Info Popup - CS3.1]
+        UC06[UC-06: Explore Schedule via Interactive Calendar - CS3.2]
+    end
+
     User --> UC01
     User --> UC02
     User --> UC03
     User --> UC04
+    User --> UC05
+    User --> UC06
 
     UC01 -.->|Interacts with| ART_BNB[Bottom Nav Bar Artifact]
     UC02 -.->|Interacts with| ART_FAB[Draggable FAB Artifact]
     UC03 -.->|Interacts with| ART_SSH[Sticky Search Header Artifact]
     UC04 -.->|Interacts with| ART_FFC[Faceted Filter Chips Artifact]
+    UC05 -.->|Interacts with| ART_AIP[Additional Info Popup Artifact]
+    UC06 -.->|Interacts with| ART_ISC[Interactive Calendar Artifact]
 ```
 
 ---
@@ -121,6 +132,30 @@ flowchart TD
     FC1 --> FC2[User taps one or more filter chips without typing]
     FC2 --> FC3[Active chips highlight; list updates instantly in real time]
     FC3 --> EndSearch2([Filtered Results Displayed Zero Typing Required])
+```
+
+---
+
+### 3.4 Flow Model — Conceptual Solution CS3.1 vs CS3.2 (Schedule Exploration)
+
+```mermaid
+flowchart TD
+    StartSched([User opens Schedule Section]) --> SchedModel{Schedule Interaction Model}
+
+    %% CS3.1 Path
+    SchedModel -->|CS3.1: Info Popup| SP1[User views 2-row layout: Upcoming & Past Events]
+    SP1 --> SP2[User taps event region excluding Read More button]
+    SP2 --> SP3[System opens expandable popup box ART-AIP with top 3 results or star player names]
+    SP3 --> SP4[User taps popup box again to close, or taps Read More to visit section page]
+    SP4 --> EndSched1([Event Details Reviewed with Zero Layout Shift])
+
+    %% CS3.2 Path
+    SchedModel -->|CS3.2: Interactive Calendar| SC1[User navigates to dedicated Schedule Calendar Page ART-ISC]
+    SC1 --> SC2[User swipes vertically by week/month or uses date picker/search bar]
+    SC2 --> SC3[User taps schedule item in calendar view]
+    SC3 --> SC4[Item expands into card ART-EEC with date, time, location, players & status]
+    SC4 --> SC5[User taps Detail button on card to open full Match Detail Page]
+    SC5 --> EndSched2([Comprehensive Match Context & Navigation Achieved])
 ```
 
 ---
@@ -203,9 +238,47 @@ flowchart TD
 
 ---
 
+### 4.5 UC-05: View Event Highlights via Additional Information Popup (CS3.1)
+
+| Field | Details |
+|---|---|
+| **Use Case ID** | **UC-05** |
+| **Use Case Name** | View Event Highlights via Additional Information Popup |
+| **Related Concept** | **CS3.1** (Additional Important Information Popup for P-03) |
+| **Primary Actor** | Core Chess Follower / Mobile Visitor |
+| **Target Artifacts** | Additional Information Popup Artifact (`ART-AIP`), Schedule Row Item (`ART-SRI`) |
+| **Preconditions** | User is viewing the Schedule section retaining the familiar 2-row layout (*Upcoming Events* and *Past Events*). |
+| **Trigger** | User wants to quickly see key match context (such as featured star grandmasters or top-3 winners) without navigating away from the page. |
+| **Main Success Scenario** | **1. User Action:** User scans event items in either the Upcoming or Past events row.<br>**2. User Action:** User touches an event item region (outside the explicit "Read more" link).<br>**3. System Response:** System highlights touch region and displays expandable overlay popup (`ART-AIP`) over the event card with smooth drop-shadow animation.<br>**4. System Response:** `ART-AIP` displays curated highlights: top-3 players/results for past matches, or key big-name participants for upcoming events.<br>**5. User Action:** User reviews information and taps anywhere inside `ART-AIP` again.<br>**6. System Response:** System collapses `ART-AIP` smoothly, restoring normal row appearance. |
+| **Alternative Flows** | **ALT-1 (Direct Section Navigation):** User touches "Read more" directly inside `ART-AIP` or on the event row; system navigates to the dedicated section page.<br>**ALT-2 (Switching Active Popups):** User touches a different event row while `ART-AIP` is open; system closes the previous popup and expands the new event popup instantly. |
+| **Exception Flows** | **EX-1 (Missing Highlight Data):** If player/result highlight data is unavailable, `ART-AIP` displays fallback message ("Participant list updating shortly") alongside the "Read more" link. |
+| **Postconditions** | User obtains key player names or match results in 1 tap without losing their position on the schedule page. |
+| **Empirical Evidence** | Validates **P09** feedback regarding insufficient match details while preserving layout familiarity for returning users. |
+
+---
+
+### 4.6 UC-06: Explore Match Schedule via Interactive Chess Calendar (CS3.2)
+
+| Field | Details |
+|---|---|
+| **Use Case ID** | **UC-06** |
+| **Use Case Name** | Explore Match Schedule via Interactive Chess Calendar |
+| **Related Concept** | **CS3.2** (Interactive Chess Schedule Calendar for P-03) |
+| **Primary Actor** | Core Chess Follower / Mobile Visitor |
+| **Target Artifacts** | Interactive Schedule Calendar Artifact (`ART-ISC`), Expanded Event Card (`ART-EEC`), Match Detail Page (`ART-MDP`) |
+| **Preconditions** | User selects the Schedule tab from primary navigation; system opens dedicated `ART-ISC` page. |
+| **Trigger** | User wants to explore past/upcoming chess matches chronologically, jump to a specific date, or search for a player's schedule. |
+| **Main Success Scenario** | **1. User Action:** User lands on `ART-ISC` page showing matches organized chronologically by date and start time.<br>**2. System Response:** System visually highlights current date marker; displays directional arrow if current date is outside visible viewport.<br>**3. User Action:** User swipes vertically (downward for upcoming weeks, upward for past weeks) or selects a specific date via date picker.<br>**4. System Response:** System smoothly scrolls and renders calendar items for the selected timeframe.<br>**5. User Action:** User taps a schedule item.<br>**6. System Response:** Item expands in-place into `ART-EEC` showing time, location, players, tournament name, match status, short description, and a "Detail" button.<br>**7. User Action:** User taps "Detail" button.<br>**8. System Response:** System navigates to `ART-MDP` (Match Detail Page) with complete player statistics and game history. |
+| **Alternative Flows** | **ALT-1 (Schedule Search):** User types player name, tournament, or location into search bar; system filters calendar entries dynamically.<br>**ALT-2 (Collapse Card):** User touches `ART-EEC` again or taps outside it; card collapses back into single-line schedule item.<br>**ALT-3 (Preserve State on Return):** User returns from `ART-MDP` via back button; system preserves scroll position, selected date, search query, and expanded card. |
+| **Exception Flows** | **EX-1 (High Event Density):** If many matches occur on one day, system displays top 3 events with a "View more" expander to prevent visual overcrowding. |
+| **Postconditions** | User gains complete chronological orientation, flexible date jump & search, and multi-level information (summary -> expanded card -> detail page). |
+| **Empirical Evidence** | Directly resolves **P09** feedback by supplying full match info (time, players, location, format) and replaces misleading chevron icon with a dedicated calendar mental model. |
+
+---
+
 ## 5. Summary & Verification Matrix
 
-The four Use Case Specifications above cover 100% of the conceptual solutions proposed in `06-PA2-ProjectProposal.md`. 
+The six Use Case Specifications above cover 100% of the conceptual solutions proposed in `06-PA2-ProjectProposal.md`. 
 
 | Use Case ID | Conceptual Solution | Problem Addressed | User Interaction Type | Verification Method |
 |---|---|---|---|---|
@@ -213,3 +286,5 @@ The four Use Case Specifications above cover 100% of the conceptual solutions pr
 | **UC-02** | CS1.2: Draggable FAB | P-01: Reachability | Touch-drag & 2-tap radial menu | Custom position persistence across sessions |
 | **UC-03** | CS2.1: Flexible Sticky Search | P-02: Long List Search | Text input + auto-suggest | Success rate on reversed name order queries |
 | **UC-04** | CS2.2: Faceted Filter Chips | P-02: Long List Search | 1-tap filter toggles | Zero-typing filtering by title and event date |
+| **UC-05** | CS3.1: Additional Info Popup | P-03: Lack of Schedule Info | 1-tap expandable overlay box | Instant highlight access without layout disruption |
+| **UC-06** | CS3.2: Interactive Calendar | P-03: Lack of Schedule Info | Calendar swipe, date jump & expanded card | Full temporal navigation & 3-stage progressive disclosure |
