@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
 
 <head>
@@ -1045,6 +1045,183 @@
       color: white
     }
 
+    .sched-section {
+      margin-top: 14px
+    }
+
+    .sched-label {
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 8px 0 7px
+    }
+
+    .event-card {
+      position: relative;
+      background: white;
+      border: 2px solid var(--ink);
+      border-radius: 16px;
+      padding: 11px 12px;
+      margin-bottom: 9px;
+      cursor: pointer;
+      box-shadow: 0 4px 0 rgba(28, 23, 18, .08)
+    }
+
+    .event-card.active {
+      background: #fff0bc
+    }
+
+    .event-card b {
+      display: block;
+      font-size: 13px
+    }
+
+    .event-card span {
+      display: block;
+      font-size: 11px;
+      color: #6d6257;
+      margin-top: 2px
+    }
+
+    .event-popup {
+      display: none;
+      position: relative;
+      margin-top: 9px;
+      background: #fffaf0;
+      border: 2px solid var(--ink);
+      border-radius: 14px;
+      padding: 10px;
+      box-shadow: 0 6px 0 rgba(28, 23, 18, .12)
+    }
+
+    .event-card.active .event-popup {
+      display: block
+    }
+
+    .event-popup strong {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 4px
+    }
+
+    .event-popup p {
+      font-size: 11px;
+      line-height: 1.25;
+      color: #5e554c
+    }
+
+    .event-popup a {
+      display: inline-block;
+      margin-top: 7px;
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 900;
+      text-decoration: none
+    }
+
+    .cal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: var(--font-display);
+      font-size: 28px;
+      letter-spacing: -.035em;
+      margin-bottom: 10px
+    }
+
+    .date-strip {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+      margin: 8px 0 8px
+    }
+
+    .date-chip {
+      border: 2px solid var(--ink);
+      background: white;
+      border-radius: 13px;
+      padding: 6px 2px;
+      font-size: 10px;
+      font-weight: 900;
+      line-height: 1.12;
+      cursor: pointer
+    }
+
+    .date-chip.today {
+      background: var(--green);
+      color: white
+    }
+
+    .jump-badge {
+      display: inline-flex;
+      border: 2px solid var(--ink);
+      background: #ffe1d4;
+      border-radius: 999px;
+      padding: 5px 9px;
+      font-size: 10px;
+      font-weight: 900;
+      margin-bottom: 4px
+    }
+
+    .sched-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 11px
+    }
+
+    .sched-item {
+      background: white;
+      border: 2px solid var(--ink);
+      border-radius: 16px;
+      padding: 10px;
+      cursor: pointer
+    }
+
+    .sched-item.active {
+      background: #fff0bc
+    }
+
+    .sched-line {
+      font-size: 12px;
+      font-weight: 900
+    }
+
+    .event-detail-card {
+      display: none;
+      margin-top: 9px;
+      background: #fffaf0;
+      border: 2px solid var(--ink);
+      border-radius: 14px;
+      padding: 10px;
+      box-shadow: 0 6px 0 rgba(28, 23, 18, .1)
+    }
+
+    .sched-item.active .event-detail-card {
+      display: block
+    }
+
+    .event-detail-card div {
+      font-size: 10.5px;
+      color: #5e554c;
+      line-height: 1.3;
+      margin-bottom: 3px
+    }
+
+    .detail-btn {
+      display: inline-block;
+      margin-top: 5px;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      background: var(--accent);
+      color: white;
+      font-size: 10.5px;
+      font-weight: 900;
+      padding: 5px 10px;
+      text-decoration: none
+    }
+
     .mini-phone {
       width: 250px;
       height: 490px;
@@ -1208,7 +1385,7 @@
               <span class="members">Lê Mai Hoài Bảo · Trương Công Thiên Phú · Lâm Hữu Khánh · Phạm Chí Bảo Ninh · Phùng
                 Ngọc Tuấn</span>
             </div>
-            <div class="slide-no">01 / 16</div>
+            <div class="slide-no">01 / 20</div>
           </div>
         </div>
       </section>
@@ -1237,7 +1414,7 @@
               </div>
             </div>
           </div>
-          <div class="no">02 / 16</div>
+          <div class="no">02 / 20</div>
         </div>
       </section>
 
@@ -1265,7 +1442,7 @@
           </div>
           <p class="lead reveal" style="margin-top:46px">We prioritize issues that happen in short sessions, on small
             screens, and when users do not want to retry repeatedly.</p>
-          <div class="no">03 / 16</div>
+          <div class="no">03 / 20</div>
         </div>
       </section>
 
@@ -1321,7 +1498,7 @@
             Navigation and information retrieval are the clearest mobile bottlenecks.
           </p>
 
-          <div class="no">04 / 16</div>
+          <div class="no">04 / 20</div>
         </div>
       </section>
 
@@ -1335,13 +1512,12 @@
                   to change grip.</span></div>
               <div class="cluster"><b>B · Homepage Onboarding</b><span>New users need to understand Freestyle Chess
                   faster.</span></div>
-              <div class="cluster"><b>C · Search & Retrieval</b><span>Long Rating and News lists need clear
-                  search/filter support.</span></div>
+              <div class="cluster"><b>C · Search & Retrieval</b><span>Long Rating, News, and Schedule information need clearer retrieval support — search, filters, or richer previews.</span></div>
               <div class="cluster"><b>D · Video Feedback</b><span>Loading and multiple playback are frustrating, but
                   lean more toward bug fixes.</span></div>
             </div>
           </div>
-          <div class="no">05 / 16</div>
+          <div class="no">05 / 20</div>
         </div>
       </section>
 
@@ -1383,11 +1559,16 @@
                 <td>Lower priority</td>
                 <td>16/20</td>
               </tr>
+              <tr>
+                <td>P-05</td>
+                <td>Schedule lacks match/tournament detail for dedicated followers</td>
+                <td>Carried forward (qualitative)</td>
+                <td>10/20</td>
+              </tr>
             </tbody>
           </table>
-          <p class="lead reveal" style="margin-top:38px">P-01 and P-02 are interaction-model problems; P-03 is important
-            but closer to an implementation fix.</p>
-          <div class="no">06 / 16</div>
+          <p class="lead reveal" style="margin-top:38px; max-width: 1300px">P-01 and P-02 are interaction-model problems; P-03 is closer to an implementation fix. P-05 has narrow evidence — P09 only, no survey backing — but P09 behaves like a retention-critical chess follower, so we kept it as a qualitative addition.</p>
+          <div class="no">06 / 20</div>
         </div>
       </section>
 
@@ -1472,7 +1653,7 @@
               </div>
             </div>
           </div>
-          <div class="no">07 / 16</div>
+          <div class="no">07 / 20</div>
         </div>
       </section>
 
@@ -1571,7 +1752,7 @@
 
           </div>
 
-          <div class="no">08 / 16</div>
+          <div class="no">08 / 20</div>
         </div>
       </section>
 
@@ -1596,7 +1777,7 @@
               <p>Network latency → skeleton loader + retry while bottom nav remains available.</p>
             </div>
           </div>
-          <div class="no">09 / 16</div>
+          <div class="no">09 / 20</div>
         </div>
       </section>
 
@@ -1675,7 +1856,7 @@
               </div>
             </div>
           </div>
-          <div class="no">10 / 16</div>
+          <div class="no">10 / 20</div>
         </div>
       </section>
 
@@ -1700,7 +1881,7 @@
               <p>Movement under ~5px is interpreted as tap, preventing accidental drag.</p>
             </div>
           </div>
-          <div class="no">11 / 16</div>
+          <div class="no">11 / 20</div>
         </div>
       </section>
 
@@ -1778,7 +1959,7 @@
               </div>
             </div>
           </div>
-          <div class="no">12 / 16</div>
+          <div class="no">12 / 20</div>
         </div>
       </section>
 
@@ -1800,7 +1981,7 @@
           </div>
           <p class="quote reveal" style="margin-top:72px;max-width:1420px">Goal: locate player rating in 3–5 seconds,
             not through repetitive vertical scrolling.</p>
-          <div class="no">13 / 16</div>
+          <div class="no">13 / 20</div>
         </div>
       </section>
 
@@ -1879,7 +2060,7 @@
               </div>
             </div>
           </div>
-          <div class="no">14 / 16</div>
+          <div class="no">14 / 20</div>
         </div>
       </section>
 
@@ -1905,10 +2086,144 @@
               <p>Zero results → clear empty state plus Reset Filters action.</p>
             </div>
           </div>
-          <div class="no">15 / 16</div>
+          <div class="no">15 / 20</div>
         </div>
       </section>
 
+      <section class="slide">
+        <div class="slide-content">
+          <div class="eyebrow reveal"><span class="kicker">CS3.1</span><span class="rule"></span></div>
+          <h2 class="reveal">Additional Important Information Popup</h2>
+          <div class="grid2" style="grid-template-columns:auto 1fr;align-items:center;gap:50px">
+            <div class="phone reveal" data-phone data-hide-fab>
+              <div class="screen">
+                <div class="status"><span>09:41</span><span>Freestyle Chess</span><span>●●●</span></div>
+                <div class="page">
+                  <div class="ptitle">Schedule</div>
+                  <div class="sched-section">
+                    <div class="sched-label">Upcoming Events</div>
+                    <div class="event-card active"><b>Geller Cup 2026</b><span>Aug 12 · Berlin</span>
+                      <div class="event-popup"><strong>Featured Players</strong><p>Magnus Carlsen · Hikaru Nakamura · Le Quang Liem</p><a href="#">Read more →</a></div>
+                    </div>
+                    <div class="event-card"><b>Freestyle Masters</b><span>Aug 20 · Zagreb</span></div>
+                  </div>
+                  <div class="sched-section">
+                    <div class="sched-label">Past Events</div>
+                    <div class="event-card"><b>Geller Cup 2025 — Results</b><span>Aug 2025 · Berlin</span>
+                      <div class="event-popup"><strong>Top 3 Results</strong><p>Carlsen · Nakamura · Liem</p><a href="#">Read more →</a></div>
+                    </div>
+                  </div>
+                  <div class="note">Tap a card (not “Read more”) to preview featured players or top-3 results without leaving the page.</div>
+                </div>
+                <div class="sheet">
+                  <div class="sheet-title">More destinations</div>
+                  <div class="sheet-grid"><button>Press &amp; Media</button><button>Rules &amp; Club</button><button>Merch</button><button>Masterclass</button></div>
+                </div>
+                <div class="fabmenu"><div class="radial-item"><div class="radial-item-circle">⌂</div><span class="radial-item-label">Home</span></div></div>
+                <div class="fab">♟</div>
+                <div class="bottom"><button class="nav"><i>⌂</i>Home</button><button class="nav"><i>☰</i>News</button><button class="nav active"><i>◷</i>Schedule</button><button class="nav"><i>♙</i>Rating</button><button class="nav"><i>▶</i>Videos</button><button class="nav nav-more"><i>•••</i>More</button></div>
+              </div>
+            </div>
+            <div class="reveal">
+              <p class="lead">Keep the familiar two-row layout, but add a tap-to-preview popup instead of a full redesign.</p>
+              <div class="bullets">
+                <div class="bullet">Same Upcoming / Past layout returning users already know</div>
+                <div class="bullet">Tap the card region → popup shows top-3 past results or featured upcoming players</div>
+                <div class="bullet">Tap “Read more” → still navigates to the full section page as today</div>
+                <div class="bullet">Trade-off: still doesn't read as a timeline/calendar to new users</div>
+              </div>
+            </div>
+          </div>
+          <div class="no">16 / 20</div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <div class="slide-content">
+          <div class="eyebrow reveal"><span class="kicker">UC-05</span><span class="rule"></span></div>
+          <h2 class="reveal">View Event Highlights via Info Popup</h2>
+          <div class="flow reveal">
+            <div class="node"><strong>Browse</strong><span>User scans Upcoming / Past event rows</span></div>
+            <div class="arrow">→</div>
+            <div class="node"><strong>Touch card</strong><span>User taps an event card region (not “Read more”)</span></div>
+            <div class="arrow">→</div>
+            <div class="node"><strong>System response</strong><span>Popup shows featured players or top-3 results</span></div>
+            <div class="arrow">→</div>
+            <div class="node"><strong>Outcome</strong><span>Key info seen in 1 tap, zero navigation away from Schedule</span></div>
+          </div>
+          <div class="compare reveal">
+            <div class="card green"><span class="label">Alternative flow</span><p>Touch “Read more” → navigate directly to the full section page.</p></div>
+            <div class="card coral"><span class="label">Exception flow</span><p>Missing highlight data → fallback message (“Participant list updating shortly”) with “Read more” still available.</p></div>
+          </div>
+          <div class="no">17 / 20</div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <div class="slide-content">
+          <div class="eyebrow reveal"><span class="kicker">CS3.2</span><span class="rule"></span></div>
+          <h2 class="reveal">Interactive Chess Schedule Calendar</h2>
+          <div class="grid2" style="grid-template-columns:auto 1fr;align-items:center;gap:50px">
+            <div class="phone reveal" data-phone data-hide-fab>
+              <div class="screen">
+                <div class="status"><span>09:41</span><span>Freestyle Chess</span><span>●●●</span></div>
+                <div class="page">
+                  <div class="cal-header"><span>‹</span><b>August 2026</b><span>›</span></div>
+                  <div class="date-strip"><button class="date-chip">Mon<br>3</button><button class="date-chip">Tue<br>4</button><button class="date-chip today">Wed<br>5</button><button class="date-chip">Thu<br>6</button><button class="date-chip">Fri<br>7</button><button class="date-chip">Sat<br>8</button><button class="date-chip">Sun<br>9</button></div>
+                  <div class="jump-badge">↓ Jump to Today</div>
+                  <div class="search">⌕ Search matches, players, tournaments…</div>
+                  <div class="suggest"><div>Carlsen vs Nakamura · Berlin</div><div>Geller Cup 2026 — Round 3</div></div>
+                  <div class="sched-list">
+                    <div class="sched-item active"><div class="sched-line">14:00 — Carlsen vs Nakamura · Berlin</div>
+                      <div class="event-detail-card"><div><b>Date/time:</b> Aug 5, 2026 · 14:00</div><div><b>Location:</b> Berlin, Germany</div><div><b>Players:</b> Magnus Carlsen vs Hikaru Nakamura</div><div><b>Tournament:</b> Geller Cup 2026 — Round 3</div><div><b>Status:</b> Upcoming</div><div><b>Description:</b> Top seed matchup in the Freestyle bracket.</div><a class="detail-btn" href="#">Detail →</a></div>
+                    </div>
+                    <div class="sched-item"><div class="sched-line">16:30 — Liem vs Firouzja · Berlin</div></div>
+                  </div>
+                  <div class="note">Tap a date to jump; tap a schedule item to expand into a full match card; tap Detail to open the match page.</div>
+                </div>
+                <div class="sheet">
+                  <div class="sheet-title">More destinations</div>
+                  <div class="sheet-grid"><button>Press &amp; Media</button><button>Rules &amp; Club</button><button>Merch</button><button>Masterclass</button></div>
+                </div>
+                <div class="fabmenu"><div class="radial-item"><div class="radial-item-circle">⌂</div><span class="radial-item-label">Home</span></div></div>
+                <div class="fab">♟</div>
+                <div class="bottom"><button class="nav"><i>⌂</i>Home</button><button class="nav"><i>☰</i>News</button><button class="nav active"><i>◷</i>Schedule</button><button class="nav"><i>♙</i>Rating</button><button class="nav"><i>▶</i>Videos</button><button class="nav nav-more"><i>•••</i>More</button></div>
+              </div>
+            </div>
+            <div class="reveal">
+              <p class="lead">Replace the misleading dropdown-style overlay with a real calendar page — chronology, search, and date-jump in one place.</p>
+              <div class="bullets">
+                <div class="bullet">Chevron-down icon removed; Schedule tab navigates to a dedicated page like other primary tabs</div>
+                <div class="bullet">Search by player, tournament, or location directly on the calendar</div>
+                <div class="bullet">Tap an item → expanded card with time, location, players, tournament, status, description</div>
+                <div class="bullet">Trade-off: many same-day matches can visually crowd one date cell</div>
+              </div>
+            </div>
+          </div>
+          <div class="no">18 / 20</div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <div class="slide-content">
+          <div class="eyebrow reveal"><span class="kicker">UC-06</span><span class="rule"></span></div>
+          <h2 class="reveal">Explore Match Schedule via Interactive Calendar</h2>
+          <div class="flow reveal">
+            <div class="node"><strong>Land</strong><span>User selects Schedule tab → lands on dedicated calendar page</span></div>
+            <div class="arrow">→</div>
+            <div class="node"><strong>Navigate</strong><span>Swipe weeks, tap a date, or use search</span></div>
+            <div class="arrow">→</div>
+            <div class="node"><strong>Expand</strong><span>Tap a schedule item → expands into detail card</span></div>
+            <div class="arrow">→</div>
+            <div class="node"><strong>Detail</strong><span>Tap “Detail” → opens full Match Detail Page</span></div>
+          </div>
+          <div class="compare reveal">
+            <div class="card green"><span class="label">Alternative flow</span><p>Search bar filters calendar entries dynamically by player, tournament, or location.</p></div>
+            <div class="card coral"><span class="label">Exception flow</span><p>High event density on one day → show top 3 items + “View more” expander.</p></div>
+          </div>
+          <div class="no">19 / 20</div>
+        </div>
+      </section>
       <section class="slide">
         <div class="slide-content">
           <div class="eyebrow reveal"><span class="kicker">Closing</span><span class="rule"></span></div>
@@ -1927,23 +2242,23 @@
             <div class="card green reveal">
               <div class="num">R3</div>
               <h3>Proposal</h3>
-              <p>Two tough problems, two solution families.</p>
+              <p>Two priority problems plus one qualitative addition; three solution families, six concepts.</p>
             </div>
             <div class="card coral reveal">
               <div class="num">R4</div>
               <h3>Use Case</h3>
-              <p>Actor, artifact, flow, alternative and exception.</p>
+              <p>Six use cases: actor, artifact, flow, alternative and exception.</p>
             </div>
           </div>
           <p class="quote reveal" style="margin-top:72px;max-width:1450px">The next step is prototype and evaluation —
             but the design direction now has evidence behind it.</p>
-          <div class="no">16 / 16</div>
+          <div class="no">20 / 20</div>
         </div>
       </section>
     </main>
   </div>
   <div class="deck-controls" style="visibility: hidden;"><button id="prev" aria-label="Previous">‹</button><span
-      class="counter" id="counter">1 / 16</span><button id="next" aria-label="Next">›</button></div>
+      class="counter" id="counter">1 / 20</span><button id="next" aria-label="Next">›</button></div>
   <script>
     /* === Slide presentation controller === */
     class Deck {
@@ -2038,6 +2353,7 @@
         const suggest = screen.querySelector('.suggest');
         const fab = screen.querySelector('.fab');
         const menu = screen.querySelector('.fabmenu');
+        let closeRadial = () => {};
 
         // Apply visibility options
         if (hideFab && fab) fab.style.display = 'none';
@@ -2052,7 +2368,7 @@
         if (more) {
           more.onclick = e => {
             e.stopPropagation();
-            sheet.classList.toggle('open');
+            sheet && sheet.classList.toggle('open');
             closeRadial();
           };
         }
@@ -2070,6 +2386,26 @@
           if (sheet) sheet.classList.remove('open');
         });
 
+
+        screen.querySelectorAll('.event-card').forEach(card => card.onclick = e => {
+          if (e.target.closest('.event-popup a')) { e.stopPropagation(); return; }
+          e.stopPropagation();
+          card.classList.toggle('active');
+        });
+
+        screen.querySelectorAll('.event-popup a, .detail-btn').forEach(link => link.onclick = e => { e.preventDefault(); e.stopPropagation(); });
+
+        screen.querySelectorAll('.date-chip').forEach(chip => chip.onclick = e => {
+          e.stopPropagation();
+          screen.querySelectorAll('.date-chip').forEach(x => x.classList.remove('today'));
+          chip.classList.add('today');
+        });
+
+        screen.querySelectorAll('.sched-item').forEach(item => item.onclick = e => {
+          if (e.target.closest('.detail-btn')) { e.stopPropagation(); return; }
+          e.stopPropagation();
+          item.classList.toggle('active');
+        });
         if (!fab || hideFab) return; // no FAB interaction needed
 
         // ── Radial menu positioning ──────────────────────────────────────
@@ -2128,7 +2464,7 @@
           fab.classList.add('open');
         };
 
-        const closeRadial = () => {
+        closeRadial = () => {
           if (!menu) return;
           menu.classList.remove('open');
           fab.classList.remove('open');
@@ -2198,3 +2534,5 @@
 </body>
 
 </html>
+
+
