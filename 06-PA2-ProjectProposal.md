@@ -73,6 +73,8 @@ N01, N02, N03, N04; Q11 (3.94/5 — menu is findable), Q12 (3.50/5 — but not r
 
 **Weaknesses:** Permanently consumes vertical space on an already small viewport, competing with content height; does not scale gracefully if the site later needs to add a sixth or seventh top-level section, since a bottom bar has a practical limit of about 5 items before labels must shrink or icons must replace text.
 
+<img src="CS1.1.png" height="500">
+
 ### 3.4 Solution CS1.2 — Draggable Floating Action Button (FAB)
 
 **Concept summary:** Instead of a fixed bar, provide a single floating circular button that is not bound to any fixed screen position. The user can drag it to wherever their thumb naturally rests, and the button then expands into a compact navigation menu when tapped.
@@ -93,6 +95,8 @@ N01, N02, N03, N04; Q11 (3.94/5 — menu is findable), Q12 (3.50/5 — but not r
 **Strengths:** Personalizes to the user's actual handedness and grip instead of assuming one "correct" position for everyone; consumes almost no screen space when collapsed, unlike a bar that is always fully expanded.
 
 **Weaknesses:** The expanded menu can visually overlap page content beneath it; requires additional engineering effort to persist a per-user custom position across sessions (e.g., local storage), which CS1.1 does not need at all.
+
+<img src="CS1.2.png" height="500">
 
 ### 3.5 Comparison
 
@@ -139,6 +143,8 @@ N09, N10, N11, N12, N22, N23, N27; Q16 (3.60/5 — finding info is only moderate
 
 **Weaknesses:** Still fundamentally a name-based search — it does not help a user who wants to filter by an attribute they know (a title like "FM," or a rating threshold) but not a name, which is exactly the gap P10 and P08 encountered. Also still requires an upward reach to the top of the screen to actually tap into the field, even if the wide target reduces the precision required.
 
+<img src="CS2.1.png" height="500">
+
 ### 4.4 Solution CS2.2 — Faceted Filter Chips (Tap-to-Filter)
 
 **Concept summary:** Replace typed recall with tap-based selection. Instead of asking the user to remember and spell a name, present the dimensions people actually search by — title, rating range, event/date — as selectable chips.
@@ -158,6 +164,8 @@ N09, N10, N11, N12, N22, N23, N27; Q16 (3.60/5 — finding info is only moderate
 **Strengths:** Removes any dependency on remembering or spelling a name correctly — well suited to newcomers like P10, who does not know any specific player's name yet but does know what she's looking for (a title, a rating range); tapping is faster than typing on a mobile keyboard.
 
 **Weaknesses:** Less efficient for a user who already knows the *exact* name they want — a returning core chess follower may still find scanning/selecting chips slower than a direct name search would be; requires careful, compact chip-row design to avoid consuming excessive horizontal space on a small screen.
+
+<img src="CS2.2.png" height="500">
 
 ### 4.5 Comparison
 
@@ -195,6 +203,8 @@ N20, N21, N24, N28, N29; interview observations from P02 (misleading expand icon
 **Strengths:** Familiar layout for those who are dedicated users. The box is easy to make appear. Users also tend to not click directly on texts but rather the region around it, expecting the same action to happen, this clarify the difference between the box and the button.
 
 **Weaknesses:** The page remains rows of items, most people expect a schedule to look like a timeline or a calendar looking place. This can slow learning for new users.
+
+<img src="CS3.1.png" height="500">
 
 ### 5.4 Solution CS3.2 — Interactive Chess Schedule Calendar
 
@@ -244,13 +254,13 @@ The calendar highlights the current date, for example, August 2, 2026. When the 
 
 5. When users touch a schedule item, it provides visual feedback and expands into a summary card without leaving the Schedule page.
 
-7. Selecting the expanded item again, touching outside it, or opening another item collapses the current card.
+6. Selecting the expanded item again, touching outside it, or opening another item collapses the current card.
 
-8. When users select another schedule item, the previously expanded card closes and the newly selected item expands. This limits visual clutter.
+7. When users select another schedule item, the previously expanded card closes and the newly selected item expands. This limits visual clutter.
 
-9. When users select the Detail button, the application navigates to the corresponding match detail page.
+8. When users select the Detail button, the application navigates to the corresponding match detail page.
 
-10. After users return from the detail page, the calendar should preserve their selected date, scroll position, search query, and expanded event whenever possible.
+9. After users return from the detail page, the calendar should preserve their selected date, scroll position, search query, and expanded event whenever possible.
 
 **Rationale:**
 
@@ -284,6 +294,8 @@ The current schedule presentation relies heavily on text and images. Users must 
 **Weaknesses:**
 
 If many chess events occur on the same day, the calendar may not have enough space to display every schedule item clearly. This can create visual crowding, increase the height of the date section, or make individual events difficult to distinguish. A possible future improvement would be to show a limited number of events followed by a “View more” indicator, but this introduces an additional interaction and may hide information from immediate view.
+
+<img src="CS3.2.png" height="500">
 
 ### 5.5 Comparison
 
