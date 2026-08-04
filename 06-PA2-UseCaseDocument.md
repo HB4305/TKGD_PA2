@@ -10,7 +10,7 @@
 
 ## 1. Overview & Conceptual Solution Mapping
 
-In `06-PA2-ProjectProposal.md`, Group 06 proposed six conceptual solutions across three user problems (**P-01: One-Handed Reachability**, **P-02: Lack of Sticky Search & Filtering**, and **P-03: Lack of Schedule Information**).
+In `06-PA2-ProjectProposal.md`, Group 06 proposed six conceptual solutions across three user problems (**P-01: One-Handed Reachability**, **P-02: Lack of Sticky Search & Filtering**, and **P-05: Lack of Schedule Information**).
 
 This document formalizes the actors, artifacts, interaction flows, and detailed use case specifications for each proposed solution.
 
@@ -22,8 +22,8 @@ This document formalizes the actors, artifacts, interaction flows, and detailed 
 | **P-01** | Hamburger menu at top-left is out of reach for one-handed users | **CS1.2** | Draggable Floating Action Button (FAB) | Customizable, floating trigger that can be placed anywhere on screen |
 | **P-02** | Lack of sticky search & filtering on long listing pages | **CS2.1** | Sticky Search Bar with Flexible Name Matching | Always-accessible text search accepting diacritics, partial names, and any word order |
 | **P-02** | Lack of sticky search & filtering on long listing pages | **CS2.2** | Faceted Filter Chips (Tap-to-Filter) | Instant, zero-typing filtering by title (GM, IM), rating range, or event date |
-| **P-03** | Schedule does not provide enough information, forcing users to look elsewhere | **CS3.1** | Additional Important Information Popup | Quick expandable preview of top performers or star players without layout overhaul |
-| **P-03** | Schedule does not provide enough information, forcing users to look elsewhere | **CS3.2** | Interactive Chess Schedule Calendar | Chronological calendar view with date navigation, search, and expanded event cards |
+| **P-05** | Schedule does not provide enough information, forcing users to look elsewhere | **CS3.1** | Additional Important Information Popup | Quick expandable preview of top performers or star players without layout overhaul |
+| **P-05** | Schedule does not provide enough information, forcing users to look elsewhere | **CS3.2** | Interactive Chess Schedule Calendar | Chronological calendar view with date navigation, search, and expanded event cards |
 
 ---
 
@@ -69,7 +69,7 @@ graph LR
         UC04[UC-04: Filter Content via Faceted Filter Chips - CS2.2]
     end
 
-    subgraph Solution 3: Schedule Details & Exploration [P-03]
+    subgraph Solution 3: Schedule Details & Exploration [P-05]
         UC05[UC-05: View Highlights via Info Popup - CS3.1]
         UC06[UC-06: Explore Schedule via Interactive Calendar - CS3.2]
     end
@@ -244,7 +244,7 @@ flowchart TD
 |---|---|
 | **Use Case ID** | **UC-05** |
 | **Use Case Name** | View Event Highlights via Additional Information Popup |
-| **Related Concept** | **CS3.1** (Additional Important Information Popup for P-03) |
+| **Related Concept** | **CS3.1** (Additional Important Information Popup for P-05) |
 | **Primary Actor** | Core Chess Follower / Mobile Visitor |
 | **Target Artifacts** | Additional Information Popup Artifact (`ART-AIP`), Schedule Row Item (`ART-SRI`) |
 | **Preconditions** | User is viewing the Schedule section retaining the familiar 2-row layout (*Upcoming Events* and *Past Events*). |
@@ -253,7 +253,7 @@ flowchart TD
 | **Alternative Flows** | **ALT-1 (Direct Section Navigation):** User touches "Read more" directly inside `ART-AIP` or on the event row; system navigates to the dedicated section page.<br>**ALT-2 (Switching Active Popups):** User touches a different event row while `ART-AIP` is open; system closes the previous popup and expands the new event popup instantly. |
 | **Exception Flows** | **EX-1 (Missing Highlight Data):** If player/result highlight data is unavailable, `ART-AIP` displays fallback message ("Participant list updating shortly") alongside the "Read more" link. |
 | **Postconditions** | User obtains key player names or match results in 1 tap without losing their position on the schedule page. |
-| **Empirical Evidence** | Validates **P09** feedback regarding insufficient match details while preserving layout familiarity for returning users. |
+| **Empirical Evidence** | Validates **N24**, **N28**; addresses **P09**'s insufficient-match-detail feedback while preserving layout familiarity for returning users. Evidence for the underlying problem (P-05) comes from a single dedicated participant rather than broad survey data; see `06-PA2-UserAnalysis.md` scoring rationale for why the group carried it forward regardless. |
 
 ---
 
@@ -263,7 +263,7 @@ flowchart TD
 |---|---|
 | **Use Case ID** | **UC-06** |
 | **Use Case Name** | Explore Match Schedule via Interactive Chess Calendar |
-| **Related Concept** | **CS3.2** (Interactive Chess Schedule Calendar for P-03) |
+| **Related Concept** | **CS3.2** (Interactive Chess Schedule Calendar for P-05) |
 | **Primary Actor** | Core Chess Follower / Mobile Visitor |
 | **Target Artifacts** | Interactive Schedule Calendar Artifact (`ART-ISC`), Expanded Event Card (`ART-EEC`), Match Detail Page (`ART-MDP`) |
 | **Preconditions** | User selects the Schedule tab from primary navigation; system opens dedicated `ART-ISC` page. |
@@ -272,7 +272,7 @@ flowchart TD
 | **Alternative Flows** | **ALT-1 (Schedule Search):** User types player name, tournament, or location into search bar; system filters calendar entries dynamically.<br>**ALT-2 (Collapse Card):** User touches `ART-EEC` again or taps outside it; card collapses back into single-line schedule item.<br>**ALT-3 (Preserve State on Return):** User returns from `ART-MDP` via back button; system preserves scroll position, selected date, search query, and expanded card. |
 | **Exception Flows** | **EX-1 (High Event Density):** If many matches occur on one day, system displays top 3 events with a "View more" expander to prevent visual overcrowding. |
 | **Postconditions** | User gains complete chronological orientation, flexible date jump & search, and multi-level information (summary -> expanded card -> detail page). |
-| **Empirical Evidence** | Directly resolves **P09** feedback by supplying full match info (time, players, location, format) and replaces misleading chevron icon with a dedicated calendar mental model. |
+| **Empirical Evidence** | Validates **N20**, **N21**, **N24**, **N28**, **N29**; directly resolves **P09**'s feedback by supplying full match info (time, players, location, format) and replaces misleading chevron icon with a dedicated calendar mental model. Evidence for the underlying problem (P-05) comes from a single dedicated participant rather than broad survey data; see `06-PA2-UserAnalysis.md` scoring rationale for why the group carried it forward regardless. |
 
 ---
 
@@ -286,5 +286,5 @@ The six Use Case Specifications above cover 100% of the conceptual solutions pro
 | **UC-02** | CS1.2: Draggable FAB | P-01: Reachability | Touch-drag & 2-tap radial menu | Custom position persistence across sessions |
 | **UC-03** | CS2.1: Flexible Sticky Search | P-02: Long List Search | Text input + auto-suggest | Success rate on reversed name order queries |
 | **UC-04** | CS2.2: Faceted Filter Chips | P-02: Long List Search | 1-tap filter toggles | Zero-typing filtering by title and event date |
-| **UC-05** | CS3.1: Additional Info Popup | P-03: Lack of Schedule Info | 1-tap expandable overlay box | Instant highlight access without layout disruption |
-| **UC-06** | CS3.2: Interactive Calendar | P-03: Lack of Schedule Info | Calendar swipe, date jump & expanded card | Full temporal navigation & 3-stage progressive disclosure |
+| **UC-05** | CS3.1: Additional Info Popup | P-05: Lack of Schedule Info | 1-tap expandable overlay box | Instant highlight access without layout disruption |
+| **UC-06** | CS3.2: Interactive Calendar | P-05: Lack of Schedule Info | Calendar swipe, date jump & expanded card | Full temporal navigation & 3-stage progressive disclosure |

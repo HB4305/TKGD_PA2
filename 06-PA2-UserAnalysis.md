@@ -102,7 +102,7 @@ Below is the structured Affinity Board generated during the group brainstorming 
   * Add a prominent onboarding banner with a concise explanation ("Fischer Random / Chess 960 format") and a primary CTA ("Explore Events").
 
 #### Cluster C: Search, Filtering & Information Retrieval
-* **Core Problem:** 61.1% of users reported difficulty finding specific info when they don't remember exact names. Long rating lists require 20+ seconds of vertical scrolling without a sticky search bar or pagination.
+* **Core Problem:** 61.1% of users reported difficulty finding specific info when they don't remember exact names. Long rating lists require 20+ seconds of vertical scrolling without a sticky search bar or pagination. Beyond the missing sticky search itself, the existing Rating search is also brittle: it demands an exact stored name order (N23) and cannot match by attribute (title, rating — N27), while visually similar row typography makes it easy to scroll past the target player even when scanning manually (N22).
 * **Generated Ideas:**
   * Add a **Sticky Search Bar** that remains visible while scrolling.
   * Implement **Quick Filter Chips** (e.g., "Geller Cup", "Grandmaster Rating") and Auto-suggest queries.
@@ -112,6 +112,25 @@ Below is the structured Affinity Board generated during the group brainstorming 
 * **Generated Ideas:**
   * Enforce **Single-Active-Player logic** (auto-pause active video when another starts).
   * Integrate skeleton loaders and instant visual press states.
+
+#### Cluster E: Schedule Navigation & Information Gaps
+* **Core Problem:** The Schedule section under-informs dedicated chess followers (P09 actively searched multiple parts of the site, including an external link, before giving up) and contains several smaller interaction failures — a misleading expand icon, redundant exit controls, non-functional banners, and a broken scroll boundary — that compound the confusion.
+* **Generated Ideas:**
+  * Restructure Schedule as a dedicated page (not an overlay) with clearer entry/exit behavior.
+  * Surface richer match context (players, format, brackets) instead of only date/location.
+
+#### Cluster F: System Status Visibility & Feedback Mismatch
+* **Core Problem:** Several distinct surfaces fail to honestly reflect system state to the user: confirmation dialogs are too small and require nested scrolling to read (N17), page transitions show no loading indicator at all (N18), and the Hero video's custom "Stop" button visibly toggles its own label without the underlying video actually pausing (N26). All three violate the same usability principle — Visibility of System Status — even though they occur in unrelated parts of the site.
+* **Generated Ideas:**
+  * Use auto-height dialog containers sized to content, avoiding nested scroll.
+  * Add page-load indicators (spinner, progress bar, or skeleton transition) on every navigation action.
+  * Bind custom media control button states directly to the actual player state rather than toggling independently.
+
+#### Cluster G: Video/Carousel Gesture Consistency
+* **Core Problem:** The homepage Video & Streams carousel visually implies horizontal swiping (cut-off thumbnails) but does not support it (N19), and even the fallback Prev/Next controls stop being the reliable path once a video starts playing, since the swipe gesture is then captured by the video player instead of the carousel (N25). Both are the same underlying failure — a control that looks interactive in one way but behaves in another — observed at two different moments of the same interaction.
+* **Generated Ideas:**
+  * Either implement true horizontal swipe on the carousel or remove the cut-off-thumbnail visual cue that implies it.
+  * Keep carousel navigation controls (Prev/Next or swipe) consistently active and separated from the video player's own gesture area, even while a video is playing.
 
 ---
 
@@ -155,8 +174,9 @@ $$ \text{Priority Score} = \text{Frequency} + \text{Severity} + \text{Evidence S
 |---|---|---:|---:|---:|---:|---:|---|
 | **P-01** | One-handed reachability issues with top-left hamburger menu | 4 | 5 | 5 | 5 | **19** | **Selected (High)** |
 | **P-02** | Lack of sticky search & filtering on long listing pages (Rating & News) | 5 | 4 | 5 | 4 | **18** | **Selected (High)** |
-| **P-03** | Overlapping video audio streams & lack of loading feedback | 4 | 4 | 5 | 5 | **18** | **Selected (High)** |
-| **P-04** | Overloaded Hero section & lack of onboarding for first-time users | 4 | 3 | 4 | 5 | **16** | **Selected (Medium)** |
+| **P-03** | Overlapping video audio streams & lack of loading feedback | 4 | 4 | 5 | 5 | **18** | **Not proposal focus** |
+| **P-04** | Overloaded Hero section & lack of onboarding for first-time users | 4 | 3 | 4 | 5 | **16** | **Lower priority** |
+| **P-05** | Schedule lacks sufficient match/tournament information for dedicated followers | 1 | 4 | 2 | 3 | **10** | **Noted (Below Threshold)** |
 
 ### 3.1 Scoring Rationale & Justification
 
@@ -184,6 +204,12 @@ $$ \text{Priority Score} = \text{Frequency} + \text{Severity} + \text{Evidence S
    * *Evidence Strength (4/5)*: Validated by survey Q09/Q10 and interview clip observation (P03 L.T.K).
    * *Feasibility (5/5)*: Highly feasible by reorganizing content hierarchy and adding a concise intro banner.
 
+5. **P-05 (Schedule lacks sufficient match/tournament information - Score 10/20)**:
+   * *Frequency (1/5)*: Reported by only one participant (P09) across all 82 research participants; no survey question directly targeted Schedule information completeness, so this cannot be scored higher on breadth of evidence alone.
+   * *Severity (4/5)*: P09 actively searched the Schedule page, the tournament's own info page, and even followed an external link before giving up entirely — indicating a real, unmet need rather than a passing inconvenience (N24, N20, N21, N28, N29).
+   * *Evidence Strength (2/5)*: By the rubric's letter, this is "mentioned by only 1 interview participant, no survey data." However, the group weights this qualitatively: P09 is a self-identified active chess follower who deliberately sought match brackets and player pairings — exactly the information-seeking behavior of a core, retained user — whereas most other survey/interview respondents are first-time or casual users still forming a basic impression of the site. A gap that blocks a dedicated follower is judged more consequential to long-term retention than its raw frequency score suggests, which is why the group chose to carry P-05 into the Proposal despite the low quantitative score.
+   * *Feasibility (3/5)*: Requires new UI screens (e.g., a calendar view) to meaningfully close the gap; a lighter popup-based fix is more feasible but does not fully resolve the underlying information gap.
+
 ---
 
 ## 4. Final Problem Statements
@@ -197,10 +223,13 @@ $$ \text{Priority Score} = \text{Frequency} + \text{Severity} + \text{Evidence S
 ### Problem Statement 3 (Media Interaction & Feedback)
 > **Mobile users need** instant tap feedback and single-video playback **because** tapping a video gives no loading indicator and starting a new video doesn't pause the one already playing, causing overlapping audio, **especially when** watching match highlights or livestreams back-to-back.
 
+### Problem Statement 4 (Schedule Information Depth)
+> **Dedicated chess followers need** enough match and tournament context directly within the Schedule section **because** the current view shows only date and location, forcing users to search the tournament's own page or leave the site entirely to find who is playing or how matches are structured, **especially when** they already know the format and are trying to plan around specific upcoming matches.
+
 ---
 
 ## 5. Conclusion & Transition to Project Proposal
 
-The user analysis phase successfully consolidated the raw empirical data from Requirement 1 into four clear affinity clusters, prioritized the key problems using a structured score matrix, and formulated three final Problem Statements. 
+The user analysis phase successfully consolidated the raw empirical data from Requirement 1 into seven clear affinity clusters, prioritized the key problems using a structured score matrix, and formulated four final Problem Statements. 
 
 These problem statements will serve as the direct foundation for generating conceptual design solutions in **Requirement 3 (Project Proposal)**.

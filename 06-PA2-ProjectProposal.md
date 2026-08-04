@@ -10,15 +10,17 @@
 
 ## 1. Selected Problems
 
-Following the assignment's guidance to focus on a few "tough problems" rather than attempting to solve everything, our group selected the two highest-priority problems from the Priority Matrix in `06-PA2-UserAnalysis.md`:
+Following the assignment's guidance to focus on a few "tough problems" rather than attempting to solve everything, our group selected the two highest-priority problems from the Priority Matrix in `06-PA2-UserAnalysis.md`, plus one supplementary problem carried forward despite scoring below the matrix's selection threshold:
 
 | Problem ID | Problem Description | Priority Score |
 |---|---|---:|
 | **P-01** | One-handed reachability issues with top-left hamburger menu | 19/20 |
 | **P-02** | Lack of sticky search & filtering on long listing pages (Rating & News) | 18/20 |
-| **P-03** | Schedule does not provide enough information, forcing users to look elsewhere for this information. | 15/20 |
+| **P-05** | Schedule does not provide enough information, forcing users to look elsewhere for this information. | 10/20 |
 
-These two problems were chosen because they scored highest across Frequency, Severity, Evidence Strength, and Feasibility, and because existing market solutions (competing chess/sports sites) do not sufficiently address either issue on mobile. P-03 (video feedback/audio overlap) was considered but set aside for this proposal, as its underlying issues read more as implementation bugs (state-desynced controls, missing loading feedback) to be fixed rather than a genuine UX redesign opportunity.
+P-01 and P-02 were chosen because they scored highest across Frequency, Severity, Evidence Strength, and Feasibility, and because existing market solutions (competing chess/sports sites) do not sufficiently address either issue on mobile. P-03 (video feedback/audio overlap) was considered but set aside for this proposal, as its underlying issues read more as implementation bugs (state-desynced controls, missing loading feedback) to be fixed rather than a genuine UX redesign opportunity.
+
+P-05 is included despite its low quantitative score (10/20, below the ~16+ threshold used for P-01/P-02/P-04). It was reported by only one interview participant (P09) with no supporting survey data, which the rubric scores as weak evidence. However, the group weighted this qualitatively: P09 is a self-identified active chess follower who deliberately searched for match brackets and player pairings across multiple parts of the site — the exact information-seeking behavior of a dedicated, retention-relevant user — whereas most other respondents in the research are first-time or casual users still forming a basic impression of the site. A gap that blocks this kind of core user was judged worth addressing even though it does not clear the matrix's numeric bar. This trade-off is documented explicitly here, and in the corresponding rationale in `06-PA2-UserAnalysis.md`, rather than left implicit.
 
 ---
 
@@ -30,7 +32,7 @@ The team's solution keeps the same product form as the original scope defined in
 2. **Zero-step or one-step access to core actions.** Navigating to a section or searching a list should not require opening a hidden menu first; the control itself should be either always visible or always one gesture away.
 3. **Flexible input over exact recall.** Wherever a user is expected to type or remember something exactly (a name, a spelling, a word order), the interface should tolerate approximation or replace typing with tap-based selection, directly addressing the 61.1% of users who struggled when they could not recall an exact name or term (Q19).
 
-Each conceptual solution below is a distinct way of implementing these principles, not a cosmetic variant of the same idea.
+Each conceptual solution for P-01 and P-02 below is a distinct way of implementing these principles, not a cosmetic variant of the same idea. **P-05 (Section 5)** is a supplementary problem addressing information completeness rather than thumb-zone reachability or search flexibility, so its two solutions are evaluated against their own rationale rather than these three principles.
 
 ---
 
@@ -170,17 +172,17 @@ N09, N10, N11, N12, N22, N23, N27; Q16 (3.60/5 — finding info is only moderate
 
 ---
 
-## 5. Problem 3 — P-03: Schedule does not provide enough information, forcing users to look elsewhere for this information.
+## 5. Problem 3 — P-05: Schedule does not provide enough information, forcing users to look elsewhere for this information.
 
-### 3.1 Problem Restated
+### 5.1 Problem Restated
 
 The Schedule Tab shows only the date and location of where the next event will occur. This lacks a lot of information that an actual interested person would probably want. For example: Time of the matches, how many matches, who is playing, potential big name players, format, style. It also lacks a calendar option to have a big view of the time line of all the events in a period of time. It also doesn't show any item in the past, only now/soon/future.
 
-### 3.2 Evidence Base
+### 5.2 Evidence Base
 
-P09 is the only person that reported this as an issue, but considering they are an active player of chess and concerns themselves with news frequently. 
+N20, N21, N24, N28, N29; interview observations from P02 (misleading expand icon, two ambiguous exit controls on the current Schedule overlay) and P10 (non-tappable banners, broken scroll boundary hiding content). The core information-depth complaint — insufficient match/tournament detail — comes from P09 alone, with no supporting survey question or other participant reporting it directly. By the group's own Priority Matrix rubric (`06-PA2-UserAnalysis.md`, P-05), this yields a low score (10/20). The group nonetheless carries the problem into this proposal because P09, unlike most other participants, is a self-identified active chess follower who deliberately searched the Schedule page, the tournament's own info page, and even an external link looking for match brackets and pairings before giving up — behavior indicative of a dedicated, retention-relevant user rather than a casual first-time visitor. This qualitative weight is judged to outweigh the low frequency score for the purposes of this proposal, though the group is explicit that this is a smaller, less-validated problem than P-01 and P-02.
 
-### 3.3 Solution CS3.1 — Additional important information popup
+### 5.3 Solution CS3.1 — Additional important information popup
 
 **Concept summary:** Right now there are 2 rows, events that will soon happen and past events. Keep them the same, but should add additional information on a popup. 
 
@@ -194,7 +196,7 @@ P09 is the only person that reported this as an issue, but considering they are 
 
 **Weaknesses:** The page remains rows of items, most people expect a schedule to look like a timeline or a calendar looking place. This can slow learning for new users.
 
-### 3.4 Solution CS3.2 — Interactive Chess Schedule Calendar
+### 5.4 Solution CS3.2 — Interactive Chess Schedule Calendar
 
 **Concept Summary:**
 
@@ -283,7 +285,7 @@ The current schedule presentation relies heavily on text and images. Users must 
 
 If many chess events occur on the same day, the calendar may not have enough space to display every schedule item clearly. This can create visual crowding, increase the height of the date section, or make individual events difficult to distinguish. A possible future improvement would be to show a limited number of events followed by a “View more” indicator, but this introduces an additional interaction and may hide information from immediate view.
 
-### 3.5 Comparison
+### 5.5 Comparison
 
 | Criteria                     | CS3.1 — Additional Information Popup                                                                                           | CS3.2 — Interactive Chess Schedule Calendar                                                                                |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
