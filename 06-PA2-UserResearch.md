@@ -1,4 +1,4 @@
-# PA2 Report - Requirement 1: User Research and User Analysis
+# PA2 Report - Requirement 1: User Research
 
 **Group:** 06  
 **Course:** CSC13112 - UI/UX Design  
@@ -12,9 +12,11 @@
 
 ### 1.1 Research Context
 
-In PA1, our group analyzed the Freestyle Chess website and identified several mobile usability issues, including difficult one-handed navigation, long information lists, limited search/filter support, unclear onboarding for first-time users, and unexpected video playback behavior.
+In this study, the Freestyle Chess website was selected as a representative example of chess news and event websites. It contains common types of content found on this kind of platform, including news, tournament schedules, player ratings, videos, and livestreams. Therefore, studying this website allows the group to investigate broader user expectations and usability needs when accessing chess-related information on a smartphone.
 
-In PA2, our group continues with the same product scope and conducts user research to understand how real users interact with the Freestyle Chess mobile website in realistic mobile contexts.
+In PA1, our group analyzed the Freestyle Chess website and identified several potential mobile usability issues, including difficult one-handed navigation, long information lists, limited search and filtering support, unclear onboarding for first-time users, and unexpected video playback behavior.
+
+In PA2, our group continues with the same case study and conducts user research to validate the initial findings and understand how real users interact with a chess news and event website in realistic mobile contexts.
 
 ### 1.2 Research Goals
 
@@ -76,17 +78,17 @@ This combination helps the group collect both broad and deep data. The online su
 
 ### 2.1 Online Survey
 
-| Item                           | Description                                                                                          |
-| ------------------------------ | ---------------------------------------------------------------------------------------------------- |
-| Method                         | Google Form survey                                                                                   |
-| Product tested                 | Freestyle Chess mobile website                                                                       |
-| Website URL                    | <https://www.freestyle-chess.com/>                                                                   |
-| Device context                 | Smartphone browser                                                                                   |
-| Estimated exploration time     | 3-5 minutes                                                                                          |
-| Estimated form completion time | 5-8 minutes                                                                                          |
-| Number of responses            | 72                                                                                                   |
-| Survey period                  | July 17, 2026 - July 20, 2026                                                                        |
-| Data collected                 | Multiple choice answers, checkbox answers, 1-5 rating scales, short text responses                   |
+| Item                           | Description                                                                                                                                              |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Method                         | Google Form survey                                                                                                                                       |
+| Product tested                 | Freestyle Chess mobile website                                                                                                                           |
+| Website URL                    | <https://www.freestyle-chess.com/>                                                                                                                       |
+| Device context                 | Smartphone browser                                                                                                                                       |
+| Estimated exploration time     | 3-5 minutes                                                                                                                                              |
+| Estimated form completion time | 5-8 minutes                                                                                                                                              |
+| Number of responses            | 72                                                                                                                                                       |
+| Survey period                  | July 17, 2026 - July 20, 2026                                                                                                                            |
+| Data collected                 | Multiple choice answers, checkbox answers, 1-5 rating scales, short text responses                                                                       |
 | Data source                    | [Form Responses CSV](./Khảo%20sát%20trải%20nghiệm%20người%20dùng%20trên%20Freestyle%20Chess%20mobile%20web%20(Responses)%20-%20Form%20Responses%201.csv) |
 
 ### 2.2 Direct Interview
@@ -114,11 +116,11 @@ The direct interview was chosen because some usability problems cannot be fully 
 
 ### 3.1 Participant Summary
 
-| Participant Group             | Description                                                             |                   Number of Participants |
-| ----------------------------- | ----------------------------------------------------------------------- | ---------------------------------------: |
-| Online survey respondents     | Users who tested the website independently and answered the Google Form |                                       72 |
-| Direct interview participants | Users who joined task-based interviews with the research team           |                            10 (13 sessions) |
-| Total participants            | Combined number of users involved in the research                       |                                       82 |
+| Participant Group             | Description                                                             | Number of Participants |
+| ----------------------------- | ----------------------------------------------------------------------- | ---------------------: |
+| Online survey respondents     | Users who tested the website independently and answered the Google Form |                     72 |
+| Direct interview participants | Users who joined task-based interviews with the research team           |       10 (13 sessions) |
+| Total participants            | Combined number of users involved in the research                       |                     82 |
 
 ### 3.2 Chess Interest Level
 
@@ -609,29 +611,29 @@ The following personas are fictional user profiles created based on the research
 
 ### Persona 1: Frequent Chess Follower
 
-| Attribute      | Description                                                                      |
-| -------------- | -------------------------------------------------------------------------------- |
-| Name           | N.H.A                                                                            |
-| Age            | 24                                                                               |
-| Background     | Regularly follows chess tournaments, players, and FIDE ratings. Updates daily.  |
-| Goals          | Quickly check latest match results, player leaderboards, next round schedules, and event news. |
-| Mobile context | Uses the phone during short breaks, while commuting, or during live streams of games. |
-| Needs          | Fast navigation, efficient search function, advanced filters (by rating, title), and constantly updated info. |
-| Pain points    | Too much scrolling on long lists, sub-optimal search (requiring exact spelling), and unclear schedule layouts. |
+| Attribute      | Description                                                                                                                          |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Name           | N.H.A                                                                                                                                |
+| Age            | 24                                                                                                                                   |
+| Background     | Regularly follows chess tournaments, players, and FIDE ratings. Updates daily.                                                       |
+| Goals          | Quickly check latest match results, player leaderboards, next round schedules, and event news.                                       |
+| Mobile context | Uses the phone during short breaks, while commuting, or during live streams of games.                                                |
+| Needs          | Fast navigation, efficient search function, advanced filters (by rating, title), and constantly updated info.                        |
+| Pain points    | Too much scrolling on long lists, sub-optimal search (requiring exact spelling), and unclear schedule layouts.                       |
 | Quote          | "I want to open the site and see the latest results or ratings immediately, not scroll endlessly or type name characters perfectly." |
 
 ### Persona 2: Event-Driven Viewer
 
-| Attribute      | Description                                                                     |
-| -------------- | ------------------------------------------------------------------------------- |
-| Name           | T.M.P                                                                           |
-| Age            | 29                                                                              |
-| Background     | Only follows chess during major events or when friends share match links.        |
-| Goals          | Find event highlights, general schedule overview, and key player updates.       |
-| Mobile context | Uses phone for short browsing sessions (2-3 mins) during free time or before sleeping. |
-| Needs          | Simple and intuitive homepage, event-based categories, easy explanations, and a stable video player. |
+| Attribute      | Description                                                                                                                        |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Name           | T.M.P                                                                                                                              |
+| Age            | 29                                                                                                                                 |
+| Background     | Only follows chess during major events or when friends share match links.                                                          |
+| Goals          | Find event highlights, general schedule overview, and key player updates.                                                          |
+| Mobile context | Uses phone for short browsing sessions (2-3 mins) during free time or before sleeping.                                             |
+| Needs          | Simple and intuitive homepage, event-based categories, easy explanations, and a stable video player.                               |
 | Pain points    | Disoriented on where to start, hard to search related news due to lack of keyword search, and annoyed by overlapping video audios. |
-| Quote          | "I just want to browse for 2-3 minutes to check the schedules and highlights; the interface should be clear for casual users." |
+| Quote          | "I just want to browse for 2-3 minutes to check the schedules and highlights; the interface should be clear for casual users."     |
 
 ### Persona 3: First-Time Mobile User
 
@@ -652,31 +654,31 @@ The following personas are fictional user profiles created based on the research
 
 ### 10.1 Flow Model: Finding Player Rating
 
-| Step | User Action                                 | System/Interface Response            | Problem Observed                                                                                                                        | Opportunity                                                                                              |
-| ---- | ------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| 1    | User opens Freestyle Chess website on phone | Home page appears                    | Hero section is cluttered with too many banners/news and lacks onboarding information explaining the format to newcomers (P03)          | Redesign a minimalist Hero section, adding a brief onboarding/intro banner with a clear CTA              |
-| 2    | User looks for navigation menu              | Menu icon is placed on mobile layout | Hamburger button is placed at the top-left, out of reach for one-handed thumb interaction (P01, P02, P03)                                | Move the menu button to the bottom (Bottom Navigation) or shift it towards the bottom-right corner       |
-| 3    | User opens menu and selects Rating          | Rating page appears                  | Menu slides in as a side panel overlaying the screen, showing sluggish response and long category labels                                | Design a lightweight menu using tabs or a smooth drawer, responding instantly in under 0.3s              |
-| 4    | User scans or searches for a player         | Rating list/search field appears     | Leaderboard list is too long (Infinite Scroll) with no sticky search bar, causing repetitive scrolling and losing position context (P01, P02) | Integrate a sticky search bar at the top of the page and use pagination to reduce vertical length        |
-| 5    | User reads player rating information        | Player name, title, rating are shown | Shows only plain monotone text, lacking visual elements such as nationality flags or player photos                                      | Add country flags as visual icons and design player cards to improve scanability                         |
+| Step | User Action                                 | System/Interface Response            | Problem Observed                                                                                                                              | Opportunity                                                                                        |
+| ---- | ------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| 1    | User opens Freestyle Chess website on phone | Home page appears                    | Hero section is cluttered with too many banners/news and lacks onboarding information explaining the format to newcomers (P03)                | Redesign a minimalist Hero section, adding a brief onboarding/intro banner with a clear CTA        |
+| 2    | User looks for navigation menu              | Menu icon is placed on mobile layout | Hamburger button is placed at the top-left, out of reach for one-handed thumb interaction (P01, P02, P03)                                     | Move the menu button to the bottom (Bottom Navigation) or shift it towards the bottom-right corner |
+| 3    | User opens menu and selects Rating          | Rating page appears                  | Menu slides in as a side panel overlaying the screen, showing sluggish response and long category labels                                      | Design a lightweight menu using tabs or a smooth drawer, responding instantly in under 0.3s        |
+| 4    | User scans or searches for a player         | Rating list/search field appears     | Leaderboard list is too long (Infinite Scroll) with no sticky search bar, causing repetitive scrolling and losing position context (P01, P02) | Integrate a sticky search bar at the top of the page and use pagination to reduce vertical length  |
+| 5    | User reads player rating information        | Player name, title, rating are shown | Shows only plain monotone text, lacking visual elements such as nationality flags or player photos                                            | Add country flags as visual icons and design player cards to improve scanability                   |
 
 ### 10.2 Sequence Model: Finding Event News
 
-| Trigger                                 | User Intention                    | Action                                | Breakdown / Difficulty                                                                                                                | Design Implication                                                                                                          |
-| --------------------------------------- | --------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| User wants to follow a chess event      | Find relevant news quickly        | Opens News page                       | Must open the hamburger menu hidden at the top left, making one-handed access very difficult (P01, P03, P05)                          | Add the 'News' link to a persistent Bottom Navigation bar for direct thumb access                                           |
-| News list appears                       | Identify relevant event           | Scrolls or looks for filter           | News list displays chronologically in an infinite scroll, lacking clear event filters, forcing users to browse aimlessly (P04)        | Add quick filter chips for major events (e.g., 'Geller Cup', 'Freestyle Chess 2026') at the top of the News page            |
-| User does not remember exact event name | Search by approximate information | Uses keyword/date/player if available | No search bar to search news by keywords, making it difficult to find older news articles (P04)                                       | Provide a keyword search bar with auto-suggestions for player or event names                                                |
-| User finds article                      | Read summary or full content      | Taps article card                     | News cards lack interaction feedback (no color change on hover/tap), and click boundaries are ambiguous                               | Design news cards to provide subtle visual feedback (e.g. background color change on tap) to confirm click state            |
+| Trigger                                 | User Intention                    | Action                                | Breakdown / Difficulty                                                                                                         | Design Implication                                                                                               |
+| --------------------------------------- | --------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| User wants to follow a chess event      | Find relevant news quickly        | Opens News page                       | Must open the hamburger menu hidden at the top left, making one-handed access very difficult (P01, P03, P05)                   | Add the 'News' link to a persistent Bottom Navigation bar for direct thumb access                                |
+| News list appears                       | Identify relevant event           | Scrolls or looks for filter           | News list displays chronologically in an infinite scroll, lacking clear event filters, forcing users to browse aimlessly (P04) | Add quick filter chips for major events (e.g., 'Geller Cup', 'Freestyle Chess 2026') at the top of the News page |
+| User does not remember exact event name | Search by approximate information | Uses keyword/date/player if available | No search bar to search news by keywords, making it difficult to find older news articles (P04)                                | Provide a keyword search bar with auto-suggestions for player or event names                                     |
+| User finds article                      | Read summary or full content      | Taps article card                     | News cards lack interaction feedback (no color change on hover/tap), and click boundaries are ambiguous                        | Design news cards to provide subtle visual feedback (e.g. background color change on tap) to confirm click state |
 
 ### 10.3 Artifact Model: Current Mobile Website Elements
 
-| Artifact               | Purpose                           | Current Issue                                                                                                 | Evidence                                                                                                 | Possible Improvement                                                                                         |
-| ---------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| Mobile navigation menu | Move between main sections        | Hamburger menu is placed too high on the left, hard to reach with one thumb during one-handed use             | P01, P03 had to stretch their thumbs completely and almost dropped the phone; P02 changed grips repeatedly | Change to a Bottom Navigation Bar or shift the navigation button to the bottom-right corner                  |
-| Homepage content       | Introduce website and key content | Hero section is overloaded with too much info, lacking onboarding to explain Freestyle Chess to newcomers     | P03 (L.T.K) felt overwhelmed, unimpressed, and did not understand the website's purpose as a newcomer    | Simplify the Hero section, adding a brief introductory banner with a CTA (e.g., 'Explore Freestyle Chess')   |
-| Rating list            | Show player rankings              | Rating list is too long (Infinite Scroll) with no sticky search bar and lacking pagination                    | P01 scrolled continuously for over 20s; P02 scrolled up and down to find a player's position             | Integrate a sticky search bar at the top of the rating list and apply pagination                            |
-| Search/filter controls | Help users find information       | No search bar for news, and the event filter is long and hidden                                               | P04 had to use browser's Ctrl+F to find articles; P02 was confused by the long event list overlaying the screen | Provide a keyword search bar on News/Videos pages and display event filters as selectable tabs               |
+| Artifact               | Purpose                           | Current Issue                                                                                                         | Evidence                                                                                                                         | Possible Improvement                                                                                                |
+| ---------------------- | --------------------------------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Mobile navigation menu | Move between main sections        | Hamburger menu is placed too high on the left, hard to reach with one thumb during one-handed use                     | P01, P03 had to stretch their thumbs completely and almost dropped the phone; P02 changed grips repeatedly                       | Change to a Bottom Navigation Bar or shift the navigation button to the bottom-right corner                         |
+| Homepage content       | Introduce website and key content | Hero section is overloaded with too much info, lacking onboarding to explain Freestyle Chess to newcomers             | P03 (L.T.K) felt overwhelmed, unimpressed, and did not understand the website's purpose as a newcomer                            | Simplify the Hero section, adding a brief introductory banner with a CTA (e.g., 'Explore Freestyle Chess')          |
+| Rating list            | Show player rankings              | Rating list is too long (Infinite Scroll) with no sticky search bar and lacking pagination                            | P01 scrolled continuously for over 20s; P02 scrolled up and down to find a player's position                                     | Integrate a sticky search bar at the top of the rating list and apply pagination                                    |
+| Search/filter controls | Help users find information       | No search bar for news, and the event filter is long and hidden                                                       | P04 had to use browser's Ctrl+F to find articles; P02 was confused by the long event list overlaying the screen                  | Provide a keyword search bar on News/Videos pages and display event filters as selectable tabs                      |
 | Video/livestream cards | Let users select media content    | Tapping play lacks immediate visual feedback, feeling frozen; allowing simultaneous playback causes overlapping audio | P03 clicked repeatedly due to lack of immediate feedback; P02 experienced overlapping audio from two videos, causing frustration | Add a skeleton loader/spinner when playing, and enforce a single-player media model (new play stops previous video) |
 
 ---
@@ -707,5 +709,4 @@ This research has the following limitations:
 4. Participants used different phone models and screen sizes, which may affect navigation and reachability feedback.
 
 Despite these limitations, combining survey data with direct interview observations helps the group identify common user needs and mobile usability problems with enough evidence for the next stages of PA2.
-
 
